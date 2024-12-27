@@ -69,7 +69,7 @@ const Header = () => {
           <Link to="/products" className="nav-link">Products</Link>
           <Link to="/articles" className="nav-link">Articles</Link>
           <Link to="/contacts" className="nav-link">Contacts</Link>
-          <p className="phone-number">📞 +1 555-555-5555</p>
+          <p className="phone-number">+1 555-555-5555</p>
         </div>
       </div>
     </>
