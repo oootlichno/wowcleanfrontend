@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import logo from "../img/logo_wow.png";
+import logo from "../img/FullLogo_Transparent_wowclean.png";
 import backendURL from "../components/config";
 
 const Header = () => {
@@ -16,7 +16,7 @@ const Header = () => {
         setServices(Array.isArray(response.data) ? response.data : []);
       } catch (error) {
         console.error("Error fetching services:", error);
-        setServices([]); // Fallback to empty array
+        setServices([]); 
       }
     };
     fetchServices();
@@ -30,7 +30,7 @@ const Header = () => {
         setIndustries(Array.isArray(response.data) ? response.data : []);
       } catch (error) {
         console.error("Error fetching industries:", error);
-        setIndustries([]); // Fallback to empty array
+        setIndustries([]); 
       }
     };
     fetchIndustries();
@@ -38,10 +38,6 @@ const Header = () => {
 
   return (
     <>
-      {/* Grey stripe under header */}
-      <div className="header-phone-bar">
-        <p className="phone-number">📞 +1 555-555-5555</p>
-      </div>
       <div className="header">
         <div className="logo">
           <Link to="/">
@@ -73,6 +69,7 @@ const Header = () => {
           <Link to="/products" className="nav-link">Products</Link>
           <Link to="/articles" className="nav-link">Articles</Link>
           <Link to="/contacts" className="nav-link">Contacts</Link>
+          <p className="phone-number">📞 +1 555-555-5555</p>
         </div>
       </div>
     </>
