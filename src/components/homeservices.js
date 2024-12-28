@@ -27,7 +27,10 @@ const Homeservices = () => {
 
   return (
     <div className="home-services">
-      <h2 className="services-title">Our Services</h2>
+      <div className="services-title-container">
+  <h2 className="services-title">Our Services</h2>
+  <div className="services-title-line"></div>
+</div>
       <div className="services-container">
         {services.map((service) => (
           <div
@@ -42,7 +45,10 @@ const Homeservices = () => {
               className="service-icon"
             />
             <h3>{service.name}</h3>
-            <p className="service-description">{service.description}</p>
+            <p className="service-description">
+  {service.description}
+  <span className="readmore"> Read more →</span>
+</p>            
           </div>
         ))}
       </div>
