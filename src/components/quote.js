@@ -4,6 +4,7 @@ import axios from "axios";
 import backendURL from "../components/config";
 
 
+
 const QuoteForm = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -92,7 +93,7 @@ const QuoteForm = () => {
   };
 
   return (
-    <div className="home">
+    <div className="quote">
   <h2 id="quote-form-section" className="services-title">Request a Quote</h2>
   <div className="quote-form-container">
     <form onSubmit={handleSubmit} className="quote-form">
@@ -120,9 +121,10 @@ const QuoteForm = () => {
           onChange={handleChange}
         />
       </div>
-    </div>
-      
-    {/* Row 2 */}
+      </div>
+
+       {/* Row 2 */}
+
     <div className="form-row">
       <div className="form-column">
         <label htmlFor="phone">Phone *</label>
@@ -146,11 +148,10 @@ const QuoteForm = () => {
         />
       </div>
     </div>
-
-        {/* Row 3 */}
       
-      <div className="form-row">
-        <div className="form-column">
+    {/* Row 3 */}
+    <div className="form-row">
+    <div className="form-column">
           <label htmlFor="street_address">Street Address *</label>
           <input
             type="text"
@@ -161,6 +162,13 @@ const QuoteForm = () => {
             required
           />
         </div>
+      
+    </div>
+
+        {/* Row 4 */}
+      
+      <div className="form-row">
+        
         <div className="form-column">
           <label htmlFor="city">City *</label>
           <input
@@ -172,11 +180,6 @@ const QuoteForm = () => {
             required
           />
         </div>
-      </div>
-
-          {/* Row 4 */}
-      <div className="form-row">
-
         <div className="form-column">
           <label htmlFor="state">State</label>
           <input
@@ -187,7 +190,10 @@ const QuoteForm = () => {
             onChange={handleChange}
           />
         </div>
+      </div>
 
+          {/* Row 4 */}
+      <div className="form-row">
         <div className="form-column">
           <label htmlFor="zip">ZIP Code *</label>
           <input
