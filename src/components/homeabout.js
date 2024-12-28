@@ -1,5 +1,5 @@
 import React from "react";
-import people from "../img/people_on_work.jpeg";
+import people from "../img/image main about.png";
 
 
 
@@ -17,8 +17,7 @@ const Homeabout = () => {
             challenges of commercial cleaning and works closely with clients to
             meet their specific needs. From offices to restaurants, gas
             stations, and beauty salons, our services are tailored to keep your
-            spaces spotless and welcoming. Trust WOWClean to transform your
-            spaces into a beacon of cleanliness.
+            spaces spotless and welcoming. 
           </p>
         </div>
         <div className="company-image">

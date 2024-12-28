@@ -58,6 +58,16 @@ text-decoration: none;
 
 }
 
+h3 {
+color: #071D49;
+text-align: center;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 180%;
+}
+
 p{
 color: #0F172A;
 font-family: Poppins;
@@ -390,50 +400,25 @@ background: #D5051B;
 /* Home About Section */
 
 .company-description-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  background: white;
-  /* #f6faff */
-  ;
-  padding: 60px 40px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 40px auto;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+display: flex;
+height: 653px;
+padding: 80px;
+justify-content: center;
+align-items: center;
+gap: 40px;
+align-self: stretch;
+background: #F1F5F9;
+  
 }
 
 .company-text {
   flex: 1;
-  min-width: 300px;
-  max-width: 600px;
   text-align: left;
-}
-
-.company-text h2 {
-  color: black;
-  font-size: 24px;
-  font-family: 'Gilroy-Medium';
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-
-.company-text p {
-  color: #969696;
-  font-size: 16px;
-  font-family: 'Gilroy-Bold';
-  font-weight: 400;
-  line-height: 1.6;
+  margin-right: 40px;
 }
 
 .company-image {
   flex: 1;
-  min-width: 300px;
-  max-width: 600px;
-  text-align: center;
 }
 
 .company-image img {
@@ -444,49 +429,60 @@ background: #D5051B;
 
 /*Home Services*/
 
-.home {
-  width: 100%;
-  background: #f6faff;
-  padding: 40px 20px;
+.home-services {
   display: flex;
+  height: 1111px;
+  padding: 80px;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 48px;
+  align-self: stretch;
+  background: white;
 }
 
 .services-title {
-  color: black;
-  font-size: 24px;
-  font-family: 'Gilroy-Bold', sans-serif;
-  font-weight: 400;
-  margin-bottom: 20px;
-  text-align: center;
+display: flex;
+height: 103px;
+flex-direction: column;
+align-items: center;
+gap: 32px;
+flex-shrink: 0;
+align-self: stretch;
+border-bottom: 8px solid var(--Red, #D5051B);
+
 }
 
 
 
 .services-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  align-items: flex-start;
+  gap: 80px;
+  align-self: stretch;
 }
 
 .service-card {
-  background: white;
-  border-radius: 8px;
-  padding: 20px;
   display: flex;
+  height: 356px;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1 0 0;
+  border-radius: 10px;
+background: var(--White, #FFF);
+box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.10), 0px 0px 6px 0px rgba(0, 0, 0, 0.07);
 }
 
 .service-icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 15px;
+display: flex;
+height: 220px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+align-self: stretch;
 }
 
 

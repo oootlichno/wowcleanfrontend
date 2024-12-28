@@ -26,7 +26,7 @@ const Homeservices = () => {
   };
 
   return (
-    <div className="home">
+    <div className="home-services">
       <h2 className="services-title">Our Services</h2>
       <div className="services-container">
         {services.map((service) => (
@@ -41,7 +41,7 @@ const Homeservices = () => {
               alt={service.name}
               className="service-icon"
             />
-            <h3 className="service-title">{service.name}</h3>
+            <h3>{service.name}</h3>
             <p className="service-description">{service.description}</p>
           </div>
         ))}
