@@ -256,7 +256,7 @@ p {
 
 .quote-form-container {
   display: flex;
-  height: 982px;
+  height: auto;
   padding: 40px 20px;
   flex-direction: column;
   align-items: center;
