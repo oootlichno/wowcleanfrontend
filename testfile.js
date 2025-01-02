@@ -1,39 +1,39 @@
-.service-card {
-  display: flex;
-  flex-direction: column; /* Stack content vertically */
-  align-items: center; /* Center-align content */
-  justify-content: flex-start; /* Align content to the top */
-  padding: 20px; /* Adjust padding to match design */
-  gap: 12px; /* Adjust gap between text elements */
-  height: 356px; /* Set consistent height */
-  border-radius: 10px; /* Rounded corners */
-  background: var(--White, #FFF);
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 0px 6px 0px rgba(0, 0, 0, 0.07);
-}
+return (
+  <div className="about-page">
+    {/* Background Shape */}
+    <img src={shape} alt="Shape Background" className="shape-image" />
 
-.service-icon {
-  display: block;
-  width: 100%; /* Make image width responsive */
-  height: 220px; /* Set consistent height */
-  border-radius: 10px 10px 0 0; /* Round top corners */
-  object-fit: cover; /* Maintain aspect ratio */
-}
+    {/* Header Section */}
+    <div className="about-header">
+      <div className="about-text">
+        <h1>About Us</h1>
+        <p>
+          Welcome to WOWClean! With years of experience, we pride ourselves on offering
+          top-notch cleaning services to industries. Our dedicated team ensures your space is
+          spotless, using environmentally friendly products and advanced techniques.
+        </p>
+        <p>
+          We are committed to providing exceptional customer service, tailored to meet your
+          unique needs. Let us take care of the cleaning so you can focus on what matters most.
+        </p>
 
-.service-description {
-  text-align: center;
-  font-family: Poppins, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #071D49;
-  margin: 0;
-}
+        {/* Centered Button */}
+        <div className="about-button">
+          <button className="about-quote-button" onClick={handleGetQuoteClick}>
+            Get a Quote
+          </button>
+        </div>
+      </div>
+      <div className="about-image">
+        <img src={image} alt="About Us" />
+      </div>
+    </div>
 
-.readmore {
-  font-family: Poppins, sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: #071D49;
-  text-decoration: none;
-  cursor: pointer;
-  margin: 0;
-}
+    {/* Conditionally Render Quote Form */}
+    {showQuoteForm && (
+      <div id="quote-section" className="quote-section">
+        <QuoteForm />
+      </div>
+    )}
+  </div>
+);

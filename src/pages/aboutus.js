@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import image from "../img/Toilet-Cleaning-Materials.jpg"
+import image from "../img/360_F_cleaner.png";
 import QuoteForm from "../components/quote";
+import shape from "../img/Shape.png";
 
 const AboutUs = () => {
   const [showQuoteForm, setShowQuoteForm] = useState(false);
@@ -15,6 +16,7 @@ const AboutUs = () => {
   return (
     <div className="about-page">
       {/* Header Section */}
+      <img src={shape} alt="Shape Background" className="shape-image" />
       <div className="about-header">
         <div className="about-text">
           <h1>About Us</h1>
@@ -29,22 +31,18 @@ const AboutUs = () => {
             to meet your unique needs. Let us take care of the cleaning so you can
             focus on what matters most.
           </p>
-         
-        </div>
-        <div className="about-image">
-          <img
-            src={image} 
-            alt="About Us"
-          />
+          
+        {/* Centered Button */}
+        <div className="about-button">
+          <button className="about-quote-button" onClick={handleGetQuoteClick}>
+            Get a Quote
+          </button>
         </div>
       </div>
-
-    {/* Centered Button */}
-    <div className="quote-button-container">
-        <button className="quote-button" onClick={handleGetQuoteClick}>
-          Get a Quote
-        </button>
+      <div className="about-image">
+        <img src={image} alt="About Us" />
       </div>
+    </div>
 
       {/* Conditionally Render Quote Form */}
       {showQuoteForm && (
