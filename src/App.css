@@ -373,7 +373,6 @@ align-self: stretch;
   display: flex;
   position: relative;
   width: 100%;
-  height: 727px;
   background-color: white;
   overflow: hidden;
 }
@@ -384,31 +383,21 @@ align-self: stretch;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 .about-text {
   position: relative;
   z-index: 2;
   margin-left: 80px;
+  gap:32px;
   display: flex;
   flex-direction: column;
   max-width: 50%;
   color: #0F172A;
 }
 
-.about-text h1 {
-  font-size: 36px;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
 
-.about-text p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #55565b;
-  margin-bottom: 20px;
-}
 
 .about-button{
   display: flex;
@@ -430,7 +419,6 @@ align-self: stretch;
   color: #fff;
   cursor: pointer;
   transition: transform 0.3s ease;
-
 font-family: Roboto;
 font-size: 24px;
 font-style: normal;
@@ -440,7 +428,7 @@ letter-spacing: 0.5px;
 }
 
 .about-quote-button:hover {
-  transform: scale(1.1); /* Scales the button slightly on hover */
+  transform: scale(1.1); 
 }
 
 .about-image img {
@@ -449,6 +437,17 @@ letter-spacing: 0.5px;
   margin-right: 50px;
   max-width: 100%; 
   height: auto;
+}
+
+.shape-image-about {
+  position: absolute;
+flex-shrink: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 

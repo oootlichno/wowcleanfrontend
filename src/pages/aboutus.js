@@ -16,7 +16,7 @@ const AboutUs = () => {
   return (
     <div className="about-page">
       {/* Header Section */}
-      <img src={shape} alt="Shape Background" className="shape-image" />
+      <img src={shape} alt="Shape Background" className="shape-image-about" />
       <div className="about-header">
         <div className="about-text">
           <h1>About Us</h1>
@@ -25,8 +25,7 @@ const AboutUs = () => {
             we pride ourselves on offering top-notch cleaning services to industries. 
             Our dedicated team ensures your space is
             spotless, using environmentally friendly products and advanced techniques.
-          </p>
-          <p>
+        
             We are committed to providing exceptional customer service, tailored
             to meet your unique needs. Let us take care of the cleaning so you can
             focus on what matters most.
