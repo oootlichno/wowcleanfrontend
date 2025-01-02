@@ -94,11 +94,12 @@ const QuoteForm = () => {
 
   return (
     <div className="quote">
-  <h2 id="quote-form-section" className="services-title">Request a Quote</h2>
+  <h2 id="quote-form-section" className="services-title-quote">Request a Quote</h2>
   <div className="quote-form-container">
     <form onSubmit={handleSubmit} className="quote-form">
 
      {/* Row 1 */}
+     <div className="main-form-row">
     <div className="form-row">
       <div className="form-column">
         <label htmlFor="company_name">Company Name</label>
@@ -123,8 +124,8 @@ const QuoteForm = () => {
       </div>
       </div>
 
-       {/* Row 2 */}
 
+       {/* Row 2 */}
     <div className="form-row">
       <div className="form-column">
         <label htmlFor="phone">Phone *</label>
@@ -148,8 +149,10 @@ const QuoteForm = () => {
         />
       </div>
     </div>
+    </div>
       
     {/* Row 3 */}
+    <div className="main-form-row">
     <div className="form-row">
     <div className="form-column">
           <label htmlFor="street_address">Street Address *</label>
@@ -217,10 +220,11 @@ const QuoteForm = () => {
         </div>
 
       </div>
+      </div>
 
        {/* Row 5 */}
+       <div className="main-form-row">
       <div className="form-row">
-       
         <div className="form-column">
           <label htmlFor="cleaning_frequency">
             Cleaning Sessions per Week *
@@ -267,6 +271,7 @@ const QuoteForm = () => {
             required
           />
         </div>
+      </div>
       </div>
 
       

@@ -1,6 +1,119 @@
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Fix mobile Safari increase font-size on landscape mode */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu,
+summary {
+  list-style: none;
+}
+
+/* Firefox: solve issue where nested ordered lists continue numbering from parent (https://bugzilla.mozilla.org/show_bug.cgi?id=1881517) */
+ol {
+  counter-reset: revert;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+  box-sizing: border-box;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+ display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+ - fix for the content editable attribute will work properly.
+ - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable="false"])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+  box-sizing: border-box;
+}
+
+/* Remove details summary webkit styles */
+::-webkit-details-marker {
+  display: none;
+}
+
 /* General Styling */
-
-
 body {
   margin: 0;
   background-color: #f8f9fa;
@@ -257,7 +370,7 @@ p {
 .quote-form-container {
   display: flex;
   height: auto;
-  padding: 40px 20px;
+  padding: 40px 40px;
   flex-direction: column;
   align-items: center;
   row-gap: 60px;
@@ -274,53 +387,78 @@ p {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+
 }
 
 .form-row {
   display: flex;
-  gap: 16px;
+  gap: 41px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 
 .form-column {
   flex: 1;
+  min-width: 200px;
+}
+
+.main-form-row {
+  margin-bottom: 60px;
 }
 
 .quote-form label {
-   color: #232323;
-    font-family: Poppins;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-decoration: none;
-  
+  display:inline;
+  width: 155px;
+  margin-bottom: 5px;
+  color: #232323;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+
+
 }
 
 .quote-form input,
 .quote-form select {
-
- 
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
   border-radius: 15px;
   border: 1px solid #DFEAF2;
-background: #FFF;
-color: #718EBF;
-font-family: Poppins;
-font-size: 16px;
-font-style: italic;
-font-weight: 400;
-line-height: normal;
-opacity: 0.45;
+  background: #FFF;
+  color: #718EBF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 20px;
+  opacity: 0.45;
+
+
+}
+
+.services-title-quote {
+margin-bottom: 80px;
 }
 
 .quote-button-container {
   display: flex;
+  align-self: flex-end;
   padding: 20px 24px;
+  margin-top: 20px;
+  flex-shrink: 0;
+  max-width: 200px;
   justify-content: center;
-  align-items: center;
+  margin: 0 auto;
   border-radius: 50px;
-border: 2px solid #D5051B;
-background: #D5051B;
+  border: 2px solid #D5051B;
+  background: #D5051B;
+
 }
 
 .quote-button-form {
@@ -329,8 +467,13 @@ background: #D5051B;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; /* 100% */
+  line-height: 24px;
+  /* 100% */
   letter-spacing: 0.5px;
+  width: auto;
+
+
+
 }
 
 .quote-button-form:hover {
