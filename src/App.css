@@ -465,133 +465,118 @@ p {
   margin-top: 40px;
 }
 
-/*Quote Form*/
-
+/* Quote Form */
 .quote {
   padding: 80px;
 }
 
 .quote-form-container {
   display: flex;
-  height: auto;
-  padding: 40px 40px;
   flex-direction: column;
   align-items: center;
-  row-gap: 60px;
-  column-gap: 40px;
-  margin-top: 22px;
-  flex-shrink: 0;
-  align-self: stretch;
+  padding: 40px 60px;
+  gap: 40px;
   border-radius: 10px;
-  background: var(--White, #FFF);
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.10), 0px 0px 6px 0px rgba(0, 0, 0, 0.07);
+  background: #FFFFFF;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 0px 6px 0px rgba(0, 0, 0, 0.07);
 }
 
 .quote-form {
   width: 100%;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
+  gap: 30px;
+  margin-bottom: 0;
+}
 
+.main-form-row {
+  margin-bottom: 40px;
 }
 
 .form-row {
   display: flex;
-  gap: 41px;
+  gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .form-column {
   flex: 1;
-  min-width: 200px;
+  min-width: 240px;
 }
 
-.main-form-row {
-  margin-bottom: 60px;
+.quote-form-title {
+  color: #071D49;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .quote-form label {
-  display: inline;
-  width: 155px;
+  display: inline-block;
   margin-bottom: 5px;
-  color: #232323;
-  font-family: Poppins;
+  color: #071D49;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-decoration: none;
-
-
+  font-weight: 500;
 }
 
 .quote-form input,
 .quote-form select {
-  display: flex;
-  justify-content: center;
   width: 100%;
-  height: 50px;
-  border-radius: 15px;
+  height: 48px;
+  border-radius: 8px;
   border: 1px solid #DFEAF2;
   background: #FFF;
+  padding: 10px 15px;
   color: #718EBF;
-  font-family: Poppins;
-  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
   font-style: italic;
-  font-weight: 400;
-  line-height: normal;
-  padding-left: 20px;
-  opacity: 0.45;
+  outline: none;
+  box-shadow: none;
+}
 
-
+.quote-form input::placeholder,
+.quote-form select::placeholder {
+  color: #B0C4DE;
+  opacity: 0.7;
 }
 
 .services-title-quote {
-  display: flex;
-  margin-bottom: 80px;
-  justify-content: center;
-  /* Horizontally center the text */
-  align-items: center;
-  /* Vertically center the text */
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #071D49;
   text-align: center;
+  margin-bottom: 40px;
 }
 
-
-
+/* Button Styles */
 .quote-button-container {
   display: flex;
-  align-self: flex-end;
-  padding: 20px 24px;
-  margin-top: 20px;
-  flex-shrink: 0;
-  max-width: 200px;
-  justify-content: center;
-  margin: 0 auto;
-  border-radius: 50px;
-  border: 2px solid #D5051B;
-  background: #D5051B;
-
+  justify-content: flex-end;
 }
 
 .quote-button-form {
-  color: #FFF;
-  font-family: Roboto;
-  font-size: 24px;
-  font-style: normal;
+  background-color: #D5051B;
+  color: #FFFFFF;
+  padding: 12px 24px;
+  border-radius: 25px;
+  border: 2px solid #D5051B;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
   font-weight: 700;
-  line-height: 24px;
-  /* 100% */
-  letter-spacing: 0.5px;
-  width: auto;
-
-
-
+  transition: all 0.3s ease;
 }
 
 .quote-button-form:hover {
   transform: scale(1.1);
+  background-color: #BF0419;
+  cursor: pointer;
 }
-
 
 
 /*Home*/
@@ -619,9 +604,10 @@ p {
   left: 0;
   z-index: 1;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 600px;
 }
+
+
 
 .banner-text {
   position: relative;

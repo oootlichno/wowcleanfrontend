@@ -100,6 +100,7 @@ const QuoteForm = () => {
 
      {/* Row 1 */}
      <div className="main-form-row">
+     <div className="quote-form-title">Contact information</div>
     <div className="form-row">
       <div className="form-column">
         <label htmlFor="company_name">Company Name</label>
@@ -153,6 +154,7 @@ const QuoteForm = () => {
       
     {/* Row 3 */}
     <div className="main-form-row">
+    <div className="quote-form-title">Location information</div>
     <div className="form-row">
     <div className="form-column">
           <label htmlFor="street_address">Street Address *</label>
@@ -224,6 +226,7 @@ const QuoteForm = () => {
 
        {/* Row 5 */}
        <div className="main-form-row">
+       <div className="quote-form-title">Order information</div>
       <div className="form-row">
         <div className="form-column">
           <label htmlFor="cleaning_frequency">
@@ -272,14 +275,9 @@ const QuoteForm = () => {
           />
         </div>
       </div>
-      </div>
-
-      
-      <div className="form-row">
-        
-      </div>
-      <div className="quote-button-container">
-  <button type="submit" className="quote-button-form">Submit</button>
+      </div>      
+<div className="quote-button-container">
+  <button type="submit" className="quote-button-form">Submit a Quote</button>
 </div>
     </form>
   </div>
