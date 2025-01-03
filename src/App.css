@@ -581,7 +581,7 @@ p {
 
 /*Home*/
 /* Main Banner Container */
-.main {
+/* .main {
   display: flex;
   position: relative;
   width: 100%;
@@ -648,12 +648,110 @@ p {
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
-  /* 100% */
   letter-spacing: 0.5px;
 }
 
 .quote-button:hover {
   transform: scale(1.1);
+} */
+
+/* Main Banner Container */
+.main {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 727px;
+  background-color: white; /* Matches Figma's light blue */
+  overflow: hidden;
+}
+
+.shape-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.shape-image {
+  position: absolute;
+  top: -100px; 
+  left: 0;
+  width: 100%; 
+  height: auto; 
+  z-index: 1;
+  pointer-events: none; 
+}
+
+.banner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 80px; /* Matches spacing in Figma */
+}
+
+.banner-text {
+  max-width: 50%;
+  color: #0F172A;
+  font-family: "Poppins", sans-serif;
+}
+
+.banner-text h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.banner-text h2 {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.banner-text p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.banner-image {
+  width: 682px;
+  height: 682px;
+  object-fit: contain;
+  margin-right: 50px;
+}
+
+.banner-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px; /* Matches Figma button width */
+  padding: 16px 24px;
+  background-color: #D5051B;
+  border: 2px solid #D5051B;
+  border-radius: 50px;
+  transition: transform 0.2s ease;
+}
+
+.quote-button {
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.quote-button:hover {
+  transform: scale(1.05);
 }
 
 /* Home About Section */
