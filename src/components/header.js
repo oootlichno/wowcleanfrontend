@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import logo from "../img/FullLogo_Transparent_wowclean.png";
+import logo from "../img/FullLogo_Transparent_wowclean_c.png";
 import backendURL from "../components/config";
 
 const Header = () => {
@@ -59,9 +59,9 @@ const Header = () => {
           <div className="dropdown">
             <Link to="/industries" className="nav-link">Industries</Link>
             <div className="dropdown-menu">
-              {Array.isArray(industries) && industries.map((industrie) => (
-                <Link key={industrie.id} to={`/industries/${industrie.id}`} className="dropdown-item">
-                  {industrie.name}
+              {Array.isArray(industries) && industries.map((industry) => (
+                <Link key={industry.id} to={`/industries/${industry.id}`} className="dropdown-item">
+                  {industry.name}
                 </Link>
               ))}
             </div>
