@@ -1,39 +1,36 @@
-return (
-  <div className="about-page">
-    {/* Background Shape */}
-    <img src={shape} alt="Shape Background" className="shape-image" />
+/* Container Flex Setup */
+.about-header {
+  display: flex;
+  justify-content: space-between; /* Separate text and image */
+  align-items: flex-end; /* Align items to the bottom */
+  position: relative;
+  padding: 80px;
+}
 
-    {/* Header Section */}
-    <div className="about-header">
-      <div className="about-text">
-        <h1>About Us</h1>
-        <p>
-          Welcome to WOWClean! With years of experience, we pride ourselves on offering
-          top-notch cleaning services to industries. Our dedicated team ensures your space is
-          spotless, using environmentally friendly products and advanced techniques.
-        </p>
-        <p>
-          We are committed to providing exceptional customer service, tailored to meet your
-          unique needs. Let us take care of the cleaning so you can focus on what matters most.
-        </p>
+/* Image Styling */
+.about-image img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; /* Ensure proper scaling */
+  align-self: flex-end; /* Ensure alignment to bottom */
+}
 
-        {/* Centered Button */}
-        <div className="about-button">
-          <button className="about-quote-button" onClick={handleGetQuoteClick}>
-            Get a Quote
-          </button>
-        </div>
-      </div>
-      <div className="about-image">
-        <img src={image} alt="About Us" />
-      </div>
-    </div>
+/* Background Shape */
+.shape-image-about {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0; /* Place behind content */
+  transform: translateY(10%); /* Adjust alignment */
+}
 
-    {/* Conditionally Render Quote Form */}
-    {showQuoteForm && (
-      <div id="quote-section" className="quote-section">
-        <QuoteForm />
-      </div>
-    )}
-  </div>
-);
+/* Button */
+.about-button {
+  align-self: flex-start; /* Align button with text */
+  margin-top: 30px;
+  z-index: 1;
+}
