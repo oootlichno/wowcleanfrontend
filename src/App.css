@@ -3,6 +3,10 @@
     - The "symbol *" part is to solve Firefox SVG sprite bug
     - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
  */
+
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
 *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
   all: unset;
   display: revert;
@@ -147,7 +151,7 @@ h1 {
   font-family: Poppins;
   font-size: 68px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 110%;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -157,13 +161,13 @@ h1 {
 
 h2 {
   color: #071D49;
-  font-family: Poppins, sans-serif;
+  font-family: Poppins;
   font-size: 56px;
   font-style: normal;
   font-weight: 600;
   line-height: 110%;
   margin-top: 0px;
-  margin-bottom: 24px;
+  margin-bottom: 0px;
   text-decoration: none;
 
 }
@@ -303,14 +307,7 @@ p {
 }
 
 .benefits-title {
-  font-family: Poppins;
-  font-size: 56px;
-  color: #071D49;
-  font-weight: 600;
-  line-height: 61.6px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+margin-bottom: 48px;
 
 }
 
@@ -356,9 +353,9 @@ p {
 
 .benefit-title {
   font-family: Poppins;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  color: #071D49;
+  color: #0F172A;
   margin-bottom: 12px;
   line-height: 32.4px;
   text-align: center;
@@ -708,6 +705,16 @@ p {
 }
 
 /* Home About Section */
+
+.company-about-title{
+color: #071D49;
+font-family: Poppins;
+margin-bottom: 24px;
+font-size: 56px;
+font-style: normal;
+font-weight: 600;
+line-height: 110%; /* 61.6px */
+}
 
 .company-description-container {
   display: flex;

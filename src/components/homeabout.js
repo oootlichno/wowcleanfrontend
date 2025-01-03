@@ -7,7 +7,9 @@ const Homeabout = () => {
     return (
         <div className="company-description-container">
         <div className="company-text">
-          <h2>About</h2>
+        <div className="company-about-title">
+        Our Team
+        </div>
           <p>
             WOWClean is dedicated to providing exceptional cleaning services for
             businesses and organizations of all sizes. With a mission to
