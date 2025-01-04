@@ -16,8 +16,8 @@ const AboutUs = () => {
   return (
     <div className="about-page">
   {/* Background Shape */}
-  <div class="shape-container-about">
-  <img src={shape} alt="Background Shape" className="shape-image-about" />
+  <div class="shape-container">
+  <img src={shape} alt="Background Shape" className="shape-image"/>
 </div>
 
   {/* About Header */}

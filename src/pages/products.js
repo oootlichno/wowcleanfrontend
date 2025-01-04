@@ -21,7 +21,10 @@ const ProductsPage = () => {
 
   return (
     <div className="products-page">
-  <img src={shape} alt="Background Shape" className="shape-image-about" /> 
+  <div class="shape-container">
+  <img src={shape} alt="Background Shape" className="shape-image"/>
+</div>
+<div className="product-container">
        <h1 className="products-title">Our Products</h1>
       <div className="products-grid">
         {products.map((product) => (
@@ -34,6 +37,7 @@ const ProductsPage = () => {
             </div>
           </div>
         ))}
+        </div>
       </div>
     </div>
   );
