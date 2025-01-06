@@ -15,6 +15,7 @@ import OneIndustriePage from "./pages/oneIndustrie";
 import Articles from "./pages/articles";
 import Contacts from "./pages/contactus";
 import Quote from "./components/quote";
+import PrivacyPolicy from "./pages/privacy-policy";
 import ThankYou from "./pages/thankyou";
 
 
@@ -36,6 +37,7 @@ function App() {
           <Route path="/articles/:id" element={<OneArticlePage />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/quote" element={<Quote />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/thank-you" element={<ThankYou />} />
         </Routes>
         <Footer />

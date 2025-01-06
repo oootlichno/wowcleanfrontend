@@ -43,15 +43,15 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <div className="Policy">
-        <p>
-          &copy; {currentYear} WOWClean by CPG. All rights reserved. Click on {" "}
-          <Link to="/privacy-policy" style={{ color: "#fff" }}>
-             Privacy Policy
-          </Link>{" "}
-          to read more.
-        </p>
-        </div>
+      <div className="Policy">
+  <p>
+    &copy; {currentYear} WOWClean by CPG. All rights reserved. Click on{" "}
+    <Link to="/privacy-policy" style={{ color: "#fff" }}>
+      Privacy Policy
+    </Link>{" "}
+    to read more.
+  </p>
+</div>
         <div className="footer-social">
           <a
             href="https://facebook.com"
