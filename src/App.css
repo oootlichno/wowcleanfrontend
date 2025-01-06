@@ -424,10 +424,10 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 24px;
+  padding: 16px 24px;
   margin-top: 80px;
   margin-bottom: 36px;
-  width: auto;
+  width: 220px;
   border-radius: 50px;
   border: 2px solid #d5051b;
   background: #d5051b;
@@ -444,6 +444,7 @@ p {
 }
 
 .about-quote-button {
+  font-family: Roboto;
   font-size: 24px;
   font-weight: 700;
   color: white;
@@ -451,6 +452,8 @@ p {
   border: none;
   cursor: pointer;
   text-align: center;
+  letter-spacing: 0.5px;
+  text-decoration: none;
 }
 
 
