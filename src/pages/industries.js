@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import backendURL from "../components/config";
-
+import shape from "../img/Shape.png";
 
 const Industries = () => {
   const [industries, setIndustries] = useState([]);
@@ -15,18 +15,29 @@ const Industries = () => {
     fetchIndustries();
   }, []);
 
+  
+  
   return (
     <div className="services-page">
-      <h1>Industries we work with</h1>
+      <div class="shape-container">
+        <img src={shape} alt="Background Shape" className="shape-image" />
+      </div>
+      <div className="services-title-page">Industries we work with</div>
       <div className="services-grid">
         {industries.map((industrie) => (
           <div className="servicepage-card" key={industrie.id}>
-            <img src={industrie.image_url} alt={industrie.name} />
-            <h2>{industrie.name}</h2>
-            <p>{industrie.description}</p>
-            <Link to={`/industries/${industrie.id}`} className="learn-more-btn">
-              Learn More
-            </Link>
+            <img
+              src={industrie.image_url}
+              alt={industrie.name}
+              className="service-icon"
+            />
+            <div className="services-text-page">
+            <h3>{industrie.name}</h3>
+            <p className="service-description">{industrie.description}</p>
+            <div className="learn-more-btn">
+              <Link to={`/industries/${industrie.id}`}>Learn More</Link>
+            </div>
+          </div>
           </div>
         ))}
       </div>
