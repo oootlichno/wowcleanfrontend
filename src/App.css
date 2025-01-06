@@ -904,49 +904,78 @@ p {
 
 /* OneServicePage */
 .one-service-page {
-  font-family: 'Gilroy-Medium', sans-serif;
   background-color: #f8f9fa;
-  padding: 40px 20px;
+  padding: 15px 50px;
 }
 
 .service-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  text-align: left;
-  padding: 40px 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+    max-width: 1440px;
+
+   
+}
+
+.breadcrumb{
+color: #555;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 200% */
+letter-spacing: 0.5px;
+}
+
+.back-button {
+color: #D5051B;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 120% */
+letter-spacing: 0.5px;
+margin-bottom: 32px;
 }
 
 .service-text {
   flex: 1;
   min-width: 300px;
+
 }
 
 .service-text h1 {
-  font-size: 36px;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 20px;
+color: #071D49;
+font-family: Poppins;
+font-size: 68px;
+font-style: normal;
+font-weight: 600;
+line-height: 110%; /* 74.8px */
+  margin-bottom: 32px;
 }
 
 .service-text p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #55565b;
-  margin-bottom: 20px;
+  color: #071D49;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 38.4px */
+  margin-bottom: 80px;
+
 }
 
 .service-image {
-  flex: 1;
-  min-width: 300px;
+display: flex;
+width: 684px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+align-self: stretch;
+border-radius: 8px;
 }
 
 .service-image img {
