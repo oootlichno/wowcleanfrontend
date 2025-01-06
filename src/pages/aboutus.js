@@ -17,7 +17,7 @@ const AboutUs = () => {
     <div className="about-page">
   {/* Background Shape */}
   <div class="shape-container">
-  <img src={shape} alt="Background Shape" className="shape-image"/>
+  <img src={shape} alt="Background Shape" className="shape-image-about" />
 </div>
 
   {/* About Header */}

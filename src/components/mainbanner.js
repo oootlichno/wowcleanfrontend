@@ -10,7 +10,7 @@ const Banner = () => {
       </div>
       <div className="banner">
         <div className="banner-text">
-          <h1>WOWCLEAN by CPG</h1>
+          <h1>WOWCLEAN</h1>
           <h2>One Toilet at a Time</h2>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
