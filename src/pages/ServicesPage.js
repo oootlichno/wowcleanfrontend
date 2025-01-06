@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import backendURL from "../components/config";
+import shape from "../img/Shape.png";
+
 
 
 const ServicesPage = () => {
@@ -17,20 +19,30 @@ const ServicesPage = () => {
 
   return (
     <div className="services-page">
-      <h1>Our Services</h1>
+      <div class="shape-container">
+  <img src={shape} alt="Background Shape" className="shape-image"/>
+</div>
+<div className="services-title-page">Our Services</div>
       <div className="services-grid">
         {services.map((service) => (
           <div className="servicepage-card" key={service.id}>
-            <img src={service.image} alt={service.name} />
-            <h2>{service.name}</h2>
-            <p>{service.description}</p>
-            <Link to={`/services/${service.id}`} className="learn-more-btn">
+            <img src={service.image} alt={service.name} className="service-icon"/>
+            <div className="services-text-page">
+            <h3>{service.name}</h3>
+            <p className="service-description">{service.description}</p>
+            <div className="learn-more-btn">
+            <Link to={`/services/${service.id}`}>
               Learn More
             </Link>
           </div>
+          </div>
+          </div>
+
         ))}
       </div>
+      
     </div>
+
   );
 };
 

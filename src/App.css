@@ -824,46 +824,78 @@ p {
 /*Services page*/
 
 .services-page {
-  padding: 20px;
-  text-align: center;
+  position: relative;
+  background-color: white;
+  width: 100%;
+  padding: 80px 50px 80px 50px;
+  overflow: hidden;
+
+}
+
+.services-title-page {
+  color: #071D49;
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  font-family: Roboto;
+  margin-bottom: 34px;
+  text-align: left;
+  position: relative;
+  z-index: 1;
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* Create 3 columns */
-  gap: 20px;
-  /* Space between cards */
-  width: 100%;
-  max-width: 1200px;
-  /* Prevent the grid from being too wide */
+  column-gap: 80px;
+  row-gap: 32px;
+  position: relative;
+  z-index: 1;
   margin: 0 auto;
-  /* Center the grid */
-  padding: 20px;
+  width: 100%;
+}
+
+.services-text-page {
+    flex-grow: 1; 
+    padding: 20px 20px 27px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+
+}
+
+.service-icon {
+  height: 244px;
 }
 
 .servicepage-card {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: white;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  min-height: 350px;
 }
 
-
-.servicepage-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
 
 .learn-more-btn {
-  margin-top: 10px;
   display: inline-block;
+  margin: 20px auto 0;
   padding: 10px 20px;
   background: #d30000;
   color: white;
-  border-radius: 5px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
   text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
 }
 
 .learn-more-btn:hover {
@@ -1139,16 +1171,16 @@ p {
   width: 100%;
   padding: 90px;
   overflow: hidden;
-  
+
 }
 
-.product-container{
-margin: 0;
+.product-container {
+  margin: 0;
 }
 
 
 .products-title {
-font-family: Roboto;
+  font-family: Roboto;
   margin-bottom: 34px;
   text-align: left;
   position: relative;
@@ -1187,7 +1219,7 @@ font-family: Roboto;
 }
 
 
-.product-description  {
+.product-description {
   color: #071D49;
   text-align: center;
   margin-bottom: 20px;
@@ -1218,7 +1250,7 @@ font-family: Roboto;
   border: 2px solid #D5051B;
   background: none;
   color: #D5051B;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
