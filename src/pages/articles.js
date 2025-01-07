@@ -7,6 +7,7 @@ import ArticlesCarousel from "../components/ArticlesCarousel";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
+  const [visibleArticles, setVisibleArticles] = useState(9); // State to control number of visible articles
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -20,16 +21,22 @@ const Articles = () => {
     fetchArticles();
   }, []);
 
+  const handleViewAll = () => {
+    setVisibleArticles((prevVisible) =>
+      prevVisible + 9 > articles.length ? articles.length : prevVisible + 9
+    );
+  };
+
   return (
     <div className="articles-page">
       {/* Background Shape */}
       <div className="shape-container">
         <img src={shape} alt="Background Shape" className="shape-image" />
       </div>
-  
+
       {/* Carousel Section */}
       <ArticlesCarousel articles={articles} />
-  
+
       {/* All Articles Section */}
       <div className="services-title-page">All Articles</div>
       <p className="article-about">
@@ -37,7 +44,7 @@ const Articles = () => {
         team, blending expertise and inspiration to keep your spaces spotless.
       </p>
       <div className="recent-articles-grid">
-        {articles.map((article) => (
+        {articles.slice(0, visibleArticles).map((article) => (
           <article className="article-card" key={article.id}>
             {/* Article Image */}
             <img
@@ -46,24 +53,22 @@ const Articles = () => {
               className="articles-image"
             />
 
-                    {/* Meta (Date) */}
-                    <div className="articles-meta">
-                {new Date(article.published_date).toLocaleDateString("en-GB", {
-                  day: "2-digit",
-                  month: "short",
-                  year: "numeric",
-                })}
-              </div>
-  
+            {/* Meta (Date) */}
+            <div className="articles-meta">
+              {new Date(article.published_date).toLocaleDateString("en-GB", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric",
+              })}
+            </div>
+
             {/* Article Content */}
             <div className="r-article-content">
-      
-  
               {/* Title */}
               <header>
                 <div className="articles-title">{article.title}</div>
               </header>
-  
+
               {/* Read More Link */}
               <Link
                 to={`/articles/${article.id}`}
@@ -76,7 +81,18 @@ const Articles = () => {
           </article>
         ))}
       </div>
+
+      {/* "View All" Button */}
+      {/* articles.length > 0 */ visibleArticles < articles.length && (
+        <div className="view-all-container">
+          <button className="view-all-btn" onClick={handleViewAll}>
+            View All →
+          </button>
+        </div>
+      )}
     </div>
   );
-  };
+};
+
 export default Articles;
+

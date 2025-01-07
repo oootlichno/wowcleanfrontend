@@ -1246,6 +1246,38 @@ border-radius: 8px;
   background: rgba(0, 0, 0, 0.7);
 }
 
+/* View All Button */
+
+
+.view-all-container {
+  display: flex;
+  justify-content: flex-end; 
+  margin-top: 72px;
+  z-index: 2;
+}
+
+.view-all-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 24px;
+  font-family: Poppins, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #d5051b;
+  border: 2px solid #d5051b;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.view-all-btn:hover {
+  background: #ffffff;
+  color: #d5051b;
+  border-color: #d5051b;
+}
+
 /* One Article Page */
 
 .one-article-page {
