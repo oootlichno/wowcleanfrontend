@@ -25,7 +25,6 @@ const ArticlesCarousel = ({ articles }) => {
     <div className="articles-carousel">
       <h2 className="services-title-page">Recent Articles</h2>
       <p className="article-about">Here’s what we've been up to recently.</p>
-
       <div className="carousel-controls">
         <button className="carousel-btn left" onClick={scrollLeft}>
           ←
@@ -34,7 +33,6 @@ const ArticlesCarousel = ({ articles }) => {
           →
         </button>
       </div>
-
       <div id="carousel-container" className="carousel-container">
         {latestArticles.map((article) => (
           <div className="article-card" key={article.id}>

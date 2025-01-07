@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+/* import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import backendURL from "../components/config";
-
+import shape from "../img/Shape.png";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -17,28 +17,37 @@ const Articles = () => {
 
   return (
     <div className="articles-page">
-{/*       <h1 className="page-title">Latest Articles</h1>
- */}      <div className="articles-grid">
-        {articles.map((article) => (
-          <div className="article-card" key={article.id}>
-            <img src={article.image} alt={article.title} className="article-image" />
-            <h2 className="articles-title">{article.title}</h2>
-            <p className="article-text">
-              {article.text.length > 100
-                ? `${article.text.substring(0, 100)}...`
-                : article.text}
-            </p>
-            <Link to={`/articles/${article.id}`} className="read-more-btn">
-              Read More
-            </Link>
-            <p className="article-meta">
-              Published on: {new Date(article.published_date).toLocaleDateString()}
-            </p>
+  <div className="shape-container">
+    <img src={shape} alt="Background Shape" className="shape-image" />
+  </div>
+  <div className="services-title-page">Recent Articles</div>
+  <p className="article-about">Here’s what we've been up to recently.</p>
+  <div className="recent-articles-grid">
+    {articles.map((article) => (
+      <div className="article-card" key={article.id}>
+        <img
+          src={article.image}
+          alt={article.title}
+          className="articles-image"
+        />
+        <div className="r-article-content">
+          <div className="articles-meta">
+            {new Date(article.published_date).toLocaleDateString("en-GB", {
+              day: "2-digit",
+              month: "short",
+              year: "numeric",
+            })}
           </div>
-        ))}
+          <div className="articles-title">{article.title}</div>
+          <Link to={`/articles/${article.id}`} className="read-more">
+            Read More →
+          </Link>
+        </div>
       </div>
-    </div>
+    ))}
+  </div>
+</div>
   );
 };
 
-export default Articles;
+export default Articles; */
