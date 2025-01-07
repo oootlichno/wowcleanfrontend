@@ -3,7 +3,6 @@ import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import backendURL from "../components/config";
 
-
 const OneArticlePage = () => {
   const { id } = useParams();
   const [article, setArticle] = useState(null);
@@ -17,7 +16,7 @@ const OneArticlePage = () => {
 
     const fetchLatestArticles = async () => {
       const response = await axios.get(`${backendURL}/api/articles`);
-      setLatestArticles(response.data.slice(0, 5)); 
+      setLatestArticles(response.data.slice(0, 3)); // Limit to 3 articles for the sidebar
     };
 
     fetchArticle();
@@ -28,30 +27,119 @@ const OneArticlePage = () => {
 
   return (
     <div className="one-article-page">
-    <div className="article-content">
-      <h1 className="article-title">{article.title}</h1>
-      <img className="article-image" src={article.image} alt={article.title} />
-      <div className="article-text" dangerouslySetInnerHTML={{ __html: article.text }}></div>
-      <p className="article-meta">Published on: {article.published_date}</p>
-    </div>
-    <div className="latest-articles">
-      <h2>Latest Posts</h2>
-      <ul>
-        {latestArticles.map((latest) => (
-          <li key={latest.id}>
-            <Link to={`/articles/${latest.id}`}>
-            <img src={latest.image} alt={latest.title} />
-            <div>
-              <h3>{latest.title}</h3>
-              <p>{latest.published_date}</p>
-            </div>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+
+      {/* Main Image Content */}
+<div className="img-article-content">
+  <img className="article-image" src={article.image} alt={article.title} />
+  <div className="gradient-overlay"></div>
+  <div className="article-header">
+
+     {/* Path (Breadcrumbs) */}
+     <nav className="breadcrumbs">
+      <span>Articles</span> &nbsp;—&nbsp;
+      <span>Recent Articles</span> &nbsp;—&nbsp;
+      <span>{article.title}</span>
+    </nav>
+    
+    {/* Back Button */}
+    <Link to="/articles" className="back-link">
+      ← Back
+    </Link>
   </div>
+  {/* Title */}
+  <h1 className="article-title">{article.title}</h1>
+</div>
+      {/* Main Text Content */}
+      <div className="text-article-content">
+  {/* Article Main Content */}
+  <div className="article-main">
+    <p className="article-meta">
+      Published on{" "}
+      {new Date(article.published_date).toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric",
+      })}
+    </p>
+    <div
+      className="article-text"
+      dangerouslySetInnerHTML={{ __html: article.text }}
+    ></div>
+  </div>
+
+  {/* Latest Articles */}
+  <aside className="latest-articles">
+  <h2 className="latest-articles-title">Latest Posts</h2>
+  <ul className="latest-articles-list">
+    {latestArticles.map((latest) => (
+      <li key={latest.id} className="latest-article-item">
+        <Link to={`/articles/${latest.id}`} className="latest-article-link">
+          <img
+            src={latest.image}
+            alt={latest.title}
+            className="latest-article-image"
+          />
+          <div className="latest-article-info">
+          <p className="latest-article-meta">
+              Published on{" "}
+              {new Date(latest.published_date).toLocaleDateString("en-GB", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric",
+              })}
+            </p>
+            <h3 className="latest-article-title">{latest.title}</h3>
+            <Link
+          to={`/articles/${latest.id}`}
+          className="latest-article-read-more"
+          aria-label={`Read more about ${latest.title}`}
+        >
+          Read More →
+        </Link>
+          </div>
+        </Link>
+
+      </li>
+    ))}
+  </ul>
+</aside>
+</div>
+
+        {/* Share to Socials */}
+        <div className="share-socials">
+          <span className="share-label">Share with</span>
+          <a
+            href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+          >
+            <i className="fab fa-facebook"></i> SHARE
+          </a>
+          <a
+            href={`https://www.instagram.com/`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+          >
+            <i className="fab fa-instagram"></i> SHARE
+          </a>
+          <a
+            href={`https://www.linkedin.com/shareArticle?mini=true&url=${window.location.href}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+          >
+            <i className="fab fa-linkedin"></i> SHARE
+          </a>
+        </div>
+      </div>
+    
   );
 };
 
 export default OneArticlePage;
+
+
+
+
