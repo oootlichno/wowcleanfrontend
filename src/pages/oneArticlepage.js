@@ -74,11 +74,15 @@ const OneArticlePage = () => {
     {latestArticles.map((latest) => (
       <li key={latest.id} className="latest-article-item">
         <Link to={`/articles/${latest.id}`} className="latest-article-link">
-          <img
+        
+
+<div class="latest-article-image-container">
+<img
             src={latest.image}
             alt={latest.title}
             className="latest-article-image"
           />
+</div>
           <div className="latest-article-info">
           <p className="latest-article-meta">
               Published on{" "}
@@ -105,34 +109,40 @@ const OneArticlePage = () => {
 </aside>
 </div>
 
-        {/* Share to Socials */}
-        <div className="share-socials">
-          <span className="share-label">Share with</span>
-          <a
-            href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-link"
-          >
-            <i className="fab fa-facebook"></i> SHARE
-          </a>
-          <a
-            href={`https://www.instagram.com/`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-link"
-          >
-            <i className="fab fa-instagram"></i> SHARE
-          </a>
-          <a
-            href={`https://www.linkedin.com/shareArticle?mini=true&url=${window.location.href}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-link"
-          >
-            <i className="fab fa-linkedin"></i> SHARE
-          </a>
-        </div>
+{/* Share to Socials */}
+<div className="share-socials">
+  <div className="share-label">Share with</div>
+  <div className="share-item facebook">
+    <a
+      href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="social-link"
+    >
+      <i className="fab fa-facebook"></i> SHARE
+    </a>
+  </div>
+  <div className="share-item instagram">
+    <a
+      href={`https://www.instagram.com/`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="social-link"
+    >
+      <i className="fab fa-instagram"></i> SHARE
+    </a>
+  </div>
+  <div className="share-item linkedin">
+    <a
+      href={`https://www.linkedin.com/shareArticle?mini=true&url=${window.location.href}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="social-link"
+    >
+      <i className="fab fa-linkedin"></i> SHARE
+    </a>
+  </div>
+</div>
       </div>
     
   );

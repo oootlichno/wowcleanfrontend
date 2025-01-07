@@ -1498,18 +1498,37 @@ p {
   gap: 18px;
 }
 
-.latest-article-image {
+.latest-article-image-container {
+  position: relative;
   width: 80px;
   height: 80px;
-  border-radius: 8px;
+  border-radius: 20px;
+  overflow: hidden; 
+}
+
+.latest-article-image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(24, 59, 86, 0.0001) 0%, rgba(22, 49, 70, 0.453847) 45.38%, #152532 100%);
+  border-radius: 8px; 
+  pointer-events: none;  
+}
+
+.latest-article-image {
+  display: block;
+  width: 110px;
+  height: 110px;
+  border-radius: 20px;
   object-fit: cover;
   background: linear-gradient(180deg, rgba(24, 59, 86, 0.0001) 0%, rgba(22, 49, 70, 0.453847) 45.38%, #152532 100%);
 
+
 }
 
-.latest-article-info {
-  flex: 1;
-}
 
 
 .latest-article-meta {
@@ -1541,28 +1560,48 @@ p {
 /* Share Socials */
 .share-socials {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid #e9ecef;
-  gap: 24px;
+  margin: 100px;
+  gap: 110px;
+
 }
 
 .share-label {
-  font-size: 16px;
-  color: #6c757d;
-  font-weight: 600;
+  color: #757575;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 166.667% */
 }
 
+.share-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 43px;
+  padding: 0 110px; /* Left and right padding */
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+
+}
 .social-link {
   display: flex;
   align-items: center;
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
-  color: #1565d8;
   gap: 8px;
-  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .social-link i {
@@ -1574,6 +1613,21 @@ p {
 }
 
 
+.facebook {
+  color: #3B5998; 
+  border-bottom: 1px solid #3B5998;
+
+}
+
+.instagram {
+  color: #E1306C; 
+  border-bottom: 1px solid #E1306C;
+}
+
+.linkedin {
+  color: #0077b5; 
+  border-bottom: 1px solid #0077b5;
+}
 
 
 
