@@ -22,38 +22,61 @@ const Articles = () => {
 
   return (
     <div className="articles-page">
+      {/* Background Shape */}
       <div className="shape-container">
         <img src={shape} alt="Background Shape" className="shape-image" />
       </div>
+  
+      {/* Carousel Section */}
       <ArticlesCarousel articles={articles} />
+  
+      {/* All Articles Section */}
       <div className="services-title-page">All Articles</div>
-      <p className="article-about">Fresh ideas for a cleaner life! Explore trends, tips, and stories from our team, blending expertise and inspiration to keep your spaces spotless.</p>
+      <p className="article-about">
+        Fresh ideas for a cleaner life! Explore trends, tips, and stories from our
+        team, blending expertise and inspiration to keep your spaces spotless.
+      </p>
       <div className="recent-articles-grid">
         {articles.map((article) => (
-          <div className="article-card" key={article.id}>
+          <article className="article-card" key={article.id}>
+            {/* Article Image */}
             <img
               src={article.image}
-              alt={article.title}
+              alt={`Thumbnail for ${article.title}`}
               className="articles-image"
             />
-            <div className="r-article-content">
-              <div className="articles-meta">
+
+                    {/* Meta (Date) */}
+                    <div className="articles-meta">
                 {new Date(article.published_date).toLocaleDateString("en-GB", {
                   day: "2-digit",
                   month: "short",
                   year: "numeric",
                 })}
               </div>
-              <div className="articles-title">{article.title}</div>
-              <Link to={`/articles/${article.id}`} className="read-more">
+  
+            {/* Article Content */}
+            <div className="r-article-content">
+      
+  
+              {/* Title */}
+              <header>
+                <div className="articles-title">{article.title}</div>
+              </header>
+  
+              {/* Read More Link */}
+              <Link
+                to={`/articles/${article.id}`}
+                className="read-more"
+                aria-label={`Read more about ${article.title}`}
+              >
                 Read More →
               </Link>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </div>
   );
-};
-
+  };
 export default Articles;
