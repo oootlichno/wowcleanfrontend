@@ -24,14 +24,14 @@ const ArticlesCarousel = ({ articles }) => {
     <div className="articles-carousel">
       <h2 className="carousel-title">Recent Articles</h2>
       <p className="article-about">Here’s what we've been up to recently.</p>
-      <div className="carousel-controls">
+  {/*     <div className="carousel-controls">
         <button className="carousel-btn left" onClick={scrollLeft}>
           ←
         </button>
         <button className="carousel-btn right" onClick={scrollRight}>
           →
         </button>
-      </div>
+      </div> */}
       <div id="carousel-container" className="carousel-container">
         {latestArticles.map((article) => (
           <div className="carousel-article-card" key={article.id}>
@@ -40,16 +40,17 @@ const ArticlesCarousel = ({ articles }) => {
               alt={article.title}
               className="carousel-articles-image"
             />
-            <div className="carousel-article-content">
-              <div className="carousel-articles-meta">
+                 <div className="carousel-articles-meta">
                 {new Date(article.published_date).toLocaleDateString("en-GB", {
                   day: "2-digit",
                   month: "short",
                   year: "numeric",
                 })}
               </div>
+            <div className="carousel-article-content">
+         
               <div className="carousel-articles-title">{article.title}</div>
-              <Link to={`/articles/${article.id}`} className="carousel-read-more">
+              <Link to={`/articles/${article.id}`} className="read-more">
                 Read More →
               </Link>
             </div>

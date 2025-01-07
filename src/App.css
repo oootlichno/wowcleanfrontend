@@ -1115,6 +1115,7 @@ border-radius: 8px;
   width: 100%;
   overflow: hidden;
   margin-bottom: 40px;
+  margin-bottom: 120px;
 }
 
 .carousel-title {
@@ -1129,35 +1130,23 @@ border-radius: 8px;
   text-align: left;
   position: relative;
   z-index: 1;
-
-
-
+  
 
 }
 
-.carousel-about {
-  color: #071d49;
-  font-family: Poppins;
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 40px;
-  text-align: left;
-position: relative;
-z-index: 1;
-}
 
 .carousel-container {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  gap: 50px; /* Gap between cards */
+  gap: 36px; 
   -webkit-overflow-scrolling: touch;
 }
 
 .carousel-article-card {
-  flex: 0 0 calc(40% - 50px); 
-  max-width: calc(40% - 50px);
+  flex: 0 0 calc(50% - 25px); 
+  max-width: calc(50% - 25px);
   position: relative;
   border-radius: 8px;
   overflow: hidden;
@@ -1177,57 +1166,58 @@ z-index: 1;
 
 .carousel-article-content {
   position: absolute;
+  gap: 85px;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 20px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
-  color: #fff;
+  color: #ffffff;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .carousel-articles-meta {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 40px;
+  left: 23px;
   background: #fff;
   color: #1565d8;
   font-family: Poppins;
   font-size: 14px;
   font-weight: 600;
-  padding: 4px 12px;
+  padding: 11px 20px;
   border-radius: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-articles-title {
   color: #fff;
-  font-family: Poppins;
-  font-size: 24px;
+  margin-left: 55px; 
+  width: 521px;
+   font-family: Poppins;
   font-weight: 600;
-  margin-top: 40px;
-}
-
-.carousel-read-more {
-  display: inline-block;
-  margin-top: 10px;
-  text-decoration: none;
-  color: #FFF;
-  align-self: flex-end;
-  font-family: Poppins;
-  font-size: 16px;
+  margin-bottom: 16px;
+  font-size: 36px;
   font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+  font-weight: 600;
+  line-height: 110%;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  align-self: flex-start;
 }
 
-.carousel-controls {
+
+/* .carousel-controls {
   position: absolute;
   top: 50%;
   width: 100%;
   display: flex;
   justify-content: space-between;
   transform: translateY(-50%);
-}
+} */
 
 .carousel-btn {
   background: rgba(0, 0, 0, 0.5);
@@ -1241,15 +1231,16 @@ z-index: 1;
   align-items: center;
   cursor: pointer;
   font-size: 18px;
+  margin-bottom: 5px;
 }
 
-.carousel-btn.left {
+/* .carousel-btn.left {
   left: 10px;
 }
 
 .carousel-btn.right {
   right: 10px;
-}
+} */
 
 .carousel-btn:hover {
   background: rgba(0, 0, 0, 0.7);
