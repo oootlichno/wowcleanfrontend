@@ -1028,7 +1028,6 @@ z-index: 1;
 }
 
 
-
 .recent-articles-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1049,8 +1048,6 @@ z-index: 1;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
   z-index: 1;
-  min-height: 350px;
-  width: 630px;
   height: 693px;
   background: linear-gradient(180deg, rgba(24, 59, 86, 0.00) 0%, rgba(22, 49, 70, 0.45) 45.38%, #152532 100%);
 }
@@ -1118,6 +1115,151 @@ line-height: normal;
 
 }
 
+/* Articles Carousel */
+.articles-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.carousel-title {
+  color: #071d49;
+  font-family: Poppins;
+  font-weight: 600;
+  margin-bottom: 16px;
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+
+
+
+
+}
+
+.carousel-about {
+  color: #071d49;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-align: left;
+position: relative;
+z-index: 1;
+}
+
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  gap: 50px; /* Gap between cards */
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-article-card {
+  flex: 0 0 calc(40% - 50px); 
+  max-width: calc(40% - 50px);
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  background: white;
+  scroll-snap-align: start;
+  z-index: 1;
+  height: 693px;
+
+}
+
+.carousel-articles-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-article-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  color: #fff;
+}
+
+.carousel-articles-meta {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #fff;
+  color: #1565d8;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-articles-title {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+.carousel-read-more {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #FFF;
+  align-self: flex-end;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-btn {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.carousel-btn.left {
+  left: 10px;
+}
+
+.carousel-btn.right {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
 
 /* One Article Page */
 
