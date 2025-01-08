@@ -98,7 +98,7 @@ const ContactForm = () => {
 </div>
 
       <div className="quote-button-container">
-      <button type="submit" className="submit-btn">Send a message</button>
+      <button type="submit" className="quote-button-form">Send a message</button>
       {status && <p className="form-status">{status}</p>}
 </div>
 

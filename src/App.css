@@ -560,18 +560,19 @@ p {
 
 /* Button Styles */
 .quote-button-container {
-  display: flex;
-  justify-content: flex-end;
+
+  text-align: right;
+  padding: 20px 0px 20px 24px;
 }
 
 .quote-button-form {
   background-color: #D5051B;
   color: #FFFFFF;
   padding: 12px 24px;
-  border-radius: 25px;
+  border-radius: 50px;
   border: 2px solid #D5051B;
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-family: "Roboto";
+  font-size: 24px;
   font-weight: 700;
   transition: all 0.3s ease;
 }
@@ -1974,40 +1975,6 @@ p {
   resize: none;
 }
 
-/* Submit Button */
-.quote-button-container {
-  text-align: right;
-  padding: 20px 24px 20px 24px;
-  border-radius: 50px;
-
-
-}
-
-.submit-btn {
-  display: inline-block;
-  background-color: #d5051b;
-  color: #ffffff;
-  padding: 12px 32px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 50px;
-  font-family: Roboto;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  text-decoration: none;
-
-}
-
-.submit-btn:hover {
-  background-color: #a90415;
-  box-shadow: 0px 4px 10px rgba(213, 5, 27, 0.3);
-}
 
 /* Status Message */
 .form-status {
