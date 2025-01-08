@@ -7,34 +7,37 @@ import office_image from "../img/Office_contact.png";
 
 const ContactUs = () => {
   return (
-    <div className="contact-page">
-    {/* Background Shape */}
-    <div className="shape-container">
-      <img src={shape} alt="Background Shape" className="shape-image" />
-    </div>
-  
-    {/* Contact Information Section */}
-    <div className="contact-info-section">
-      <div className="contacts-title">Our contact information</div>
-      <div className="contacts-container">
-      <div className="contact-info-grid">
+<div className="contact-page">
+  {/* Background Shape */}
+  <div className="shape-container">
+    <img src={shape} alt="Background Shape" className="shape-image" />
+  </div>
 
+  {/* Contact Information Section */}
+  <div className="contact-info-section">
+    <div className="contacts-title">Our contact information</div>
+    <div className="contacts-container">
+      <div className="contact-info-grid">
         <div className="contact-card">
           <img src={office_image} alt="Office Icon" className="contacts-icon" />
-          <h2>Office Address</h2>
-          <p>Puławska 233, 02-715 Warsawa, Poland
-</p>
+          <div className="contact-card-text">
+          <h2>Office Address:</h2>
+          <p>Puławska 233, 02-715 Warsaw, Poland</p>
+          </div>
         </div>
-        
         <div className="contact-card">
           <img src={email_image} alt="Email Icon" className="contacts-icon" />
-          <h2>Email</h2>
+          <div className="contact-card-text">
+          <h2>Email:</h2>
           <p>support@wowclean.com</p>
+        </div>
         </div>
         <div className="contact-card">
           <img src={phone_image} alt="Phone Icon" className="contacts-icon" />
+          <div className="contact-card-text">
           <h2>Phone No:</h2>
           <p>Head office: +1 555-555-5555</p>
+        </div>
         </div>
       </div>
       <div className="google-map">
@@ -48,8 +51,8 @@ const ContactUs = () => {
           loading="lazy"
         ></iframe>
       </div>
-      </div>
     </div>
+  </div>
   
     {/* Contact Form Section */}
     <div className="contact-form-section">

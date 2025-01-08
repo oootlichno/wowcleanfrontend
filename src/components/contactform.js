@@ -34,6 +34,9 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="contact-form">
+      <div className='contact-form-section'>
+      <div className='contact-form-column'>
+      <label htmlFor="contact-form-label">First Name</label>
       <input
         type="text"
         name="first_name"
@@ -42,6 +45,9 @@ const ContactForm = () => {
         placeholder="First Name"
         required
       />
+      </div>
+      <div className='contact-form-column'>
+      <label htmlFor="contact-form-label">Last Name</label>
       <input
         type="text"
         name="last_name"
@@ -50,6 +56,11 @@ const ContactForm = () => {
         placeholder="Last Name"
         required
       />
+      </div>
+      </div>
+      <div className='contact-form-section'>
+      <div className='contact-form-column'>
+      <label htmlFor="contact-form-label">Email</label>
       <input
         type="email"
         name="email"
@@ -58,6 +69,9 @@ const ContactForm = () => {
         placeholder="Email Address"
         required
       />
+      </div>
+      <div className='contact-form-column'>
+      <label htmlFor="contact-form-label">Phone no</label>
       <input
         type="text"
         name="phone"
@@ -66,6 +80,9 @@ const ContactForm = () => {
         placeholder="Phone No"
         required
       />
+      </div>
+      </div>
+      <div className='contact-form-section'>
       <textarea
         name="message"
         value={formData.message}
@@ -73,9 +90,11 @@ const ContactForm = () => {
         placeholder="Message"
         required
       ></textarea>
+      </div>
+      <div className="quote-button-container">
       <button type="submit" className="submit-btn">Send a message</button>
       {status && <p className="form-status">{status}</p>}
-
+</div>
     </form>
     
   );

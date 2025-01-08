@@ -1467,11 +1467,12 @@ p {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
+
 .latest-article-info {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
 .latest-articles-list {
@@ -1503,7 +1504,7 @@ p {
   width: 80px;
   height: 80px;
   border-radius: 20px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .latest-article-image-container::after {
@@ -1514,8 +1515,8 @@ p {
   width: 100%;
   height: 100%;
   background: linear-gradient(180deg, rgba(24, 59, 86, 0.0001) 0%, rgba(22, 49, 70, 0.453847) 45.38%, #152532 100%);
-  border-radius: 8px; 
-  pointer-events: none;  
+  border-radius: 8px;
+  pointer-events: none;
 }
 
 .latest-article-image {
@@ -1573,7 +1574,8 @@ p {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 30px; /* 166.667% */
+  line-height: 30px;
+  /* 166.667% */
 }
 
 .share-item {
@@ -1582,7 +1584,8 @@ p {
   justify-content: center;
   width: auto;
   height: 43px;
-  padding: 0 110px; /* Left and right padding */
+  padding: 0 110px;
+  /* Left and right padding */
 }
 
 .social-links {
@@ -1592,6 +1595,7 @@ p {
 
 
 }
+
 .social-link {
   display: flex;
   align-items: center;
@@ -1614,18 +1618,18 @@ p {
 
 
 .facebook {
-  color: #3B5998; 
+  color: #3B5998;
   border-bottom: 1px solid #3B5998;
 
 }
 
 .instagram {
-  color: #E1306C; 
+  color: #E1306C;
   border-bottom: 1px solid #E1306C;
 }
 
 .linkedin {
-  color: #0077b5; 
+  color: #0077b5;
   border-bottom: 1px solid #0077b5;
 }
 
@@ -1730,87 +1734,115 @@ p {
 /* Contacts */
 .contact-page {
   font-family: "Poppins", sans-serif;
-  padding: 40px;
   background-color: white;
-  
+  overflow: hidden;
+  padding-left: 80px;
+  padding-right: 80px;
+  position: relative;
+
 }
 
 
 /* Title Section */
 .contacts-title {
-  font-size: 36px;
-  font-weight: 600;
+
   color: #071d49;
-  margin-bottom: 32px;
-  text-align: left; /* Change from center if needed */
-  position: relative; /* Ensure it's positioned properly */
+  margin-bottom: 70px;
+  text-align: left;
+  position: relative;
   z-index: 2;
+  font-family: Poppins;
+  font-size: 68px;
+  font-weight: 600;
+  line-height: 74.8px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
 
 }
 
-.contacts-container{
+.contacts-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Align content properly */
-  gap: 32px; /* Add proper spacing between sections */
-  margin-top: 40px; /* Space from the title */
-
+  align-items: flex-start;
+  /* Align content properly */
+  gap: 32px;
 }
 
 /* Contact Information Section */
 
 .contact-info-section {
   position: relative;
-  z-index: 2; /* Ensure it's above the background */
+  /* Ensure it's relative to allow layering */
+  z-index: 1;
+  /* Higher than the shape-container */
+  padding-top: 80px;
+  /* Ensure spacing from the top */
 }
 
 .contact-info-grid {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  max-width: 400px; /* Ensure it doesn't exceed design limits */
-  z-index: 2;
+  gap: 60px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-right: 85px;
+  max-width: 400px;
+  /* Ensure it doesn't exceed design limits */
 
+}
+
+.contact-card-text {
+  gap: 6px;
 }
 
 .contact-card {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 20px;
-  
+  gap: 32px;
+
 }
 
 .contact-card:hover {
-  transform: translateY(-4px); /* Slight lift on hover */
+  transform: translateY(-4px);
+  /* Slight lift on hover */
 }
 
 .contacts-icon {
-  width: 50px; /* Match Figma size */
-  height: 50px;
+  width: 24px;
+  height: 24px;
 }
 
 .contact-card h2 {
-  font-size: 18px;
-  font-weight: 700; /* Bold header */
-  color: #071d49;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 36px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
 }
 
 .contact-card p {
+  font-family: Poppins;
   font-size: 16px;
-  color: #6c757d;
-  margin: 0;
+  font-weight: 400;
+  line-height: 25.6px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
 }
 
 /* Google Map */
 .google-map {
-flex: 1; /* Allow map to grow naturally */
-max-width: 800px;
-height: 400px;
-border-radius: 8px;
-overflow: hidden;
-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-z-index: 2;
+  flex: 1;
+  /* Allow map to grow naturally */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
 
 }
@@ -1819,7 +1851,6 @@ z-index: 2;
 
 /* Contact Form Section */
 .contact-form-section {
-  margin-top: 80px;
   text-align: center;
 }
 
@@ -1842,7 +1873,7 @@ z-index: 2;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 5px;
 }
 
 .contact-form .form-row {
@@ -1875,6 +1906,12 @@ z-index: 2;
   background: #c9302c;
 }
 
+.contact-form-section{
+
+}
+.contact-form-textarea{
+
+}
 
 /*Thank you*/
 .thank-you-container {
@@ -2085,5 +2122,5 @@ z-index: 2;
 
 
 .contact-info-grid {
-  max-width: 100%; 
+  max-width: 100%;
 }
