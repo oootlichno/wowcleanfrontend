@@ -1835,6 +1835,7 @@ p {
 /* Google Map */
 .google-map {
   flex: 1;
+  max-height: 400px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -1905,6 +1906,8 @@ p {
   border-radius: 16px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
 }
 
 .contact-form-column {
@@ -1937,7 +1940,7 @@ p {
 .contact-form-column input,
 .contact-form-column textarea {
 
-  color: #718EBF;
+  color: #071d49;
   padding: 12px 16px;
   border-radius: 15px;
   border: 1px solid #DFEAF2;
@@ -1946,7 +1949,6 @@ p {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   font-family: Poppins;
   font-size: 16px;
-  font-style: italic;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
