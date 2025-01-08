@@ -1729,69 +1729,110 @@ p {
 
 /* Contacts */
 .contact-page {
-  background: #f6faff;
+  font-family: "Poppins", sans-serif;
   padding: 40px;
-  font-family: 'Gilroy-Medium', sans-serif;
+  background-color: white;
+  
 }
 
-.contact-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
 
-.contact-header h1 {
+/* Title Section */
+.contacts-title {
   font-size: 36px;
-  color: black;
-  font-family: 'Gilroy-Bold', sans-serif;
-  margin-bottom: 20px;
+  font-weight: 600;
+  color: #071d49;
+  margin-bottom: 32px;
+  text-align: left; /* Change from center if needed */
+  position: relative; /* Ensure it's positioned properly */
+  z-index: 2;
+
 }
 
-.contact-header p {
-  font-size: 16px;
-  color: #969696;
-  font-family: 'Gilroy-Medium', sans-serif;
-  line-height: 1.6;
-}
-
-/* Contact Container */
-.contact-container {
+.contacts-container{
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
+  align-items: flex-start; /* Align content properly */
+  gap: 32px; /* Add proper spacing between sections */
+  margin-top: 40px; /* Space from the title */
+
 }
 
 /* Contact Information Section */
-.contact-info {
-  flex: 1;
-  min-width: 300px;
+
+.contact-info-section {
+  position: relative;
+  z-index: 2; /* Ensure it's above the background */
+}
+
+.contact-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 400px; /* Ensure it doesn't exceed design limits */
+  z-index: 2;
+
 }
 
 .contact-card {
-  background: white;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  
+}
+
+.contact-card:hover {
+  transform: translateY(-4px); /* Slight lift on hover */
+}
+
+.contacts-icon {
+  width: 50px; /* Match Figma size */
+  height: 50px;
 }
 
 .contact-card h2 {
-  font-size: 24px;
-  color: black;
-  font-family: 'Gilroy-Bold', sans-serif;
-  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700; /* Bold header */
+  color: #071d49;
 }
 
 .contact-card p {
   font-size: 16px;
-  color: #969696;
-  font-family: 'Gilroy-Medium', sans-serif;
+  color: #6c757d;
+  margin: 0;
 }
 
-/* Contact us */
-.contact-form-container {
-  flex: 1;
-  min-width: 400px;
+/* Google Map */
+.google-map {
+flex: 1; /* Allow map to grow naturally */
+max-width: 800px;
+height: 400px;
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+z-index: 2;
+
+
+}
+
+
+
+/* Contact Form Section */
+.contact-form-section {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.form-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.form-description {
+  font-size: 16px;
+  color: #6c757d;
+  margin-bottom: 40px;
 }
 
 .contact-form {
@@ -2039,4 +2080,10 @@ p {
     grid-template-columns: repeat(2, 1fr);
     /* 2 cards per row for smaller screens */
   }
+}
+
+
+
+.contact-info-grid {
+  max-width: 100%; 
 }
