@@ -40,8 +40,8 @@ const QuoteForm = () => {
   
       if (response.status === 201) {
         const emailData = {
-          customerEmail: formData.email || process.env.REACT_APP_ADMIN_EMAIL, 
-          adminEmail: process.env.REACT_APP_ADMIN_EMAIL || "oootlichno@gmail.com",
+          customerEmail: formData.email || process.env.ADMIN_EMAIL, 
+          adminEmail: process.env.ADMIN_EMAIL || "oootlichno@gmail.com",
           orderDetails: {
             companyName: formData.company_name,
             contactPerson: formData.contact_person,
@@ -60,7 +60,7 @@ const QuoteForm = () => {
   
         console.log("Email data being sent:", emailData);
         console.log("Email:", formData.email);
-        console.log("Admin Email:", process.env.REACT_APP_ADMIN_EMAIL);
+        console.log("Admin Email:", process.env.ADMIN_EMAIL);
 
 
   
