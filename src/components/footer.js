@@ -1,6 +1,8 @@
 import React from "react";
 import logo from "../img/FullLogo_Transparent_wowclean_c.png";
 import { Link } from "react-router-dom";
+import Contact from "../components/phonecall";
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -39,7 +41,7 @@ const Footer = () => {
         </div>
 
         {/*Phone Number*/}
-        <div className="phone-number">+1 555-555-5555</div>
+        <Contact phone="555-555-5555" />
       </div>
 
       <div className="footer-bottom">

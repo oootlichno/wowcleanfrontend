@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import logo from "../img/FullLogo_Transparent_wowclean_c.png";
 import backendURL from "../components/config";
+import Contact from "../components/phonecall";
 
 const Header = () => {
   const [services, setServices] = useState([]);
@@ -69,7 +70,7 @@ const Header = () => {
           <Link to="/products" className="nav-link">Products</Link>
           <Link to="/articles" className="nav-link">Articles</Link>
           <Link to="/contacts" className="nav-link">Contacts</Link>
-          <p className="phone-number">+1 555-555-5555</p>
+          <Contact phone="555-555-5555" />
         </div>
       </div>
     </>
