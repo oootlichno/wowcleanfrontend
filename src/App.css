@@ -476,6 +476,8 @@ p {
 /* Quote Form */
 .quote {
   padding: 80px;
+  position: relative;
+  z-index: 10;
 }
 
 .quote-form-container {
