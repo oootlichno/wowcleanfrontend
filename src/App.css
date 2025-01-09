@@ -156,6 +156,7 @@ h1 {
   margin-top: 0px;
   margin-bottom: 0px;
   text-decoration: none;
+  font-size: clamp(32px, 5vw, 68px);
 }
 
 
@@ -171,6 +172,8 @@ h2 {
   margin-top: 0px;
   margin-bottom: 0px;
   text-decoration: none;
+  font-size: clamp(24px, 4vw, 56px);
+  
 
 }
 
@@ -186,6 +189,7 @@ h3 {
   line-height: 180%;
   margin: 0px;
   text-decoration: none;
+  font-size: clamp(8px, 3vw, 18px);
 
 }
 
@@ -197,6 +201,7 @@ p {
   font-weight: 400;
   line-height: 160%;
   text-decoration: none;
+  font-size: clamp(14px, 2vw, 24px);
 
 }
 
@@ -2219,3 +2224,97 @@ p {
     text-align: center;
   }
 }
+
+
+@media (max-width: 768px) {
+  .header .nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .header.active .nav {
+    display: flex;
+  }
+
+  .banner {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .banner-text {
+      max-width: 100%;
+    }
+  
+    .banner-image {
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+    }
+
+    .Footer {
+      padding: 20px 10px;
+    }
+  
+    .footer-nav ul {
+      flex-direction: column;
+      gap: 8px; /* Reduce spacing for smaller screens */
+    }
+  
+    .footer-social {
+      justify-content: center;
+    }
+
+    .phone-number{
+      justify-content: center;
+    }
+
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
+
+    .quote-form,
+    .contact-form {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .form-row {
+      flex-direction: column;
+    }
+  
+    .form-column {
+      width: 100%;
+    }
+  
+}
+
+@media (max-width: 480px) {
+  .services-grid,
+  .products-grid,
+  .recent-articles-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .services-grid,
+  .products-grid,
+  .recent-articles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
