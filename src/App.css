@@ -2300,6 +2300,29 @@ p {
     .form-column {
       width: 100%;
     }
+
+    .services-container {
+      grid-template-columns: 1fr; 
+      gap: 20px; 
+    }
+  
+    .benefit-card {
+      max-width: 100%; /* Ensure cards take up full width */
+      margin: 0 auto; /* Center the cards */
+    }
+
+  
+    .benefit-card, .service-card {
+      margin: 10px auto; /* Center the cards and add spacing */
+      max-width: 90%; /* Ensure the cards don't touch the screen edges */
+    }
+
+    .benefit-icon img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
   
 }
 
