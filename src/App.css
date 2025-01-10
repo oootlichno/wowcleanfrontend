@@ -1341,6 +1341,7 @@ p {
 .article-layout {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 32px;
 }
@@ -1371,7 +1372,6 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Ensures the image scales correctly */
   z-index: 1;
 }
 
@@ -1396,10 +1396,8 @@ p {
 
 .article-main {
   flex: 1;
-/*   flex-direction: column;
- */  gap: 34px;
+ gap: 34px;
   background: #ffffff;
-  max-width: calc(100% - 460px);
 }
 
 
@@ -1417,6 +1415,7 @@ p {
   font-size: 18px;
   font-weight: 400;
   line-height: 30px;
+  margin-bottom: 34px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
@@ -1440,27 +1439,36 @@ p {
 
 /* Latest Articles */
 .latest-articles {
-  flex: 0 0 460px;
-  background: #ffffff;
-  border: 1px solid #e9ecef;
-  border-radius: 8px;
-  padding: 35px;
-  max-width: 460px;
-  max-height: 450px;
+  flex: 1;
+  max-width: 100%; /* Ensure it takes full width on smaller screens */
+  margin: 0 auto; /* Center-align the container */
+  padding: 20px; /* Add some padding for spacing */
   box-shadow: 0px 10px 15px -3px #0000001A;
+  border-radius: 8px; /* Rounded corners */
+  border: 1px solid #e9ecef;
+  background: #ffffff;
+  max-width: 460px;
+  max-height: 600px;
+  height:auto;
+  padding: 35px;
+
+
 
 }
 
 .latest-articles-title {
-  color: #071D49;
+
+
+color: #071D49;
   font-family: Poppins;
   font-size: 24px;
   font-weight: 600;
   line-height: 43.2px;
   margin-bottom: 22px;
-  text-align: left;
+  text-align: left; /* Center-align the "Latest Posts" title */
   text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none; 
+
 
 }
 
@@ -1483,9 +1491,12 @@ p {
 }
 
 .latest-articles-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+
+
+  display: flex;
+  flex-direction: column; /* Ensure articles stack vertically */
+  gap: 20px; /* Add spacing between each article */
+
 }
 
 
@@ -1494,6 +1505,7 @@ p {
   display: flex;
   flex-direction: column;
   padding-bottom: 22px;
+
 }
 
 .latest-article-item:last-child {
@@ -1507,9 +1519,10 @@ p {
 }
 
 .latest-article-image-container {
+  width: 100%;
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 110px;
+  height: 110px;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -1528,8 +1541,6 @@ p {
 
 .latest-article-image {
   display: block;
-  width: 110px;
-  height: 110px;
   border-radius: 20px;
   object-fit: cover;
   background: linear-gradient(180deg, rgba(24, 59, 86, 0.0001) 0%, rgba(22, 49, 70, 0.453847) 45.38%, #152532 100%);
@@ -1561,7 +1572,6 @@ p {
 
 .latest-article-read-more:hover {
   color: #a00415;
-  /* Darker shade on hover */
 }
 
 
@@ -2624,18 +2634,23 @@ p {
     flex-direction: column; /* Stack sections vertically */
   }
 
-  .article-main {
-    max-width: 100%; /* Full width for the article content */
-    margin-bottom: 20px; /* Add spacing below the main article */
+  .article-layout {
+    flex-direction: column; /* Stack elements vertically */
   }
 
   .latest-articles {
-    flex: 1;/* Occupy 30% of the screen */
-    max-width: 100%; /* Ensure full-width responsiveness */
-    margin: 0 auto; /* Center align the section */
-    padding: 20px; /* Adjust padding */
-    box-sizing: border-box; 
+    flex: none; /* Reset flex properties */
+    max-width: 100%; /* Full width for the Latest Posts block */
+    margin: 0 auto; /* Center align the Latest Posts block */
   }
+
+  .article-main {
+    flex: none; /* Reset flex properties */
+    max-width: 100%; /* Full width for the article text */
+    margin-top: 20px; /* Add spacing between Latest Posts and article text */
+  }
+
+
 
   .latest-articles-list {
     display: flex;
@@ -2664,6 +2679,8 @@ p {
     object-fit: cover; /* Maintain aspect ratio */
     border-radius: 8px; /* Add rounded corners */
   }
+
+
 
   .latest-article-title {
      /* Center align the title */
@@ -2701,6 +2718,10 @@ p {
 .latest-article-link {
   text-decoration: none;
   gap: 18px;
+}
+
+.latest-articles {
+  display: none; /* Hide the Latest Posts block */
 }
 
 .share-socials {
