@@ -306,7 +306,7 @@ p {
   align-items: stretch;
   gap: 80px;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 100%;
   width: 100%;
 }
 
@@ -319,9 +319,10 @@ p {
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   max-width: 350px;
-  flex: 1;
+  flex: 1 1 calc(33.33% - 40px);
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 20px auto;
 }
 
 .benefit-card:hover {
@@ -336,8 +337,10 @@ p {
 }
 
 .benefit-icon img {
+  max-width: 80px;
   width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 .benefit-title {
@@ -712,7 +715,9 @@ p {
 }
 
 .company-image img {
-  max-width: 100%;
+  max-width: 700px;
+  width: 100%;
+  height: auto; 
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -2185,6 +2190,17 @@ p {
   .service-card {
     height: auto; /* Adjust height dynamically */
   }
+
+  .benefits-container {
+    gap: 40px; /* Reduce the gap between cards */
+    padding: 20px; /* Reduce padding around the container */
+  }
+
+  .benefit-card {
+    flex: 1 1 calc(50% - 20px); /* Two cards per row */
+  }
+
+
 }
 
 
@@ -2386,13 +2402,15 @@ p {
     }
 
     .services-container {
-      grid-template-columns: 1fr; 
+      flex-direction: column;
       gap: 20px; 
     }
   
     .benefit-card {
-      max-width: 100%; /* Ensure cards take up full width */
+      flex: 1 1 100%;
+      max-width: 90%; /* Ensure cards take up full width */
       margin: 0 auto; /* Center the cards */
+
     }
 
   
@@ -2571,3 +2589,14 @@ p {
 
 }
 
+@media (min-width: 2000px) {
+  .company-description-container {
+    padding: 40px; /* Reduce padding for very large screens */
+    max-width: 1800px; /* Restrict the overall section width */
+    margin: 0 auto; /* Center the section */
+  }
+
+  .company-text {
+    margin-right: 20px; /* Reduce text spacing */
+  }
+}
