@@ -983,6 +983,7 @@ p {
   flex-shrink: 0;
   align-self: stretch;
   border-radius: 8px;
+  flex-shrink: 0;
 }
 
 .service-image img {
@@ -2175,6 +2176,53 @@ p {
 
 /* Responsive Adjustments */
 
+@media (min-width: 1440px) {
+  .one-service-page {
+    max-width: 1200px; /* Constrain overall page width */
+    margin: 0 auto; /* Center-align the page */
+  }
+
+  .service-header {
+    justify-content: space-between; /* Spread items evenly */
+    gap: 40px; /* Increase spacing for large screens */
+  }
+
+  .service-text {
+    max-width: 600px; /* Restrict text width */
+  }
+
+  .service-image {
+    max-width: 50%; /* Restrict image size */
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .service-header {
+    flex-direction: column; /* Stack text and image vertically */
+    align-items: center; /* Center-align content */
+    gap: 30px; /* Ensure sufficient gap between text and image */
+  }
+
+  .service-text {
+    text-align: center; /* Center-align the text */
+  }
+
+  .service-text h1 {
+    font-size: 48px; /* Scale down heading size */
+    margin-bottom: 16px; /* Reduce spacing below heading */
+  }
+
+  .service-image {
+    width: 90%; /* Constrain image width */
+    margin: 0 auto; /* Center the image */
+  }
+
+  .service-text {
+      min-height: 200px; /* Ensure enough height for the text */
+    }
+}
+
 
 @media (max-width: 1024px) {
   .services-grid {
@@ -2233,6 +2281,32 @@ p {
     margin: 0 auto; /* Center the image */
   }
 
+ /* One service page */
+ .service-header {
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center-align */
+  gap: 30px; /* Reduce gap for tablet screens */
+}
+
+.service-text h1 {
+  font-size: 40px; /* Scale down heading size */
+  margin-bottom: 24px; /* Adjust spacing */
+}
+
+.service-text p {
+  font-size: 18px; /* Scale paragraph text */
+  margin-bottom: 60px; /* Adjust spacing */
+}
+
+.service-image {
+  width: 80%; /* Restrict image width */
+  margin: 0 auto; /* Center the image */
+}
+
+.service-image img {
+  max-width: 80%; /* Ensure the image scales down */
+  height: auto; /* Maintain aspect ratio */
+}
 
 
 }
@@ -2485,6 +2559,48 @@ p {
 
   .about-image img {
     max-height: 400px; /* Further reduce image size */
+  }
+
+   /* One service page */
+   .one-service-page {
+    padding: 15px 20px; /* Reduce side padding */
+  }
+
+  .service-header {
+    flex-direction: column; /* Stack the text and image vertically */
+    align-items: center; /* Center-align items */
+    gap: 20px; /* Reduce gap */
+  }
+
+  .service-text {
+    text-align: center; /* Center-align text */
+    width: 100%; /* Full-width for text */
+  }
+
+  .service-text h1 {
+    font-size: 36px; /* Reduce heading size */
+    margin-bottom: 16px; /* Reduce spacing */
+  }
+
+  .service-text p {
+    font-size: 16px; /* Reduce font size for better readability */
+    margin-bottom: 40px; /* Adjust spacing */
+  }
+
+  .service-image {
+    width: 100%; /* Full-width image */
+    align-self: center; /* Center-align the image */
+  }
+
+  .service-image img {
+    max-width: 90%; /* Prevent image from touching screen edges */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .back-button {
+    font-size: 16px; /* Adjust back button font size */
+    text-align: center; /* Center-align */
+    margin-bottom: 20px; /* Adjust spacing */
   }
   
 }
