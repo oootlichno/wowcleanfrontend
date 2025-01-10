@@ -2698,6 +2698,85 @@ p {
     margin-bottom: 20px; 
     max-width: 95%; /* Ensure the cards take up most of the screen width */
   }
+/* Articles Page Padding */
+.articles-page {
+  padding: 20px; /* Reduce overall padding */
+}
+
+/* Recent Articles Section */
+.recent-articles-grid {
+  grid-template-columns: repeat(1, 1fr); /* Single column layout */
+  gap: 20px; /* Reduce spacing between articles */
+}
+
+.article-card {
+  height: auto; /* Allow cards to adjust height dynamically */
+}
+
+/* Image Scaling */
+.articles-image {
+  width: 100%; /* Ensure the image fills the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Keep the image visually appealing */
+}
+
+/* Text Adjustments */
+.article-about {
+  font-size: 18px; /* Reduce font size */
+  margin-bottom: 30px; /* Adjust spacing below text */
+  text-align: center; /* Center-align for small screens */
+}
+
+.articles-title {
+  margin: 0 10px;
+  font-size: 16px; /* Reduce font size for smaller screens */
+  line-height: 20px; /* Adjust line height */
+}
+
+.read-more {
+  font-size: 14px; /* Reduce font size of "Read More" */
+  margin-right: 10px; /* Adjust spacing */
+
+
+  margin-top: 10px; /* Add spacing above "Read More" */
+    display: block;
+}
+
+.articles-meta {
+  top: 10px; /* Adjust position */
+  left: 10px; /* Adjust position */
+  font-size: 12px; /* Reduce font size */
+  padding: 4px 8px; /* Adjust padding */
+}
+
+/* Carousel Section */
+.carousel-container {
+  gap: 20px; /* Reduce the spacing between cards */
+}
+
+.carousel-article-card {
+  flex: 0 0 calc(100% - 10px); /* Single column for small screens */
+  max-width: calc(100% - 10px);
+  height: auto; /* Allow dynamic height */
+}
+
+.carousel-articles-title {
+  font-size: 18px; /* Adjust title font size */
+  margin-left: 20px; /* Adjust margins */
+}
+
+.carousel-articles-meta {
+  font-size: 12px; /* Adjust meta font size */
+  padding: 4px 8px; /* Adjust padding */
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  width: 30px; /* Reduce size */
+  height: 30px; /* Reduce size */
+  font-size: 14px; /* Adjust button font size */
+}
+
 }
 
 
@@ -2790,6 +2869,11 @@ p {
   .quote-button-form {
     font-size: 16px; /* Reduce button font size for better scaling */
     padding: 8px 10px; /* Compact button size */
+  }
+
+  .recent-articles-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    gap: 30px; /* Adjust spacing between cards */
   }
 
 }
