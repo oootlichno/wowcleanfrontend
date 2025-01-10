@@ -111,7 +111,7 @@ const OneArticlePage = () => {
 
 {/* Share to Socials */}
 <div className="share-socials">
-  <div className="share-label">Share with</div>
+  <div className="share-label">Share with:</div>
   <div className="share-item facebook">
     <a
       href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`}

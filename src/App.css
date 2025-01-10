@@ -1340,6 +1340,8 @@ p {
 /* Layout */
 .article-layout {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 32px;
 }
 
@@ -1393,11 +1395,11 @@ p {
 }
 
 .article-main {
-  display: flex;
-  flex-direction: column;
-  gap: 34px;
+  flex: 1;
+/*   flex-direction: column;
+ */  gap: 34px;
   background: #ffffff;
-  max-width: 770px;
+  max-width: calc(100% - 460px);
 }
 
 
@@ -1438,12 +1440,13 @@ p {
 
 /* Latest Articles */
 .latest-articles {
-  flex: 1;
+  flex: 0 0 460px;
   background: #ffffff;
   border: 1px solid #e9ecef;
   border-radius: 8px;
   padding: 35px;
   max-width: 460px;
+  max-height: 450px;
   box-shadow: 0px 10px 15px -3px #0000001A;
 
 }
@@ -1565,6 +1568,7 @@ p {
 /* Share Socials */
 .share-socials {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin: 100px;
@@ -2615,6 +2619,119 @@ p {
     text-align: center; /* Center-align */
     margin-bottom: 20px; /* Adjust spacing */
   }
+
+  .article-layout {
+    flex-direction: column; /* Stack sections vertically */
+  }
+
+  .article-main {
+    max-width: 100%; /* Full width for the article content */
+    margin-bottom: 20px; /* Add spacing below the main article */
+  }
+
+  .latest-articles {
+    flex: 1;/* Occupy 30% of the screen */
+    max-width: 100%; /* Ensure full-width responsiveness */
+    margin: 0 auto; /* Center align the section */
+    padding: 20px; /* Adjust padding */
+    box-sizing: border-box; 
+  }
+
+  .latest-articles-list {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Add spacing between articles */
+  }
+
+  .latest-article-item {
+    display: flex;
+    flex-direction: column; /* Stack elements within each article */
+    gap: 10px; /* Add spacing between image, title, and link */
+    align-items: center; /* Center align content */
+    text-align: center;
+    width: 100%;
+  }
+
+  .latest-article-image-container {
+    width: 100%; /* Take full width */
+    max-width: 150px; /* Restrict image size */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center align the image */
+  }
+
+  .latest-article-image {
+    width: 100%; /* Image takes the full width of the container */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add rounded corners */
+  }
+
+  .latest-article-title {
+     /* Center align the title */
+    font-size: 14px; /* Adjust font size */
+    line-height: 20px; /* Adjust line height */
+    margin: 0 auto; /* Center align */
+  }
+
+  .latest-article-read-more {
+    text-align: center; /* Center align the link */
+    font-size: 12px; /* Adjust font size */
+    margin: 0; /* Remove unnecessary margins */
+    text-decoration: none;
+  }
+
+  .latest-article-read-more:hover {
+    color: #a00415; /* Darker shade on hover */
+  }
+
+  .article-meta {
+    font-size: 6px;
+    line-height: 20px;
+    margin-bottom: 10px;;
+}
+
+  .text-article-content {
+    padding: 20px;
+    display: flex
+;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.latest-article-link {
+  text-decoration: none;
+  gap: 18px;
+}
+
+.share-socials {
+  flex-direction: column; /* Stack items vertically */
+  margin: 30px 10px; /* Reduce overall margin */
+  gap: 20px; /* Adjust gap between elements */
+}
+
+.share-label {
+  font-size: 14px; /* Adjust font size */
+  line-height: 20px; /* Adjust line height */
+}
+
+.share-item {
+  justify-content: center; /* Center the items */
+  padding: 0 15px; /* Reduce padding for smaller screens */
+}
+
+.social-links {
+  gap: 15px; /* Adjust gap for smaller screens */
+  justify-content: center; /* Center-align links */
+}
+
+.social-link {
+  font-size: 12px; /* Reduce font size */
+  gap: 6px; /* Reduce spacing between icon and text */
+}
+
+.social-link i {
+  font-size: 16px; /* Adjust icon size */
+}
   
 }
 
@@ -2777,6 +2894,71 @@ p {
   font-size: 14px; /* Adjust button font size */
 }
 
+/* Article One page */
+.article-header {
+  top: 15px;
+  left: 20px; /* Adjust for smaller screens */
+  font-size: 18px;
+}
+
+.article-title {
+  font-size: 36px; /* Reduce title font size */
+  line-height: 48px; /* Adjust line height */
+  left: 20px; /* Adjust positioning */
+  bottom: 30px; /* Adjust positioning */
+  max-width: calc(100% - 40px); /* Ensure it doesn't overflow */
+}
+
+.article-main {
+  padding-top: 20px; /* Adjust padding for smaller screens */
+  padding-left: 20px;
+  max-width: 100%; /* Full width */
+}
+
+.article-meta {
+  font-size: 14px; /* Reduce meta font size */
+  line-height: 20px; /* Adjust line height */
+}
+
+.article-text {
+  font-size: 16px; /* Reduce text size */
+  line-height: 24px; /* Adjust line height */
+}
+
+/* Latest Articles Section */
+.latest-articles {
+  padding: 20px; /* Adjust padding */
+}
+
+.latest-article-title {
+  font-size: 14px; /* Adjust title size */
+  line-height: 20px; /* Adjust line height */
+  justify-content: center;
+}
+
+.latest-article-meta,
+.latest-article-read-more {
+  font-size: 12px; /* Adjust font sizes */
+}
+
+.share-socials {
+  margin: 20px 5px; /* Further reduce margins */
+  gap: 15px; /* Compact spacing between items */
+}
+
+.share-label {
+  font-size: 12px; /* Further reduce font size */
+  line-height: 18px; /* Adjust line height */
+}
+
+.social-link {
+  font-size: 12px; /* Reduce font size */
+  gap: 4px; /* Compact spacing */
+}
+
+.social-link i {
+  font-size: 14px; /* Further adjust icon size */
+}
 }
 
 
