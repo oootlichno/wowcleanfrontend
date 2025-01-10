@@ -2311,6 +2311,19 @@ p {
 
 }
 
+@media (max-width: 800px) {
+  .products-grid {
+    grid-template-columns: repeat(1, 1fr); /* Single column layout */
+  }
+}
+
+/* Medium Screens (801px to 1200px) - Two Columns */
+@media (min-width: 801px) and (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+  }
+}
+
 
 
 @media (max-width: 768px) {
@@ -2673,7 +2686,22 @@ p {
   }
 
 
+  .products-page {
+    padding: 15px; /* Reduce the overall page padding */
+  }
+
+  .products-grid {
+    gap: 20px; /* Reduce the gap between the cards */
+  }
+
+  .product-card {
+    margin-bottom: 20px; 
+    max-width: 95%; /* Ensure the cards take up most of the screen width */
+  }
 }
+
+
+
 @media (min-width: 481px) and (max-width: 768px) {
   .services-grid,
   .products-grid,
