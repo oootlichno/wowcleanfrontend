@@ -755,7 +755,8 @@ p {
 .services-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items: flex-start;
+  align-items: stretch;
+  grid-auto-rows: minmax(0, auto);
   column-gap: 80px;
   row-gap: 48px;
   align-self: stretch;
@@ -763,7 +764,7 @@ p {
 
 .service-card {
   display: flex;
-  height: 356px;
+  height: auto;
   flex-direction: column;
   text-align: center;
   border-radius: 10px;
@@ -773,6 +774,10 @@ p {
 
 .service-card-text-container {
   padding: 20px;
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .service-icon {
@@ -785,6 +790,7 @@ p {
   gap: 10px;
   flex-shrink: 0;
   align-self: stretch;
+  flex-shrink: 0;
 }
 
 .service-description {
@@ -797,6 +803,7 @@ p {
   line-height: 1.6;
   text-decoration: none;
   margin: 0px;
+  margin-bottom: auto;
 }
 
 .readmore {
