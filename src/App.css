@@ -2235,6 +2235,19 @@ color: #071D49;
   .service-text {
       min-height: 200px; /* Ensure enough height for the text */
     }
+
+    .contacts-container {
+      flex-direction: column; /* Stack map and contact info vertically */
+      gap: 20px;
+    }
+  
+    .contact-info-grid {
+      padding-right: 0; /* Remove extra padding */
+    }
+  
+    .google-map {
+      max-height: 300px; /* Reduce map height */
+    }
 }
 
 
@@ -2701,7 +2714,7 @@ color: #071D49;
   }
 
   .article-meta {
-    font-size: 6px;
+    font-size: 12px;
     line-height: 20px;
     margin-bottom: 10px;;
 }
@@ -2752,6 +2765,48 @@ color: #071D49;
 
 .social-link i {
   font-size: 16px; /* Adjust icon size */
+}
+
+.contact-page {
+  padding-left: 20px;
+  padding-right: 20px; /* Adjust page padding for smaller screens */
+}
+
+.contacts-title {
+  font-size: 48px; /* Reduce title size */
+  line-height: 56px;
+  text-align: center; /* Center-align title */
+}
+
+.contacts-container {
+  flex-direction: column; /* Stack all content vertically */
+  align-items: center;
+}
+
+.contact-info-grid {
+  gap: 40px; /* Adjust gap between contact info cards */
+  padding: 20px 0; /* Add padding to top and bottom */
+}
+
+.google-map {
+  width: 100%; /* Ensure map takes full width */
+  max-height: 250px; /* Reduce height further for smaller screens */
+}
+
+.contact-form-section {
+  margin-top: 40px; /* Reduce margin */
+}
+
+.contact-form {
+  padding: 20px; /* Adjust form padding */
+}
+
+.contact-form-column {
+  width: 100%; /* Full-width inputs */
+}
+
+.contact-form-column.full-width {
+  width: 100%; /* Ensure full-width for specific inputs */
 }
   
 }
@@ -2979,6 +3034,82 @@ color: #071D49;
 
 .social-link i {
   font-size: 14px; /* Further adjust icon size */
+}
+.contacts-title {
+  font-size: 36px; /* Further reduce title size */
+  margin-bottom: 40px; /* Adjust spacing */
+}
+
+.contact-info-grid {
+  gap: 20px; /* Smaller gap */
+}
+
+.google-map {
+  max-height: 200px; /* Reduce map height */
+}
+
+.form-title {
+  font-size: 36px; /* Reduce form title size */
+  text-align: center;
+}
+
+.form-description {
+  font-size: 16px; /* Adjust description size */
+  text-align: center; /* Center-align text */
+}
+
+.contact-form {
+  padding: 20px; /* Reduce padding */
+    margin-top: 20px; /* Adjust margins */
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 16px; /* Add gap between fields */
+}
+
+.contact-form-column {
+  width: 100%; /* Full width for inputs */
+  margin-bottom: 15px; /* Add spacing between form fields */
+}
+
+.contact-form-column label {
+  font-size: 14px; /* Reduce label font size */
+}
+
+.contact-form-column input,
+.contact-form-column textarea {
+  font-size: 14px; /* Adjust input font size */
+  padding: 10px; /* Compact padding for inputs */
+}
+
+.contact-form-column.full-width {
+  flex: 0 0 100%; /* Ensure full width for specific fields */
+}
+
+.contact-form-column:first-child,
+.contact-form-column:last-child {
+  margin-right: 0; /* Remove side margins for stacked inputs */
+}
+
+.contact-form .contact-form-column.full-width input,
+.contact-form .contact-form-column.full-width textarea {
+  width: 100%; /* Ensure full-width inputs */
+}
+
+.contact-form button {
+  font-size: 16px; /* Adjust button font size */
+  padding: 12px 20px; /* Compact padding for button */
+  width: 100%; /* Full-width button */
+  margin-top: 20px; /* Add margin above the button */
+}
+
+.contact-form-sections {
+  display: block; /* Disable flexbox and use block layout */
+}
+
+.contact-form {
+  width: 100%; /* Ensure the form takes full width */
+  margin: 0 auto; /* Center the form if needed */
 }
 }
 
