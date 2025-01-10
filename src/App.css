@@ -1,7 +1,5 @@
 /*
-    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
-    - The "symbol *" part is to solve Firefox SVG sprite bug
-    - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+  CSS RESET
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
@@ -12,27 +10,23 @@
   display: revert;
 }
 
-/* Preferred box-sizing value */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Fix mobile Safari increase font-size on landscape mode */
 html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
 }
 
-/* Reapply the pointer cursor for anchor tags */
 a,
 button {
   cursor: revert;
 }
 
-/* Remove list styles (bullets/numbers) */
 ol,
 ul,
 menu,
@@ -40,59 +34,47 @@ summary {
   list-style: none;
 }
 
-/* Firefox: solve issue where nested ordered lists continue numbering from parent (https://bugzilla.mozilla.org/show_bug.cgi?id=1881517) */
 ol {
   counter-reset: revert;
 }
 
-/* For images to not be able to exceed their container */
 img {
   max-inline-size: 100%;
   max-block-size: 100%;
 }
 
-/* removes spacing between cells in tables */
 table {
   border-collapse: collapse;
 }
 
-/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
 input,
 textarea {
   -webkit-user-select: auto;
 }
 
-/* revert the 'white-space' property for textarea elements on Safari */
 textarea {
   white-space: revert;
 }
 
-/* minimum style to allow to style meter element */
 meter {
   -webkit-appearance: revert;
   appearance: revert;
 }
 
-/* preformatted text - use only for this feature */
 :where(pre) {
   all: revert;
   box-sizing: border-box;
 }
 
-/* reset default text opacity of input placeholder */
 ::placeholder {
   color: unset;
 }
 
-/* fix the feature of 'hidden' attribute.
- display:revert; revert to element instead of attribute */
+
 :where([hidden]) {
   display: none;
 }
 
-/* revert for bug in Chromium browsers
- - fix for the content editable attribute will work properly.
- - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
 :where([contenteditable]:not([contenteditable="false"])) {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
@@ -101,21 +83,19 @@ meter {
   -webkit-user-select: auto;
 }
 
-/* apply back the draggable feature - exist only in Chromium and Safari */
 :where([draggable="true"]) {
   -webkit-user-drag: element;
 }
 
-/* Revert Modal native behavior */
 :where(dialog:modal) {
   all: revert;
   box-sizing: border-box;
 }
 
-/* Remove details summary webkit styles */
 ::-webkit-details-marker {
   display: none;
 }
+
 
 /* General Styling */
 body {
@@ -137,6 +117,8 @@ body {
 
 html {
   scroll-behavior: smooth;
+  font-size: 62.5%; 
+  
 }
 
 input::placeholder,
@@ -201,7 +183,8 @@ p {
   font-weight: 400;
   line-height: 160%;
   text-decoration: none;
-  font-size: clamp(14px, 2vw, 24px);
+  font-size: clamp(1.4rem, 2vw, 2.4rem);
+  line-height: 1.6;
 
 }
 
@@ -212,6 +195,7 @@ p {
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 20px 60px;
   background-color: #071D49;
   color: white;
@@ -227,7 +211,6 @@ p {
   align-items: center;
   gap: 16px;
   flex-grow: 1;
-  /* Allows the navigation links to take up remaining space */
 }
 
 .header .nav .nav-link {
@@ -247,7 +230,6 @@ p {
 
 .header .phone-number {
   margin-left: auto;
-  /* Pushes the phone number to the far right */
   color: white;
   font-family: Roboto;
   font-size: 16px;
@@ -601,7 +583,6 @@ p {
   width: 100%;
   height: 727px;
   background-color: white;
-  /* Matches Figma's light blue */
   overflow: hidden;
 }
 
@@ -633,7 +614,6 @@ p {
   align-items: center;
   width: 100%;
   padding: 0 80px;
-  /* Matches spacing in Figma */
 }
 
 .banner-text {
@@ -671,15 +651,18 @@ p {
   justify-content: center;
   align-items: center;
   width: 220px;
-  /* Matches Figma button width */
   padding: 16px 24px;
   background-color: #D5051B;
   border: 2px solid #D5051B;
   border-radius: 50px;
   transition: transform 0.2s ease;
+  cursor: pointer; 
+    text-align: center;
+    margin: 0;
 }
 
 .quote-button {
+  display: block;
   color: #FFF;
   font-family: Roboto;
   font-size: 24px;
@@ -2174,28 +2157,12 @@ p {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .header .nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(1, 1fr);
-    /* 1 card per row for mobile devices */
-  }
+.contact-info-grid {
+  max-width: 100%;
 }
+
+/* Responsive Adjustments */
+
 
 @media (max-width: 1024px) {
   .services-grid {
@@ -2206,11 +2173,61 @@ p {
 
 
 
-.contact-info-grid {
-  max-width: 100%;
-}
-
 @media (max-width: 768px) {
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+      padding: 10px 20px;
+  }
+
+  .header .logo img {
+    max-width: 80px; /* Reduce logo size */
+    margin-bottom: 10px; /* Add spacing below the logo */
+  }
+
+  .header .nav {
+    justify-content: center;
+    flex-wrap: wrap; /* Allow navigation links to wrap */
+    gap: 10px;
+  }
+
+  .header .nav .nav-link {
+    font-size: 14px; /* Reduce font size for links */
+    line-height: 20px;
+  }
+
+  .header .phone-number {
+    margin-top: 10px; /* Add spacing above the phone number */
+    margin-left: 0; /* Remove left margin */
+    font-size: 14px; /* Reduce font size */
+    text-align: center; /* Center-align phone number */
+  }
+
+  .header .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .header.active .nav {
+    display: flex;
+  }
+
+  h1, h2, h3, p {
+    line-height: 1.2; 
+  }
+
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(1, 1fr);
+    /* 1 card per row for mobile devices */
+  }
+
   .contact-form-section {
     flex-direction: column;
   }
@@ -2222,24 +2239,6 @@ p {
 
   .quote-button-container {
     text-align: center;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .header .nav {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .header .hamburger {
-    display: block;
-    cursor: pointer;
-  }
-
-  .header.active .nav {
-    display: flex;
   }
 
   .banner {
@@ -2256,6 +2255,15 @@ p {
       width: 100%;
       height: auto;
       margin-right: 0;
+    }
+
+    .banner-button{
+      margin: 0 auto;
+
+    }
+
+    .shape-image {
+      top: -60px;
     }
 
     .Footer {
@@ -2327,11 +2335,61 @@ p {
 }
 
 @media (max-width: 480px) {
+
+  .header {
+    padding: 10px; /* Further reduce padding */
+  }
+
+  .header .nav .nav-link {
+    font-size: 12px; /* Further reduce link font size */
+  }
+
+  .header .phone-number {
+    font-size: 12px; /* Reduce font size of phone number */
+  }
+
   .services-grid,
   .products-grid,
   .recent-articles-grid {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  h1, h2, h3, p {
+    line-height: 1.2; 
+  }
+
+  .company-description-container {
+    flex-direction: column; /* Stack the text and image vertically */
+    align-items: center; /* Center align items */
+    padding: 20px; /* Reduce padding for smaller screens */
+    height: auto; /* Allow height to adjust dynamically */
+  }
+
+  .company-text {
+    margin-right: 0; /* Remove right margin */
+    text-align: center; /* Center align text */
+  }
+
+  .company-image {
+    margin-top: 20px; /* Add spacing above the image */
+    flex: 0; /* Prevent the image from taking excess space */
+    width: 100%; /* Ensure the image adapts to the screen width */
+    max-width: 300px; /* Limit the maximum width */
+  }
+
+  .company-image img {
+    border-radius: 8px;
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .company-text p {
+    text-align: justify; /* Adds justified alignment */
+    text-justify: inter-word; /* Ensures spacing between words looks natural */
+  }
+
+
 }
 @media (min-width: 481px) and (max-width: 768px) {
   .services-grid,
@@ -2339,5 +2397,75 @@ p {
   .recent-articles-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .company-description-container {
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px; /* Reduce padding */
+    gap: 20px; /* Smaller gap */
+  }
+
+  .company-text {
+    margin-right: 0; /* Remove margin for stacking */
+    text-align: center; /* Center text on mobile */
+  }
+
+  .company-image {
+    margin-top: 20px; /* Add spacing between image and text */
+  }
+
+  .company-about-title {
+    color: #071D49;
+    font-family: Poppins, sans-serif;
+    margin-bottom: 24px;
+    font-size: clamp(28px, 5vw, 56px); /* Responsive font size */
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+  }
+  
+  .company-description-container {
+    display: flex;
+    flex-direction: column; /* Default row layout */
+    height: auto; /* Avoid fixed height */
+    padding: 40px; /* Reduce padding for smaller screens */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Smaller gap for mobile */
+    align-self: stretch;
+    background: #F1F5F9;
+  }
+  
+  .company-text {
+    flex: 1;
+    text-align: left;
+    margin-right: 20px; /* Reduce margin for smaller screens */
+    line-height: 160%;
+    font-size: clamp(14px, 2.5vw, 18px); /* Adjust font size */
+  }
+  
+  .company-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  
+  .company-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .company-image img {
+    max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
 }
 
