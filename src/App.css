@@ -2169,6 +2169,15 @@ p {
     grid-template-columns: repeat(2, 1fr);
     /* 2 cards per row for smaller screens */
   }
+
+  .services-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    column-gap: 40px;
+  }
+
+  .service-card {
+    height: auto; /* Adjust height dynamically */
+  }
 }
 
 
@@ -2264,6 +2273,66 @@ p {
 
     .shape-image {
       top: -60px;
+    }
+    .services-container {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+      column-gap: 20px;
+    }
+  
+    .home-services {
+      padding: 40px 20px; /* Reduce padding for smaller devices */
+    }
+  
+    .service-card {
+      margin: 0 auto; /* Center cards */
+    }
+  
+    .services-title-line {
+      width: 100px; /* Reduce line width for better proportions */
+    }
+
+    #quote-section {
+      margin-top: 20px;
+      padding: 20px; /* Add padding for better spacing */
+    }
+  
+    .quote {
+      padding: 20px; /* Reduce padding for smaller screens */
+    }
+  
+    .quote-form-container {
+      padding: 20px 15px; /* Reduce padding for mobile */
+      gap: 20px; /* Reduce the gap between elements */
+    }
+  
+    .quote-form {
+      max-width: 100%; /* Ensure form takes the full width */
+    }
+  
+    .form-row {
+      flex-direction: column; /* Stack input fields vertically */
+      gap: 15px; /* Adjust the gap for smaller screens */
+    }
+  
+    .form-column {
+      flex: 1;
+      min-width: 100%; /* Ensure inputs take full width */
+    }
+  
+    .quote-form-title {
+      font-size: 20px; /* Reduce title font size */
+      text-align: center; /* Center the title for better alignment */
+    }
+  
+    .quote-button-container {
+      text-align: center; /* Center-align the button on mobile */
+      padding: 20px 0; /* Adjust padding */
+    }
+  
+    .quote-button-form {
+      width: 100%; /* Make button take full width */
+      font-size: 18px; /* Adjust font size for smaller screens */
+      padding: 10px 15px; /* Adjust padding for the button */
     }
 
     .Footer {
@@ -2389,6 +2458,18 @@ p {
     text-justify: inter-word; /* Ensures spacing between words looks natural */
   }
 
+  .services-title-line {
+    width: 160px; 
+  }
+
+  .service-description, .readmore {
+    font-size: 14px; /* Smaller font size for limited screen width */
+  }
+
+  .home-services {
+    gap: 24px; /* Reduce spacing for compact layout */
+  }
+
 
 }
 @media (min-width: 481px) and (max-width: 768px) {
@@ -2465,6 +2546,20 @@ p {
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .quote-form-container {
+    padding: 10px; /* Further reduce padding for very small screens */
+    gap: 10px; /* Compact the gaps further */
+  }
+
+  .form-column {
+    min-width: 100%; /* Ensure inputs stack properly */
+  }
+
+  .quote-button-form {
+    font-size: 16px; /* Reduce button font size for better scaling */
+    padding: 8px 10px; /* Compact button size */
   }
 
 }
