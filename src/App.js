@@ -17,6 +17,9 @@ import Contacts from "./pages/contactus";
 import Quote from "./components/quote";
 import PrivacyPolicy from "./pages/privacy-policy";
 import ThankYou from "./pages/thankyou";
+import AdminLogin from "./pages/admin/login";
+import AdminDashboard from "./pages/admin/dashboard";
+import ProtectedAdminRoute from "./components/adminroute";
 
 
 
@@ -39,6 +42,16 @@ function App() {
           <Route path="/quote" element={<Quote />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/thank-you" element={<ThankYou />} />
+          {/* Admin Routes */}
+          <Route path="/admin" element={<AdminLogin />} />
+          <Route
+            path="/admin/dashboard"
+            element={
+              <ProtectedAdminRoute>
+                <AdminDashboard />
+              </ProtectedAdminRoute>
+            }
+          />
         </Routes>
         <Footer />
       </div>
