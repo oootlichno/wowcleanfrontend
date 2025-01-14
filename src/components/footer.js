@@ -38,15 +38,15 @@ const Footer = () => {
             <li>
               <Link to="/contacts">Contacts</Link>
             </li>
-          </ul>
-        </div>
-
-        {/*Phone Number and Email*/}
-        <div className="contact-container">
+            <div className="contact-container">
   <Contact phone="555-555-5555" />
   <Email email="support@wowclean.com" />
 </div>
+          </ul>        
       </div>
+        </div>
+
+
 
       <div className="footer-bottom">
       <div className="Policy">

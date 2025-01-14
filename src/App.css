@@ -249,9 +249,8 @@ p {
 .contact-container {
   display: flex;
   flex-direction: column; 
-  gap: 8px; 
+  gap: 16px; 
   align-items: flex-end; 
-  gap: 8px; 
   text-align: right; 
   position: absolute;
   right: 0; 
@@ -264,6 +263,7 @@ p {
   font-size: 16px; 
   display: flex;
   align-items: center;
+  margin-bottom: -10px;
 }
 
 .contact-container a i {
@@ -2928,6 +2928,25 @@ color: #071D49;
 .contact-form-column.full-width {
   width: 100%; /* Ensure full-width for specific inputs */
 }
+.contact-container {
+  align-items: center; /* Align to the right for larger screens */
+  text-align: center;
+  flex-direction: row;
+  margin-top: 195px;
+}
+
+.footer {
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center;
+
+}
+
+.footer-content {
+  margin-bottom: 35px;
+}
+
+
   
 }
 
