@@ -21,6 +21,8 @@ import AdminLogin from "./pages/admin/login";
 import AdminDashboard from "./pages/admin/dashboard";
 import ProtectedAdminRoute from "./components/adminroute";
 import ArticlesAdmin from "./pages/admin/articlesadmin";
+import SingleArticleAdmin from "./pages/admin/SingleArticleAdmin";
+import AddArticleAdmin from "./pages/admin/AddArticleAdmin";
 
 
 
@@ -56,7 +58,9 @@ function App() {
           >
             {/* Subroutes for Admin Dashboard */}
             <Route path="articles" element={<ArticlesAdmin />} />
-            {/* Future paths for industries, services, quotes, and messages can be added here */}
+            <Route path="articles/:id" element={<SingleArticleAdmin />} />
+            <Route path="articles/add" element={<AddArticleAdmin />} />
+          
           </Route>
         </Routes>
         <Footer />

@@ -75,7 +75,7 @@
   table th, table td {
     border: 1px solid #ccc;
     padding: 10px;
-    text-align: left;
+    text-align: center;
   }
   
   table th {
@@ -84,6 +84,7 @@
   
   button {
     margin-right: 10px;
+    margin-top: 10px;
     padding: 5px 10px;
     background-color: #071d49;
     color: white;
@@ -95,4 +96,33 @@
   button:hover {
     background-color: #d5051b;
   }
+
+  .add-button, .save-button {
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-button:hover, .save-button:hover {
+    background-color: #003f8a;
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 10px;
+  }
+  
+  .single-article-admin,
+  .add-article-admin {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
   
