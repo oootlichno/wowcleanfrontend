@@ -240,6 +240,44 @@ p {
   letter-spacing: 0.5px;
 }
 
+.fas.fa-phone {
+  color: white;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column; 
+  gap: 8px; 
+  align-items: flex-end; 
+  gap: 8px; 
+  text-align: right; 
+  position: absolute;
+  right: 0; 
+  margin-right: 60px;
+}
+
+.contact-container a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px; 
+  display: flex;
+  align-items: center;
+}
+
+.contact-container a i {
+  margin-right: 8px; 
+}
+
+.phone-number {
+  font-weight: bold; 
+}
+
+.email-link {
+  font-weight: normal; 
+}
+
 
 
 /* Dropdown Styles */

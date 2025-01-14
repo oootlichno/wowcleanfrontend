@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../img/FullLogo_Transparent_wowclean_c.png";
 import { Link } from "react-router-dom";
 import Contact from "../components/phonecall";
+import Email from "../components/emailwrite";
 
 
 const Footer = () => {
@@ -40,8 +41,11 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/*Phone Number*/}
-        <Contact phone="555-555-5555" />
+        {/*Phone Number and Email*/}
+        <div className="contact-container">
+  <Contact phone="555-555-5555" />
+  <Email email="support@wowclean.com" />
+</div>
       </div>
 
       <div className="footer-bottom">
