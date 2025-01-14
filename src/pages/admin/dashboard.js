@@ -1,5 +1,6 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link, Outlet } from 'react-router-dom';
+import '../admin/Adminaccount.css';
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
@@ -10,9 +11,25 @@ const AdminDashboard = () => {
   };
 
   return (
-    <div className="admin-dashboard">
-      <h1>Welcome to the Admin Dashboard</h1>
-      <button onClick={handleLogout}>Logout</button>
+    <div className="admin-dashboard-container">
+      {/* Left-Side Menu */}
+      <aside className="admin-menu">
+        <h2>Admin Menu</h2>
+        <ul>
+          <li><Link to="/admin/dashboard/articles">Articles</Link></li>
+          <li><Link to="/admin/dashboard/industries">Industries</Link></li>
+          <li><Link to="/admin/dashboard/services">Services</Link></li>
+          <li><Link to="/admin/dashboard/quotes">Quotes</Link></li>
+          <li><Link to="/admin/dashboard/messages">Messages</Link></li>
+        </ul>
+        <button onClick={handleLogout} className="logout-button">Logout</button>
+      </aside>
+
+      {/* Main Content Area */}
+      <main className="admin-content">
+        <h1>Welcome to the Admin Dashboard</h1>
+        <Outlet /> {/* Dynamic content will render here */}
+      </main>
     </div>
   );
 };

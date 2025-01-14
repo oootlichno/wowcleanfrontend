@@ -1,0 +1,98 @@
+.admin-dashboard-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  .admin-menu {
+    width: 120px;
+    background-color: #071d49;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .admin-menu h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .admin-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .admin-menu ul li {
+    margin: 10px 0;
+  }
+  
+  .admin-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .admin-menu ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .logout-button {
+    background-color: #d5051b;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .logout-button:hover {
+    background-color: #a00415;
+  }
+  
+  .admin-content {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    overflow-y: auto;
+  }
+  
+  .admin-content h1 {
+    font-size: 24px;
+    color: #071d49;
+    margin-bottom: 20px;
+  }
+
+  /* Articles*/
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #f0f0f0;
+  }
+  
+  button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #071d49;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #d5051b;
+  }
+  

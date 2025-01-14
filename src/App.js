@@ -20,6 +20,8 @@ import ThankYou from "./pages/thankyou";
 import AdminLogin from "./pages/admin/login";
 import AdminDashboard from "./pages/admin/dashboard";
 import ProtectedAdminRoute from "./components/adminroute";
+import ArticlesAdmin from "./pages/admin/articlesadmin";
+
 
 
 
@@ -49,14 +51,18 @@ function App() {
             element={
               <ProtectedAdminRoute>
                 <AdminDashboard />
-              </ProtectedAdminRoute>
+                </ProtectedAdminRoute>
             }
-          />
+          >
+            {/* Subroutes for Admin Dashboard */}
+            <Route path="articles" element={<ArticlesAdmin />} />
+            {/* Future paths for industries, services, quotes, and messages can be added here */}
+          </Route>
         </Routes>
         <Footer />
       </div>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
