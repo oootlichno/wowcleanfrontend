@@ -121,11 +121,7 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
   
-  h1 {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
+ 
   
   .error-message {
     color: red;
