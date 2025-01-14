@@ -5,8 +5,8 @@ const AdminDashboard = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem('adminToken'); // Remove token on logout
-    navigate('/admin'); // Redirect to login
+    localStorage.removeItem('adminToken'); 
+    navigate('/admin'); 
   };
 
   return (
