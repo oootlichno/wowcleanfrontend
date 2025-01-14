@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TextEditor = ({ value, onChange }) => {
-  const applyBoldToSelection = () => {
+  const applyH2ToSelection = () => {
     const textarea = document.getElementById('article-text');
     const start = textarea.selectionStart;
     const end = textarea.selectionEnd;
@@ -15,9 +15,8 @@ const TextEditor = ({ value, onChange }) => {
     const selectedText = value.slice(start, end);
     const after = value.slice(end);
 
-    // Wrap selected text in <strong> tags for bold styling
-    onChange(`${before}<strong>${selectedText}</strong>${after}`);
-  };
+    onChange(`${before}<span style="font-weight: bold;">${selectedText}</span>${after}`);
+};
 
   return (
     <div className="text-editor">
@@ -27,8 +26,8 @@ const TextEditor = ({ value, onChange }) => {
         onChange={(e) => onChange(e.target.value)}
         className="text-area"
       />
-      <button type="button" onClick={applyBoldToSelection} className="format-button">
-        Bold
+      <button type="button" onClick={applyH2ToSelection} className="format-button">
+        Subtitle
       </button>
     </div>
   );

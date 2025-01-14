@@ -22,12 +22,11 @@ const AdminDashboard = () => {
           <li><Link to="/admin/dashboard/quotes">Quotes</Link></li>
           <li><Link to="/admin/dashboard/messages">Messages</Link></li>
         </ul>
-        <button onClick={handleLogout} className="logout-button">Logout</button>
+        <button onClick={handleLogout} className="logout-button">Log out</button>
       </aside>
 
       {/* Main Content Area */}
       <main className="admin-content">
-        <h1>Welcome to the Admin Dashboard</h1>
         <Outlet /> {/* Dynamic content will render here */}
       </main>
     </div>

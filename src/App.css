@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 
+
 *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
   all: unset;
   display: revert;
@@ -172,6 +173,22 @@ h3 {
   margin: 0px;
   text-decoration: none;
   font-size: clamp(8px, 3vw, 18px);
+
+}
+
+h3 {
+  align-self: stretch;
+  color: #071D49;
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 180%;
+  margin: 0px;
+  text-decoration: none;
+  font-size: clamp(8px, 3vw, 18px);
+  font-weight: bold;
+
 
 }
 
@@ -1077,6 +1094,10 @@ p {
   z-index: 1;
 }
 
+.article-text strong {
+  font-weight: bold;
+}
+
 .recent-articles-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1473,6 +1494,10 @@ p {
   text-decoration-skip-ink: none;
   white-space: pre-wrap;
 
+}
+
+.article-text strong {
+  font-weight: bold;
 }
 
 

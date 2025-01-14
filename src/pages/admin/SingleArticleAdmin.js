@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../admin/Adminaccount.css';
+import TextEditor from '../admin/TextEditor';
 
 const SingleArticleAdmin = () => {
   const { id } = useParams();
@@ -53,9 +54,9 @@ const SingleArticleAdmin = () => {
         />
 
         <label>Text:</label>
-        <textarea
+        <TextEditor
           value={article.text}
-          onChange={(e) => setArticle({ ...article, text: e.target.value })}
+          onChange={(newText) => setArticle({ ...article, text: newText })}
         />
 
         <label>Published Date:</label>
