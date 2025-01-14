@@ -22,7 +22,7 @@ const AdminLogin = () => {
     }
   };
 
-  return (
+/*   return (
     <div>
       <h1>Admin Login</h1>
       <form onSubmit={handleLogin}>
@@ -41,6 +41,37 @@ const AdminLogin = () => {
         <button type="submit">Login</button>
       </form>
       {error && <p>{error}</p>}
+    </div>
+  ); */
+  return (
+    <div className="login-page">
+      <header className="header">
+        {/* Your Header Component */}
+      </header>
+      <main className="login-container">
+        <div className="login-form">
+          <h2>Admin Login</h2>
+          <form onSubmit={handleLogin}>
+            {error && <p className="error-message">{error}</p>}
+            <input
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button type="submit">Login</button>
+          </form>
+        </div>
+      </main>
+      <footer className="footer">
+        {/* Your Footer Component */}
+      </footer>
     </div>
   );
 };
