@@ -2331,6 +2331,79 @@ color: #071D49;
   text-align: left;
 }
 
+/*Privacy Policy*/
+
+.privacy-policy {
+  position: relative;
+  z-index: 2; /* To ensure it overlays the shape */
+  background-color: rgba(255, 255, 255, 0.9); /* Add slight transparency for contrast */
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.policy-text {
+  position: relative;
+  z-index: 3; /* Keep text content above everything else */
+}
+
+.policy-text h1 {
+  font-size: 32px;
+  color: #071D49;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.policy-text h2, .policy-text h3 {
+  font-size: 20px;
+  color: #071D49;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.policy-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.policy-text ul {
+  margin-left: 20px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.policy-text ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.policy-text a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.policy-text a:hover {
+  text-decoration: underline;
+}
+
+.shape-image-about {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
 
 
 /* Responsive Adjustments */

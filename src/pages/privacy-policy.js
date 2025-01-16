@@ -1,8 +1,17 @@
 import React from "react";
+import shape from "../img/Shape.png";
+
 
 const PrivacyPolicy = () => {
   return (
     <div className="privacy-policy">
+
+        {/* Background Shape */}
+  <div class="shape-container">
+  <img src={shape} alt="Background Shape" className="shape-image-about" />
+</div>
+<div className="policy-text">
+
       <h1>Privacy Policy</h1>
       <p>
         Welcome to WoWClean. We value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, and safeguard your data when you interact with our services.
@@ -71,6 +80,7 @@ const PrivacyPolicy = () => {
       <p>Email: <a href="mailto:info@wowclean.com">info@wowclean.com</a></p>
       <p>Phone: +1 555-555-5555</p>
       <p>Address: 123 Clean Street, Sanitation City, SC 12345</p>
+    </div>
     </div>
   );
 };
