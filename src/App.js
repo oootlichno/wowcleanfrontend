@@ -29,6 +29,8 @@ import IndustriesAdmin from "./pages/admin/IndustriesAdmin";
 import ServicesAdmin from "./pages/admin/ServicesAdmin";
 import AddServiceAdmin from "./pages/admin/AddServiceAdmin";
 import SingleServiceAdmin from "./pages/admin/SingleServiceAdmin";
+import QuotesAdmin from "./pages/admin/QuotesAdmin";
+import MessagesAdmin from "./pages/admin/MessagesAdmin";
 
 function App() {
   return (
@@ -63,28 +65,15 @@ function App() {
             <Route path="articles" element={<ArticlesAdmin />} />
             <Route path="articles/:id" element={<SingleArticleAdmin />} />
             <Route path="articles/add" element={<AddArticleAdmin />} />
-            <Route
-              path="/admin/dashboard/industries"
-              element={<IndustriesAdmin />}
-            />
-            <Route
-              path="/admin/dashboard/industries/add"
-              element={<AddIndustryAdmin />}
-            />
-            <Route
-              path="/admin/dashboard/industries/:id"
-              element={<SingleIndustryAdmin />}
-            />
+            <Route path="industries" element={<IndustriesAdmin />} />
+            <Route path="industries/add" element={<AddIndustryAdmin />} />
+            <Route path="industries/:id" element={<SingleIndustryAdmin />} />
+            <Route path="services" element={<ServicesAdmin />} />
+            <Route path="services/add" element={<AddServiceAdmin />} />
+            <Route path="services/:id" element={<SingleServiceAdmin />} />
+            <Route path="quotes" element={<QuotesAdmin />} />
+            <Route path="messages" element={<MessagesAdmin />} />
           </Route>
-          <Route path="/admin/dashboard/services" element={<ServicesAdmin />} />
-          <Route
-            path="/admin/dashboard/services/add"
-            element={<AddServiceAdmin />}
-          />
-          <Route
-            path="/admin/dashboard/services/:id"
-            element={<SingleServiceAdmin />}
-          />
         </Routes>
         <Footer />
       </div>
