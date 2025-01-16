@@ -59,7 +59,6 @@ const IndustriesAdmin = () => {
             <tr key={industry.id}>
               <td>{industry.id}</td>
               <td>{industry.name}</td>
-              <td>{industry.description}</td>
               <td>
                 <img
                   src={industry.image_url}
@@ -67,6 +66,7 @@ const IndustriesAdmin = () => {
                   style={{ width: '100px', height: '100px', objectFit: 'cover' }}
                 />
               </td>
+              <td>{industry.description}</td>
               <td>
                 <button onClick={() => handleEdit(industry.id)} className="edit-button">
                   Edit

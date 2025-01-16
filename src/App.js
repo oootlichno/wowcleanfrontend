@@ -26,6 +26,9 @@ import AddArticleAdmin from "./pages/admin/AddArticleAdmin";
 import AddIndustryAdmin from "./pages/admin/AddIndustryAdmin";
 import SingleIndustryAdmin from "./pages/admin/SingleIndustryAdmin";
 import IndustriesAdmin from "./pages/admin/IndustriesAdmin";
+import ServicesAdmin from "./pages/admin/ServicesAdmin";
+import AddServiceAdmin from "./pages/admin/AddServiceAdmin";
+import SingleServiceAdmin from "./pages/admin/SingleServiceAdmin";
 
 function App() {
   return (
@@ -73,6 +76,15 @@ function App() {
               element={<SingleIndustryAdmin />}
             />
           </Route>
+          <Route path="/admin/dashboard/services" element={<ServicesAdmin />} />
+          <Route
+            path="/admin/dashboard/services/add"
+            element={<AddServiceAdmin />}
+          />
+          <Route
+            path="/admin/dashboard/services/:id"
+            element={<SingleServiceAdmin />}
+          />
         </Routes>
         <Footer />
       </div>
