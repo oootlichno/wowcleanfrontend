@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/footer";
 import Header from "./components/header";
@@ -23,9 +23,9 @@ import ProtectedAdminRoute from "./components/adminroute";
 import ArticlesAdmin from "./pages/admin/articlesadmin";
 import SingleArticleAdmin from "./pages/admin/SingleArticleAdmin";
 import AddArticleAdmin from "./pages/admin/AddArticleAdmin";
-
-
-
+import AddIndustryAdmin from "./pages/admin/AddIndustryAdmin";
+import SingleIndustryAdmin from "./pages/admin/SingleIndustryAdmin";
+import IndustriesAdmin from "./pages/admin/IndustriesAdmin";
 
 function App() {
   return (
@@ -53,20 +53,31 @@ function App() {
             element={
               <ProtectedAdminRoute>
                 <AdminDashboard />
-                </ProtectedAdminRoute>
+              </ProtectedAdminRoute>
             }
           >
             {/* Subroutes for Admin Dashboard */}
             <Route path="articles" element={<ArticlesAdmin />} />
             <Route path="articles/:id" element={<SingleArticleAdmin />} />
             <Route path="articles/add" element={<AddArticleAdmin />} />
-          
+            <Route
+              path="/admin/dashboard/industries"
+              element={<IndustriesAdmin />}
+            />
+            <Route
+              path="/admin/dashboard/industries/add"
+              element={<AddIndustryAdmin />}
+            />
+            <Route
+              path="/admin/dashboard/industries/:id"
+              element={<SingleIndustryAdmin />}
+            />
           </Route>
         </Routes>
         <Footer />
       </div>
     </BrowserRouter>
   );
-};
+}
 
 export default App;
