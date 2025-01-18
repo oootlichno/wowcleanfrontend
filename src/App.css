@@ -209,138 +209,143 @@ p {
 
 /* Header */
 
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 60px;
-  background-color: #071D49;
+  padding: 20px 40px;
+  background-color: #071d49;
   color: white;
-  flex-shrink: 0; 
-
 }
 
-.header .logo img {
-  max-width: 100px;
-  margin-right: 48px;
+.logo img {
+  max-width: 120px;
 }
 
-.header .nav {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-grow: 1;
-}
 
-.header .nav .nav-link {
-  color: white;
-  text-decoration: none;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-}
-
-.header .nav .nav-link:hover {
-  color: #ADBDDD;
-  border-bottom: 3px solid white;
-}
-
-.header .phone-number {
-  margin-left: auto;
-  color: white;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-}
-
-.fas.fa-phone {
-  color: white;
-  font-size: 12px;
-  margin-right: 5px;
-}
 
 .contact-container {
   display: flex;
-  flex-direction: column; 
-  gap: 16px; 
-  align-items: flex-end; 
-  text-align: right; 
-  position: absolute;
-  right: 0; 
-  margin-right: 60px;
+  flex-direction: column; /* Stack phone and email vertically */
+  align-items: flex-end; /* Align to the right */
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+  gap: 5px; 
+padding-left: 50px;
+ }
+
+.phone-number,
+.email-link {
+  text-decoration: none; /* Ensure no underline */
+  color: white;
 }
 
-.contact-container a {
-  text-decoration: none;
-  color: white;
-  font-size: 16px; 
+.footer .contact-container {
+  margin-right: auto; /* Push to the right */
+}
+
+
+.hamburger-menu {
   display: flex;
   align-items: center;
-  margin-bottom: -10px;
+  justify-content: center;
+  width: 80px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  border: 2px solid white; /* Border color */
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer;
+  background-color: transparent; /* Background, if any */
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.contact-container a i {
-  margin-right: 8px; 
+.hamburger-menu i {
+  font-size: 24px;
+  color: white;
 }
 
-.phone-number {
-  font-weight: bold; 
+/* Mobile Navigation */
+
+.mobile-nav .nav-link {
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
 }
 
-.email-link {
-  font-weight: normal; 
+.mobile-nav .nav-link:hover {
+  background-color: #004080;
 }
 
+.hamburger-menu.active .mobile-nav {
+  display: flex; /* Show the menu when the hamburger is active */
+}
 
+/* Desktop Navigation */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-right: auto;
+  padding-left: 48px;
+  color: var(--White, #FFF);
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+letter-spacing: 0.5px;
+}
 
-/* Dropdown Styles */
+.desktop-nav .nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+}
+
+.desktop-nav .nav-link:hover {
+  border-bottom: 2px solid white;
+}
+
 .dropdown {
   position: relative;
-  display: inline-block;
 }
 
 .dropdown-menu {
-  display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: white;
-  border-radius: 0px 0px 8px 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  width: 220px;
-  padding: 4px 0;
-  margin: 0;
-  padding: 0;
+  background-color: #ffffff;
+  color: #071d49;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: none;
+  flex-direction: column;
+  min-width: 200px;
+z-index: 10;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown:hover .dropdown-menu {
-  display: block;
+  display: flex;
 }
 
 .dropdown-item {
-  display: block;
-  padding: 12px 16px;
-  background: var(--Field-background, #FFF);
-  color: #0F172A;
-  font-family: Inter, sans-serif;
+  padding: 10px 15px;
   font-size: 14px;
-  font-weight: 500;
-  border-radius: 0px 0px 8px 8px;
-  line-height: normal;
   text-decoration: none;
-  transition: background-color 0.2s ease, color 0.2s ease;
-  white-space: normal;
-  word-wrap: break-word;
+  color: #071d49;
+  white-space: nowrap;
 }
 
 .dropdown-item:hover {
-  background-color: #F5F7FA;
+  background-color: #f5f5f5;
 }
+
+
 
 /* Our Benefits Section */
 
@@ -2572,53 +2577,59 @@ color: #071D49;
 
 
 @media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
 
-  .header {
+  .contact-container-header{
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex; /* Show hamburger menu only on mobile */
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 90px;
+    right: 0;
+    width: 25%;
+    background-color: #071d49;
+    z-index: 10;
     flex-direction: column;
-    align-items: flex-start;
-      padding: 10px 20px;
+    padding: 25px;
+    
   }
 
-  .header .logo img {
-    max-width: 80px; /* Reduce logo size */
-    margin-bottom: 10px; /* Add spacing below the logo */
+  .mobile-nav.active {
+    display: flex; /* Show the mobile navigation when active */
   }
 
-  .header .nav {
-    justify-content: center;
-    flex-wrap: wrap; /* Allow navigation links to wrap */
-    gap: 10px;
-  }
-
-  .header .nav .nav-link {
-    font-size: 14px; /* Reduce font size for links */
-    line-height: 20px;
-  }
-
-  .header .phone-number {
-    margin-top: 10px; /* Add spacing above the phone number */
-    margin-left: 0; /* Remove left margin */
-    font-size: 14px; /* Reduce font size */
-    text-align: center; /* Center-align phone number */
-  }
-
-  .header .hamburger {
+  .mobile-nav .nav-link {
     display: block;
-    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
   }
 
-  .header.active .nav {
-    display: flex;
-  }
-
-  h1, h2, h3, p {
-    line-height: 2; 
+  .mobile-nav .nav-link:hover {
+    background-color: #004080;
   }
 
 
   .footer-content {
     flex-direction: column;
     text-align: center;
+  }
+
+  .contact-container{
+    margin-top: 30px;
+    gap:5px;
+  }
+  .email-link{
+  padding-left: 35px;
   }
 
   .services-grid {
@@ -2996,10 +3007,7 @@ color: #071D49;
   text-align: center; /* Center-align title */
 }
 
-.contacts-container {
-  flex-direction: column; /* Stack all content vertically */
-  align-items: center;
-}
+
 
 .contact-info-grid {
   gap: 40px; /* Adjust gap between contact info cards */
@@ -3026,12 +3034,14 @@ color: #071D49;
 .contact-form-column.full-width {
   width: 100%; /* Ensure full-width for specific inputs */
 }
+
 .contact-container {
-  align-items: center; /* Align to the right for larger screens */
+  align-items: center; 
   text-align: center;
   flex-direction: row;
-  margin-top: 195px;
 }
+
+
 
 .footer {
   flex-direction: column; 
@@ -3046,6 +3056,16 @@ color: #071D49;
 
 
   
+}
+
+@media (min-width: 769px) {
+  .hamburger-menu {
+    display: none; /* Hide hamburger menu on desktop */
+  }
+
+  .desktop-nav {
+    display: flex; /* Show desktop navigation on desktop */
+  }
 }
 
 @media (max-width: 480px) {

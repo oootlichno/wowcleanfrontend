@@ -6,7 +6,6 @@ const QuotesAdmin = () => {
   const [quotes, setQuotes] = useState([]);
   const [error, setError] = useState('');
 
-  // Fetch quotes from the backend
   const fetchQuotes = async () => {
     try {
       const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/quotes`);
@@ -35,7 +34,7 @@ const QuotesAdmin = () => {
             <th>Cleaning Frequency</th>
             <th>WC</th>
             <th>Toilet</th>
-            <th>Status</th>
+            <th>Frequency</th>
           </tr>
         </thead>
         <tbody>
@@ -49,7 +48,7 @@ const QuotesAdmin = () => {
               <td>{quote.cleaning_frequency}</td>
               <td>{quote.wc}</td>
               <td>{quote.toilet}</td>
-              <td>{quote.status}</td>
+              <td>{quote.cleaning_frequency}</td>
             </tr>
           ))}
         </tbody>
