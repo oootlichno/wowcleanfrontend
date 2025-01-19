@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Contact from "../components/phonecall";
 import Email from "../components/emailwrite";
 
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
@@ -38,26 +37,24 @@ const Footer = () => {
             <li>
               <Link to="/contacts">Contacts</Link>
             </li>
-            <div className="contact-container">
-  <Contact phone="555-555-5555" />
-  <Email email="support@wowclean.com" />
-</div>
-          </ul>        
-      </div>
+          </ul>
+          <div className="contact-container">
+            <Contact phone="555-555-5555" />
+            <Email email="support@wowclean.com" />
+          </div>
         </div>
-
-
+      </div>
 
       <div className="footer-bottom">
-      <div className="Policy">
-  <p>
-    &copy; {currentYear} WOWClean by CPG. All rights reserved. Click on{" "}
-    <Link to="/privacy-policy" style={{ color: "#fff" }}>
-      Privacy Policy
-    </Link>{" "}
-    to read more.
-  </p>
-</div>
+        <div className="Policy">
+          <p>
+            &copy; {currentYear} WOWClean by CPG. All rights reserved. Click on{" "}
+            <Link to="/privacy-policy" style={{ color: "#fff" }}>
+              Privacy Policy
+            </Link>{" "}
+            to read more.
+          </p>
+        </div>
         <div className="footer-social">
           <a
             href="https://facebook.com"

@@ -217,6 +217,8 @@ p {
   padding: 20px 40px;
   background-color: #071d49;
   color: white;
+  flex-shrink: 0; 
+
 }
 
 .logo img {
@@ -233,7 +235,10 @@ p {
   color: white;
   font-size: 18px;
   gap: 5px; 
-padding-left: 50px;
+text-align: right; 
+position: absolute;
+right: 0; 
+margin-right: 60px;
  }
 
 .phone-number,
@@ -242,9 +247,9 @@ padding-left: 50px;
   color: white;
 }
 
-.footer .contact-container {
-  margin-right: auto; /* Push to the right */
-}
+/* .footer .contact-container {
+  margin-bottom: auto; 
+} */
 
 
 .hamburger-menu {
@@ -343,6 +348,41 @@ z-index: 10;
 
 .dropdown-item:hover {
   background-color: #f5f5f5;
+}
+
+.footer .nav-menu {
+  display: flex;
+  flex-wrap: wrap; /* Enable wrapping for multiple rows */
+  justify-content: center; /* Center the items */
+  gap: 20px; /* Add spacing between items */
+  margin-bottom: 20px; /* Add space below the nav menu */
+}
+
+.footer .nav-item {
+  text-align: center;
+  flex: 0 1 calc(50% - 20px); /* Each item takes 50% width minus gap */
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.footer .nav-item:hover {
+  color: #adbddc; /* Lighter color on hover */
+}
+
+.footer .contact-container {
+  display: flex;
+  flex-direction: column; /* Stack phone and email vertically */
+  align-items: center; /* Center the content */
+  gap: 5px; /* Add spacing between phone and email */
+}
+
+.footer .phone-number,
+.footer .email-link {
+  text-decoration: none; /* No underline */
+  color: white;
+  font-size: 16px;
 }
 
 
@@ -1739,11 +1779,17 @@ color: #071D49;
 
 
 .products-title {
-  font-family: Roboto;
-  margin-bottom: 34px;
+font-family: Poppins;
+margin-bottom: 16px;
+font-size: 68px;
+font-style: normal;
+font-weight: 600;
+line-height: 110%;
   text-align: left;
   position: relative;
   z-index: 1;
+
+
 }
 
 
@@ -2204,6 +2250,7 @@ color: #071D49;
   max-width: 1440px;
   padding-top: 24px;
   border-top: 1px solid #334155;
+  margin-top: 35px;
 }
 
 .footer-bottom p {
@@ -2237,7 +2284,7 @@ color: #071D49;
 .footer-bottom .footer-social {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 25px;
 }
 
 .Footer {
@@ -2625,7 +2672,7 @@ color: #071D49;
   }
 
   .contact-container{
-    margin-top: 30px;
+    margin-top: 15px;
     gap:5px;
   }
   .email-link{
@@ -3038,7 +3085,6 @@ color: #071D49;
 .contact-container {
   align-items: center; 
   text-align: center;
-  flex-direction: row;
 }
 
 
@@ -3088,7 +3134,7 @@ color: #071D49;
     grid-template-columns: repeat(1, 1fr);
   }
 
-  h1, h2, h3, p {
+  h1, h2, h3 {
     line-height: 1.2; 
   }
 
@@ -3137,7 +3183,12 @@ color: #071D49;
 
 
   .products-page {
-    padding: 15px; /* Reduce the overall page padding */
+    position: relative;
+    background-color: white;
+    width: 100%;
+    padding: 80px 50px 80px 50px;
+    overflow: hidden;
+    
   }
 
   .products-grid {

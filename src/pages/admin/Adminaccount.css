@@ -98,7 +98,7 @@
     background-color: #f0f0f0;
   }
   
-  button {
+  button-admin {
     margin-right: 10px;
     margin-top: 10px;
     padding: 5px 10px;
@@ -109,7 +109,7 @@
     cursor: pointer;
   }
   
-  button:hover {
+  button-admin:hover {
     background-color: #d5051b;
   }
 
