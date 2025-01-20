@@ -3596,25 +3596,41 @@ line-height: 110%;
 
 
   .company-description-container {
-    padding: 40px; /* Reduce padding for very large screens */
-    max-width: 1800px; /* Restrict the overall section width */
-    margin: 0 auto; /* Center the section */
+    padding: 40px; 
+    max-width: 1800px; 
+    margin: 0 auto; 
   }
 
   .company-text {
-    margin-right: 20px; /* Reduce text spacing */
+    margin-right: 20px; 
   }
 
   .about-page {
-    max-width: 1800px; /* Restrict maximum width */
-    margin: 0 auto; /* Center the content */
+    max-width: 1800px; 
+    margin: 0 auto; 
   }
 
   .about-text {
-    max-width: 800px; /* Increase text width slightly */
+    max-width: 800px; 
   }
 
   .about-image img {
-    max-height: 1000px; /* Allow larger images */
+    max-height: 1000px; 
+  }
+}
+
+@media (max-width: 903px) and (min-width: 768px) {
+  nav ul {
+    flex-wrap: wrap; 
+    gap: 10px; 
+  }
+
+  nav ul li a {
+    font-size: 14px; 
+    padding: 5px 10px; 
+  }
+
+  .phone-number {
+    display: none; 
   }
 }
