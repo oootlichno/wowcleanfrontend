@@ -246,10 +246,31 @@ margin-right: 60px;
   text-decoration: none; /* Ensure no underline */
   color: white;
 }
+/* Mobile Navigation */
 
-/* .footer .contact-container {
-  margin-bottom: auto; 
-} */
+.mobile-nav {
+  position: fixed; 
+  right: 0; 
+  background-color: #071d49;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Add a shadow for better visibility */
+}
+
+
+.menu-overlay {
+  position: fixed;
+  height: 100%;
+  z-index: 999; 
+}
+
+
+.no-scroll {
+  overflow: hidden;
+} 
+
 
 
 .hamburger-menu {
@@ -270,19 +291,19 @@ margin-right: 60px;
   color: white;
 }
 
-/* Mobile Navigation */
 
-.mobile-nav .nav-link {
-  padding: 10px 15px;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
+
+.nav-link {
   color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 18px;
 }
 
-.mobile-nav .nav-link:hover {
-  background-color: #004080;
+.nav-link:hover {
+  color: #ccc;
 }
+
 
 .hamburger-menu.active .mobile-nav {
   display: flex; /* Show the menu when the hamburger is active */
@@ -1792,8 +1813,6 @@ line-height: 110%;
 
 }
 
-
-
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -2461,6 +2480,24 @@ line-height: 110%;
 /* Responsive Adjustments */
 
 @media (min-width: 1440px) {
+
+  .overlay {
+    display: none;
+    }
+    
+    .nav.mobile-nav {
+      display: none;
+    }
+  
+  .mobile-nav {
+    display: none;
+    }
+  
+    
+    .menu-overlay {
+  display: none;
+    }
+
   .one-service-page {
     max-width: 1200px; /* Constrain overall page width */
     margin: 0 auto; /* Center-align the page */
@@ -2482,6 +2519,7 @@ line-height: 110%;
 
 
 @media (max-width: 1200px) {
+
   .service-header {
     flex-direction: column; /* Stack text and image vertically */
     align-items: center; /* Center-align content */
@@ -2522,6 +2560,8 @@ line-height: 110%;
 
 
 @media (max-width: 1024px) {
+
+  
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
     /* 2 cards per row for smaller screens */
@@ -2633,23 +2673,20 @@ line-height: 110%;
   }
 
   .hamburger-menu {
-    display: flex; /* Show hamburger menu only on mobile */
+    display: flex; 
   }
 
   .mobile-nav {
     position: fixed;
-    top: 90px;
-    right: 0;
-    width: 25%;
-    background-color: #071d49;
-    z-index: 10;
+    top: 80px;
+    max-width: 30%;
     flex-direction: column;
-    padding: 25px;
-    
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   .mobile-nav.active {
-    display: flex; /* Show the mobile navigation when active */
+    display: flex; 
   }
 
   .mobile-nav .nav-link {
@@ -3105,6 +3142,24 @@ line-height: 110%;
 }
 
 @media (min-width: 769px) {
+
+  .overlay {
+    display: none;
+    }
+    
+    .nav.mobile-nav {
+      display: none;
+    }
+  
+  .mobile-nav {
+    display: none;
+    }
+  
+    
+    .menu-overlay {
+  display: none;
+    }
+
   .hamburger-menu {
     display: none; /* Hide hamburger menu on desktop */
   }
@@ -3521,6 +3576,25 @@ line-height: 110%;
 }
 
 @media (min-width: 2000px) {
+
+  .overlay {
+    display: none;
+    }
+    
+    .nav.mobile-nav {
+      display: none;
+    }
+  
+  .mobile-nav {
+    display: none;
+    }
+  
+    
+    .menu-overlay {
+  display: none;
+    }
+
+
   .company-description-container {
     padding: 40px; /* Reduce padding for very large screens */
     max-width: 1800px; /* Restrict the overall section width */
