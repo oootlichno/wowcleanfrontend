@@ -292,5 +292,47 @@
     font-weight: bold;
   }
   
+  .admin-dashboard {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .admin-dashboard h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .dashboard-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .dashboard-button {
+    font-family: Roboto;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 15px 30px;
+    border: none;
+    background-color: #071d49;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-button:hover {
+    transform: scale(1.05);
+  transition: transform 0.2s ease;
+  }
+  
 
   
