@@ -20,10 +20,10 @@ const AddIndustryAdmin = () => {
   };
 
   return (
-    <div className="add-industry-container">
+    <div className="add-article-container">
       <h1>Add New Industry</h1>
       {error && <p className="error-message">{error}</p>}
-      <form onSubmit={handleAdd} className="add-industry-form">
+      <form onSubmit={handleAdd} className="add-article-form">
         <div className="form-group">
           <label>Name:</label>
           <input

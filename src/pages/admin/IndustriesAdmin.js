@@ -44,7 +44,7 @@ const IndustriesAdmin = () => {
     <div className="admin-industries">
       <h1>Industries</h1>
       {error && <p className="error-message">{error}</p>}
-      <table className="industries-table">
+      <table className="articles-table">
         <thead>
           <tr>
             <th>ID</th>
@@ -68,18 +68,20 @@ const IndustriesAdmin = () => {
               </td>
               <td>{industry.description}</td>
               <td>
+              <div className='edit-delete-buttons'>
                 <button onClick={() => handleEdit(industry.id)} className="edit-button">
                   Edit
                 </button>
                 <button onClick={() => handleDelete(industry.id)} className="delete-button">
                   Delete
                 </button>
+                </div>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-      <button onClick={handleAddIndustry} className="add-industry-button">
+      <button onClick={handleAddIndustry} className="add-article-button">
         Add an Industry
       </button>
     </div>

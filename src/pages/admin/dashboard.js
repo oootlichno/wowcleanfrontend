@@ -14,7 +14,6 @@ const AdminDashboard = () => {
     <div className="admin-dashboard-container">
       {/* Left-Side Menu */}
       <aside className="admin-menu">
-        <h2>Admin Menu</h2>
         <ul>
           <li><Link to="/admin/dashboard/articles">Articles</Link></li>
           <li><Link to="/admin/dashboard/industries">Industries</Link></li>

@@ -74,12 +74,14 @@ const ArticlesAdmin = () => {
                 }).replace(/\//g, '.')}
               </td>
               <td>
+                <div className='edit-delete-buttons'>
                 <button onClick={() => handleEdit(article.id)} className="edit-button">
                   Edit
                 </button>
                 <button onClick={() => handleDelete(article.id)} className="delete-button">
                   Delete
                 </button>
+                </div>
               </td>
             </tr>
           ))}
