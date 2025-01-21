@@ -29,14 +29,14 @@ const ContactUs = () => {
           <img src={email_image} alt="Email Icon" className="contacts-icon" />
           <div className="contact-card-text">
           <h2>Email:</h2>
-          <p>support@wowclean.com</p>
+          <p>help@wowclean.pl</p>
         </div>
         </div>
         <div className="contact-card">
           <img src={phone_image} alt="Phone Icon" className="contacts-icon" />
           <div className="contact-card-text">
           <h2>Phone No:</h2>
-          <p>Head office: +1 555-555-5555</p>
+          <p>Head office: +48734126837</p>
         </div>
         </div>
       </div>

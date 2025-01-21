@@ -39,8 +39,8 @@ const Footer = () => {
             </li>
           </ul>
           <div className="contact-container">
-            <Contact phone="555-555-5555" />
-            <Email email="support@wowclean.com" />
+            <Contact phone="+48734126837" />
+            <Email email="help@wowclean.pl" />
           </div>
         </div>
       </div>

@@ -158,7 +158,7 @@ const Header = () => {
         </div>
 
         <div className="contact-container-header">
-          <Contact phone="555-555-5555" />
+          <Contact phone="+48734126837" />
         </div>
       </div>
     </>
