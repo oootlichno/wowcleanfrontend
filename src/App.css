@@ -40,8 +40,8 @@ ol {
 }
 
 img {
-  max-inline-size: 100%;
-  max-block-size: 100%;
+/*   max-inline-size: 100%;
+ */  max-block-size: 100%;
 }
 
 table {
@@ -1713,7 +1713,7 @@ color: #071D49;
   justify-content: center;
   align-items: center;
   margin: 100px;
-  gap: 110px;
+  gap: 100px;
 
 }
 

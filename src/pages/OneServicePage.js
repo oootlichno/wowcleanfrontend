@@ -50,7 +50,7 @@ const OneServicePage = () => {
         </div>
       </div>
       {showQuoteForm && (
-        <div id="quote-section">
+        <div id="quote-section" className="quote-section">
           <QuoteForm />
         </div>
       )}
