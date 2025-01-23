@@ -445,8 +445,8 @@ z-index: 10;
   flex: 1 1 calc(33.33% - 40px);
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  margin: 20px auto;
-}
+/*   margin: 20px auto;
+ */}
 
 .benefit-card:hover {
   transform: translateY(-5px);
