@@ -24,39 +24,41 @@ const OneServicePage = () => {
 
   if (!service) return <div>Loading...</div>;
 
-  return (
-    <div className="one-service-page">
-       <div className="breadcrumb">
-        Services - {service.name}
+
+return (
+  <div className="one-service-page">
+    <div className="breadcrumb">
+    Usługi - {service.name}
+    </div>
+    <button className="back-button" onClick={() => navigate(-1)}>
+    ← Powrót
+    </button>
+    <div className="service-header">
+      <div className="service-image">
+        <img src={service.image} alt={service.name} />
       </div>
-      <button className="back-button" onClick={() => navigate(-1)}>
-        ← Back
-      </button>
-      <div className="service-header">
-        <div className="service-text">
-          <h1>{service.name}</h1>
-          <p>{service.description}</p>
-          <div className="banner-button">
+      <div className="service-text">
+        <h1>{service.name}</h1>
+        <p>{service.description}</p>
+        <div className="banner-button">
           <button
             onClick={() => setShowQuoteForm(!showQuoteForm)}
             className="quote-button"
           >
-            Get a Quote
+            Uzyskaj wycenę
           </button>
         </div>
-        </div>
-        <div className="service-image">
-          <img src={service.image} alt={service.name} />
-        </div>
       </div>
-      {showQuoteForm && (
-        <div id="quote-section" className="quote-section">
-          <QuoteForm />
-        </div>
-      )}
     </div>
-  );
-};
+    {showQuoteForm && (
+      <div id="quote-section" className="quote-section">
+        <QuoteForm />
+      </div>
+    )}
+  </div>
+
+);
+    };
 
 export default OneServicePage;
 

@@ -27,29 +27,30 @@ const OneIndustriePage = () => {
 
   return (
     <div className="one-service-page">
-      <div className="breadcrumb">
-      Branże - {industry.name}
-      </div>
+      <div className="breadcrumb">Branże - {industry.name}</div>
+
       <button className="back-button" onClick={() => navigate(-1)}>
-        ← Z powrotem
+        ← Powrót
       </button>
+
       <div className="service-header">
+        <div className="service-image">
+          <img src={industry.image_url} alt={industry.name} />
+        </div>
         <div className="service-text">
           <h1>{industry.name}</h1>
           <p>{industry.description}</p>
           <div className="banner-button">
-          <button
-            onClick={() => setShowQuoteForm(!showQuoteForm)}
-            className="quote-button"
-          >
-            Uzyskaj wycenę
-          </button>
-        </div>
-        </div>
-        <div className="service-image">
-          <img src={industry.image_url} alt={industry.name} />
+            <button
+              onClick={() => setShowQuoteForm(!showQuoteForm)}
+              className="quote-button"
+            >
+              Uzyskaj wycenę
+            </button>
+          </div>
         </div>
       </div>
+
       {showQuoteForm && (
         <div id="quote-section">
           <QuoteForm />
@@ -58,6 +59,7 @@ const OneIndustriePage = () => {
     </div>
   );
 };
+
 
 export default OneIndustriePage;
 
