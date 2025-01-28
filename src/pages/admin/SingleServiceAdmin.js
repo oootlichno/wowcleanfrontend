@@ -6,7 +6,7 @@ import '../admin/Adminaccount.css';
 const SingleServiceAdmin = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [service, setService] = useState({ name: '', image: '', description: '', price: '' });
+  const [service, setService] = useState({ name: '', image: '', description: '', short_description: '' });
   const [error, setError] = useState('');
 
   const fetchService = async () => {
@@ -52,6 +52,13 @@ const SingleServiceAdmin = () => {
           onChange={(e) => setService({ ...service, image: e.target.value })}
         />
 
+<label>About:</label>
+        <textarea
+          value={service.short_description}
+          onChange={(e) => setService({ ...service, short_description: e.target.value })}
+          rows="3"
+        />
+
         <label>Description:</label>
         <textarea
           value={service.description}
@@ -59,13 +66,6 @@ const SingleServiceAdmin = () => {
           rows="5"
         />
 
-        <label>Price ($):</label>
-        <input
-          type="number"
-          step="0.01"
-          value={service.price}
-          onChange={(e) => setService({ ...service, price: e.target.value })}
-        />
 
         <button type="submit" className="save-button">Save Changes</button>
       </form>

@@ -8,18 +8,10 @@ const Homeabout = () => {
         <div className="company-description-container">
         <div className="company-text">
         <div className="company-about-title">
-        Our Team
+        Nasz zespół
         </div>
           <p>
-            WOWClean is dedicated to providing exceptional cleaning services for
-            businesses and organizations of all sizes. With a mission to
-            maintain hygiene and cleanliness "one toilet at a time," we pride
-            ourselves on delivering reliable, thorough, and eco-friendly
-            cleaning solutions. Our experienced team understands the unique
-            challenges of commercial cleaning and works closely with clients to
-            meet their specific needs. From offices to restaurants, gas
-            stations, and beauty salons, our services are tailored to keep your
-            spaces spotless and welcoming. 
+          WOWClean jest oddany świadczeniu wyjątkowych usług sprzątania dla firm i organizacji każdej wielkości. Mając misję utrzymania higieny i czystości „najlepszego sprzątania toalet”, jesteśmy dumni z dostarczania niezawodnych, dokładnych i przyjaznych dla środowiska rozwiązań sprzątania. Nasz doświadczony zespół rozumie wyjątkowe wyzwania związane ze sprzątaniem komercyjnym i ściśle współpracuje z klientami, aby sprostać ich konkretnym potrzebom. Od restauracji po salony kosmetyczne, stacje benzynowe i magazyny, nasze usługi są dostosowane do utrzymania Twoich przestrzeni w nieskazitelnej czystości i gościnności. 
           </p>
         </div>
         <div className="company-image">

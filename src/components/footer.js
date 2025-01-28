@@ -20,22 +20,22 @@ const Footer = () => {
         <div className="footer-column footer-nav">
           <ul>
             <li>
-              <Link to="/aboutus">About Us</Link>
+              <Link to="/aboutus">O nas</Link>
             </li>
             <li>
-              <Link to="/services">Services</Link>
+              <Link to="/services">Usługi</Link>
             </li>
             <li>
-              <Link to="/industries">Industries</Link>
+              <Link to="/industries">Branże</Link>
             </li>
             <li>
-              <Link to="/products">Products</Link>
+              <Link to="/products">Produkty</Link>
             </li>
             <li>
-              <Link to="/articles">Articles</Link>
+              <Link to="/articles">Artykuły</Link>
             </li>
             <li>
-              <Link to="/contacts">Contacts</Link>
+              <Link to="/contacts">Kontakt</Link>
             </li>
           </ul>
           <div className="contact-container">
@@ -48,11 +48,11 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="Policy">
           <p>
-            &copy; {currentYear} WOWClean by CPG. All rights reserved. Click on{" "}
+            &copy; {currentYear} WOWClean by CPG. Wszelkie prawa zastrzeżone. Kliknij na {" "}
             <Link to="/privacy-policy" style={{ color: "#fff" }}>
-              Privacy Policy
+            Polityka prywatności
             </Link>{" "}
-            to read more.
+            aby przeczytać więcej.
           </p>
         </div>
         <div className="footer-social">

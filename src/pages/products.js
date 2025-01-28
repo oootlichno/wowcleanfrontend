@@ -25,7 +25,7 @@ const ProductsPage = () => {
   <img src={shape} alt="Background Shape" className="shape-image"/>
 </div>
 <div className="product-container">
-       <h1 className="products-title">Our Products</h1>
+       <h1 className="products-title">Nasze Artykuly</h1>
       <div className="products-grid">
         {products.map((product) => (
           <div className="product-card" key={product.id}>

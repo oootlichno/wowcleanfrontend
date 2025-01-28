@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 const ThankYou = () => {
   return (
     <div className="thank-you-container">
-      <h1>Thank You!</h1>
-      <p>Your quote has been submitted successfully.</p>
-      <p>A manager will contact you and provide the quote within 24 hours.</p>
+      <h1>Dziękuję!</h1>
+      <p>Twoja oferta została pomyślnie wysłana.</p>
+      <p>Menadżer skontaktuje się z Tobą i przedstawi ofertę w ciągu 24 godzin.</p>
       <Link to="/" className="back-home-link">
-        Back to Home
+      Powrót do strony głównej
       </Link>
     </div>
   );

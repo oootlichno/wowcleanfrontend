@@ -15,13 +15,13 @@ const ContactUs = () => {
 
   {/* Contact Information Section */}
   <div className="contact-info-section">
-    <div className="contacts-title">Our contact information</div>
+    <div className="contacts-title">Nasze dane kontaktowe</div>
     <div className="contacts-container">
       <div className="contact-info-grid">
         <div className="contact-card">
           <img src={office_image} alt="Office Icon" className="contacts-icon" />
           <div className="contact-card-text">
-          <h2>Office Address:</h2>
+          <h2>Adres biura:</h2>
           <p>Puławska 233, 02-715 Warsaw, Poland</p>
           </div>
         </div>
@@ -35,8 +35,8 @@ const ContactUs = () => {
         <div className="contact-card">
           <img src={phone_image} alt="Phone Icon" className="contacts-icon" />
           <div className="contact-card-text">
-          <h2>Phone No:</h2>
-          <p>Head office: +48 (734) 126-837</p>
+          <h2>Numer telefonu:</h2>
+          <p>Siedziba główna: +48 (734) 126-837</p>
         </div>
         </div>
       </div>
@@ -56,9 +56,9 @@ const ContactUs = () => {
   
     {/* Contact Form Section */}
     <div className="contact-form-section">
-      <h1 className="form-title">Feel free to contact us for any kind of query.</h1>
+      <h1 className="form-title">Zapraszamy do kontaktu z nami.</h1>
       <p className="form-description">
-        Thank you for your interest in hiring us. We consider communication with the customer.
+      Dziękujemy za zainteresowanie zatrudnieniem nas. Rozważamy komunikację z klientem.
       </p>
       <ContactForm />
     </div>

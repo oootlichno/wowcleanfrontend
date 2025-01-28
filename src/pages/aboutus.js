@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import image from "../img/360_F_cleaner_c.png";
+import image from "../img/wowclean_clean.png";
 import QuoteForm from "../components/quote";
 import shape from "../img/Shape.png";
 
@@ -23,23 +23,15 @@ const AboutUs = () => {
   {/* About Header */}
   <div className="about-header">
     <div className="about-text">
-      <h1>About Us</h1>
+      <h1>O nas</h1>
       <p>
-        Welcome to WOWClean! With years of experience, we pride ourselves on offering
-        top-notch cleaning services to industries. Our dedicated team ensures your space is
-        spotless, using environmentally friendly products and advanced techniques.
-
-        We are committed to providing exceptional customer service, tailored to meet your
-        unique needs. Let us take care of the cleaning so you can focus on what matters most.
-
-        We are committed to providing exceptional customer service, tailored to meet your unique needs. Let us take care of the cleaning so you can focus on what matters most.
-        
+      Witamy w WOW Clean! Dzięki wieloletniemu doświadczeniu jesteśmy dumni z oferowania najwyższej jakości usług sprzątania toaletów. Nasz oddany zespół dba o to, aby Twoja przestrzeń była nieskazitelnie czysta, wykorzystując przyjazne dla środowiska produkty i zaawansowane techniki. Zobowiązujemy się do zapewniania wyjątkowej obsługi klienta, dostosowanej do Twoich unikalnych potrzeb. Pozwól nam zająć się sprzątaniem twego WC, bo pierwsze wrazenie twoich klijentow ma znaczenie. Zobowiązujemy się do zapewniania wyjątkowej obsługi, dostosowanej do Twoich unikalnych potrzeb.
       </p>
       
       {/* Centered Button */}
       <div className="about-button">
         <button className="about-quote-button" onClick={handleGetQuoteClick}>
-          Get a Quote
+        Uzyskaj wycenę
         </button>
       </div>
     </div>

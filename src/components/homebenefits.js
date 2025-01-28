@@ -7,27 +7,27 @@ const OurBenefits = () => {
   const benefits = [
     {
       icon: bactreria,
-      title: "Enhanced Hygiene and Sanitization",
+      title: "Lepsza higiena i dezynfekcja",
       description:
-        "Professional cleaners use advanced techniques and products to disinfect toilets, reducing germs and promoting a healthier environment.",
+        "Profesjonalni sprzątacze stosują zaawansowane techniki i produkty do dezynfekcji toalet, redukując liczbę zarazków i promując zdrowsze środowisko.",
     },
     {
       icon: clock,
-      title: "Time and Effort Savings",
+      title: "Oszczędność czasu i wysiłku",
       description:
-        "By outsourcing toilet cleaning, you free up time and energy to focus on more critical tasks or personal priorities, while experts handle the cleaning efficiently.",
+        "Dzięki zleceniu czyszczenia toalet na zewnątrz zyskujesz czas i energię, które możesz poświęcić na ważniejsze zadania lub priorytety osobiste, podczas gdy eksperci sprawnie zajmą się czyszczeniem. Zajmiemy się całą brudną robotą.",
     },
     {
       icon: vector,
-      title: "Consistent and High-Quality Results",
+      title: "Spójne i wysokiej jakości rezultaty",
       description:
-        "Professional cleaners are trained to maintain high standards, ensuring spotless and odor-free toilets consistently, which enhances the overall user experience.",
+        "Profesjonalni sprzątacze są przeszkoleni w zakresie utrzymywania wysokich standardów, zapewniając nieskazitelnie czyste i pozbawione zapachów WC, co poprawia ogólne wrażenia użytkownika.",
     },
   ];
 
   return (
     <section className="our-benefits">
-      <h2 className="benefits-title">Our Benefits</h2>
+      <h2 className="benefits-title">Nasze korzyści</h2>
       <div className="benefits-container">
         {benefits.map((benefit, index) => (
           <div key={index} className="benefit-card">

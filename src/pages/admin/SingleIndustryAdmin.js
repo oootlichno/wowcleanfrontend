@@ -6,7 +6,7 @@ import '../admin/Adminaccount.css';
 const SingleIndustryAdmin = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [industry, setIndustry] = useState({ name: '', image_url: '', description: '' });
+  const [industry, setIndustry] = useState({ name: '', image_url: '', description: '', short_description: '' });
   const [error, setError] = useState('');
 
   const fetchIndustry = async () => {
@@ -50,6 +50,13 @@ const SingleIndustryAdmin = () => {
           type="text"
           value={industry.image_url}
           onChange={(e) => setIndustry({ ...industry, image_url: e.target.value })}
+        />
+
+      <label>About:</label>
+        <textarea
+          value={industry.short_description}
+          onChange={(e) => setIndustry({ ...industry, short_description: e.target.value })}
+          rows="3"
         />
 
         <label>Description:</label>

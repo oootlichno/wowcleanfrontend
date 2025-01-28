@@ -22,8 +22,8 @@ const ArticlesCarousel = ({ articles }) => {
 
   return (
     <div className="articles-carousel">
-      <h2 className="carousel-title">Recent Articles</h2>
-      <p className="article-about">Here’s what we've been up to recently.</p>
+      <h2 className="carousel-title">Najnowsze artykuły</h2>
+      <p className="article-about">Oto, czym zajmowaliśmy się ostatnio.</p>
   {/*     <div className="carousel-controls">
         <button className="carousel-btn left" onClick={scrollLeft}>
           ←
@@ -41,7 +41,7 @@ const ArticlesCarousel = ({ articles }) => {
               className="carousel-articles-image"
             />
                  <div className="carousel-articles-meta">
-                {new Date(article.published_date).toLocaleDateString("en-GB", {
+                {new Date(article.published_date).toLocaleDateString("pl-PL", {
                   day: "2-digit",
                   month: "short",
                   year: "numeric",
@@ -51,7 +51,7 @@ const ArticlesCarousel = ({ articles }) => {
          
               <div className="carousel-articles-title">{article.title}</div>
               <Link to={`/articles/${article.id}`} className="read-more">
-                Read More →
+              Przeczytaj więcej →
               </Link>
             </div>
           </div>

@@ -38,10 +38,10 @@ const Articles = () => {
       <ArticlesCarousel articles={articles} />
 
       {/* All Articles Section */}
-      <div className="services-title-page">All Articles</div>
+      <div className="services-title-page">Wszystkie artykuły</div>
       <p className="article-about">
-        Fresh ideas for a cleaner life! Explore trends, tips, and stories from our
-        team, blending expertise and inspiration to keep your spaces spotless.
+      Świeże pomysły na czystsze życie! Poznaj trendy, wskazówki i historie od naszego
+zespołu, łączącego wiedzę specjalistyczną i inspirację, aby utrzymać Twoje przestrzenie w nieskazitelnej czystości.
       </p>
       <div className="recent-articles-grid">
         {articles.slice(0, visibleArticles).map((article) => (
@@ -55,7 +55,7 @@ const Articles = () => {
 
             {/* Meta (Date) */}
             <div className="articles-meta">
-              {new Date(article.published_date).toLocaleDateString("en-GB", {
+              {new Date(article.published_date).toLocaleDateString("pl-PL", {
                 day: "2-digit",
                 month: "short",
                 year: "numeric",
@@ -75,7 +75,7 @@ const Articles = () => {
                 className="read-more"
                 aria-label={`Read more about ${article.title}`}
               >
-                Read More →
+                Przeczytaj więcej →
               </Link>
             </div>
           </article>
@@ -86,7 +86,7 @@ const Articles = () => {
       {/* articles.length > 0 */ visibleArticles < articles.length && (
         <div className="view-all-container">
           <button className="view-all-btn" onClick={handleViewAll}>
-            View All →
+          Zobacz wszystko →
           </button>
         </div>
       )}

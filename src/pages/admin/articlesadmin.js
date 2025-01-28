@@ -62,15 +62,15 @@ const ArticlesAdmin = () => {
               <td>{article.id}</td>
               <td>{article.title}</td>
               <td>
-                <img
-                  src={article.image}
-                  alt={`Thumbnail for ${article.title}`}
-                  style={{
-                    width: "100px",
-                    height: "100px",
-                    objectFit: "cover",
-                  }}
-                />
+              <img
+  src={article.image || "https://bookdirtbusters.com/wp-content/uploads/2020/10/house-cleaning-service.jpeg"}
+  alt={`Thumbnail for ${article.title}`}
+  style={{
+    width: "100px",
+    height: "100px",
+    objectFit: "cover",
+  }}
+/>
               </td>
               <td>
                 {new Date(article.published_date)

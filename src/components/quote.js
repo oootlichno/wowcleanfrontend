@@ -94,16 +94,16 @@ const QuoteForm = () => {
 
   return (
     <div className="quote">
-  <h2 id="quote-form-section" className="services-title-quote">Request a Quote</h2>
+  <h2 id="quote-form-section" className="services-title-quote">Poproś o wycenę</h2>
   <div className="quote-form-container">
     <form onSubmit={handleSubmit} className="quote-form">
 
      {/* Row 1 */}
      <div className="main-form-row">
-     <div className="quote-form-title">Contact information</div>
+     <div className="quote-form-title">Dane kontaktowe</div>
     <div className="form-row">
       <div className="form-column">
-        <label htmlFor="company_name">Company Name</label>
+        <label htmlFor="company_name">Nazwa firmy</label>
         <input
           type="text"
           id="company_name"
@@ -114,7 +114,7 @@ const QuoteForm = () => {
         />
       </div>
       <div className="form-column">
-        <label htmlFor="contact_person">Contact Person *</label>
+        <label htmlFor="contact_person">Osoba kontaktowa *</label>
         <input
           type="text"
           id="contact_person"
@@ -129,7 +129,7 @@ const QuoteForm = () => {
        {/* Row 2 */}
     <div className="form-row">
       <div className="form-column">
-        <label htmlFor="phone">Phone *</label>
+        <label htmlFor="phone">Telefon *</label>
         <input
           type="tel"
           id="phone"
@@ -140,7 +140,7 @@ const QuoteForm = () => {
         />
       </div>
       <div className="form-column">
-        <label htmlFor="email">Email *</label>
+        <label htmlFor="email">E-mail *</label>
         <input
           type="email"
           id="email"
@@ -154,10 +154,10 @@ const QuoteForm = () => {
       
     {/* Row 3 */}
     <div className="main-form-row">
-    <div className="quote-form-title">Location information</div>
+    <div className="quote-form-title">Dane dotyczące lokalizacji</div>
     <div className="form-row">
     <div className="form-column">
-          <label htmlFor="street_address">Street Address *</label>
+          <label htmlFor="street_address">Adres ulicy *</label>
           <input
             type="text"
             id="street_address"
@@ -175,7 +175,7 @@ const QuoteForm = () => {
       <div className="form-row">
         
         <div className="form-column">
-          <label htmlFor="city">City *</label>
+          <label htmlFor="city">Miasto *</label>
           <input
             type="text"
             id="city"
@@ -186,7 +186,7 @@ const QuoteForm = () => {
           />
         </div>
         <div className="form-column">
-          <label htmlFor="state">State</label>
+          <label htmlFor="state">Województwo</label>
           <input
             type="text"
             id="state"
@@ -200,7 +200,7 @@ const QuoteForm = () => {
           {/* Row 4 */}
       <div className="form-row">
         <div className="form-column">
-          <label htmlFor="zip">ZIP Code *</label>
+          <label htmlFor="zip">Kod pocztowy *</label>
           <input
             type="text"
             id="zip"
@@ -211,7 +211,7 @@ const QuoteForm = () => {
           />
         </div>
         <div className="form-column">
-          <label htmlFor="country">Country *</label>
+          <label htmlFor="country">Kraj *</label>
           <input
             type="text"
             id="country"
@@ -226,11 +226,11 @@ const QuoteForm = () => {
 
        {/* Row 5 */}
        <div className="main-form-row">
-       <div className="quote-form-title">Order information</div>
+       <div className="quote-form-title">Dane dotyczące zamówienia</div>
       <div className="form-row">
         <div className="form-column">
           <label htmlFor="cleaning_frequency">
-            Cleaning Sessions per Week *
+          Sesje sprzątania w tygodniu *
           </label>
           <select
             id="cleaning_frequency"
@@ -241,13 +241,13 @@ const QuoteForm = () => {
           >
             {[...Array(7)].map((_, i) => (
               <option key={i + 1} value={i + 1}>
-                {i + 1} {i === 0 ? "time" : "times"}
+                {i + 1} {i === 0 ? "raz" : "razy"}
               </option>
             ))}
           </select>
         </div>
         <div className="form-column">
-          <label htmlFor="wc">WC Quantity *</label>
+          <label htmlFor="wc">Ilość WC *</label>
           <input
             type="number"
             id="wc"
@@ -261,7 +261,7 @@ const QuoteForm = () => {
           />
         </div>
         <div className="form-column">
-          <label htmlFor="toilet">Toilet Quantity *</label>
+          <label htmlFor="toilet">Ilość toalet *</label>
           <input
             type="number"
             id="toilet"
@@ -277,7 +277,7 @@ const QuoteForm = () => {
       </div>
       </div>      
 <div className="quote-button-container">
-  <button type="submit" className="quote-button-form">Submit a Quote</button>
+  <button type="submit" className="quote-button-form">Wyślij</button>
 </div>
     </form>
   </div>

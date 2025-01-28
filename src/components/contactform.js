@@ -36,24 +36,24 @@ const ContactForm = () => {
     <form onSubmit={handleSubmit} className="contact-form">
       <div className='contact-form-sections'>
       <div className='contact-form-column'>
-      <label htmlFor="contact-form-label">First Name</label>
+      <label htmlFor="contact-form-label">Imię</label>
       <input
         type="text"
         name="first_name"
         value={formData.first_name}
         onChange={handleChange}
-        placeholder="First Name"
+        placeholder="Imię"
         required
       />
       </div>
       <div className='contact-form-column'>
-      <label htmlFor="contact-form-label">Last Name</label>
+      <label htmlFor="contact-form-label">Nazwisko</label>
       <input
         type="text"
         name="last_name"
         value={formData.last_name}
         onChange={handleChange}
-        placeholder="Last Name"
+        placeholder="Nazwisko"
         required
       />
       </div>
@@ -66,19 +66,19 @@ const ContactForm = () => {
         name="email"
         value={formData.email}
         onChange={handleChange}
-        placeholder="Email Address"
+        placeholder="Adres e-mail"
         required
       />
       </div>
 
       <div className='contact-form-column'>
-      <label htmlFor="contact-form-label">Phone no</label>
+      <label htmlFor="contact-form-label">Numer telefonu</label>
       <input
         type="text"
         name="phone"
         value={formData.phone}
         onChange={handleChange}
-        placeholder="Phone No"
+        placeholder="Numer telefonu"
         required
       />
       </div>
@@ -86,19 +86,19 @@ const ContactForm = () => {
 
       <div className='contact-form-sections'>
   <div className='contact-form-column full-width'>
-    <label htmlFor="contact-form-label">Message</label>
+    <label htmlFor="contact-form-label">Wiadomość</label>
     <textarea
       name="message"
       value={formData.message}
       onChange={handleChange}
-      placeholder="Type your Message here"
+      placeholder="Wpisz tutaj swoją wiadomość"
       required
     ></textarea>
   </div>
 </div>
 
       <div className="quote-button-container">
-      <button type="submit" className="quote-button-form">Send a message</button>
+      <button type="submit" className="quote-button-form">Wyślij wiadomość</button>
       {status && <p className="form-status">{status}</p>}
 </div>
 

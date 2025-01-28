@@ -51,7 +51,7 @@ const ServicesAdmin = () => {
             <th>Name</th>
             <th>Image</th>
             <th>Description</th>
-            <th>Price</th>
+            <th>About</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -68,7 +68,7 @@ const ServicesAdmin = () => {
                 />
               </td>
               <td>{service.description}</td>
-              <td>${service.price}</td>
+              <td>{service.short_description}</td>
               <td>
                 <button onClick={() => handleEdit(service.id)} className="edit-button">
                   Edit

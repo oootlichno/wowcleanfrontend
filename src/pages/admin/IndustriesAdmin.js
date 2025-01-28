@@ -50,6 +50,7 @@ const IndustriesAdmin = () => {
             <th>ID</th>
             <th>Name</th>
             <th>Image</th>
+            <th>About</th>
             <th>Description</th>
             <th>Actions</th>
           </tr>
@@ -66,6 +67,7 @@ const IndustriesAdmin = () => {
                   style={{ width: '100px', height: '100px', objectFit: 'cover' }}
                 />
               </td>
+              <td>{industry.short_description}</td>
               <td>{industry.description}</td>
               <td>
               <div className='edit-delete-buttons'>

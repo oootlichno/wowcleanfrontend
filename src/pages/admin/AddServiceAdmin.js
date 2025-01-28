@@ -5,7 +5,7 @@ import '../admin/Adminaccount.css';
 
 const AddServiceAdmin = () => {
   const navigate = useNavigate();
-  const [service, setService] = useState({ name: '', image: '', description: '', price: '' });
+  const [service, setService] = useState({ name: '', image: '', description: '', short_description: '' });
   const [error, setError] = useState('');
 
   const handleAdd = async (e) => {
@@ -43,6 +43,14 @@ const AddServiceAdmin = () => {
           />
         </div>
         <div className="form-group">
+          <label>About:</label>
+          <textarea
+            value={service.short_description}
+            onChange={(e) => setService({ ...service, short_description: e.target.value })}
+            placeholder="Enter the services short description"
+            rows="5"
+          />
+        <div className="form-group">
           <label>Description:</label>
           <textarea
             value={service.description}
@@ -51,14 +59,6 @@ const AddServiceAdmin = () => {
             rows="5"
           />
         </div>
-        <div className="form-group">
-          <label>Price ($):</label>
-          <input
-            type="number"
-            step="0.01"
-            value={service.price}
-            onChange={(e) => setService({ ...service, price: e.target.value })}
-          />
         </div>
         <button type="submit" className="add-button">Add Service</button>
       </form>

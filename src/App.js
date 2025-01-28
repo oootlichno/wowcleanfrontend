@@ -61,7 +61,6 @@ function App() {
               </ProtectedAdminRoute>
             }
           >
-            {/* Subroutes for Admin Dashboard */}
             <Route path="articles" element={<ArticlesAdmin />} />
             <Route path="articles/:id" element={<SingleArticleAdmin />} />
             <Route path="articles/add" element={<AddArticleAdmin />} />

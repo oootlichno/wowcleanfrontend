@@ -5,7 +5,7 @@ import '../admin/Adminaccount.css';
 
 const AddIndustryAdmin = () => {
   const navigate = useNavigate();
-  const [industry, setIndustry] = useState({ name: '', image_url: '', description: '' });
+  const [industry, setIndustry] = useState({ name: '', image_url: '', description: '', short_description: '' });
   const [error, setError] = useState('');
 
   const handleAdd = async (e) => {
@@ -43,6 +43,16 @@ const AddIndustryAdmin = () => {
           />
         </div>
         <div className="form-group">
+          <label>About:</label>
+          <textarea
+            value={industry.short_description}
+            onChange={(e) => setIndustry({ ...industry, short_description: e.target.value })}
+            placeholder="Enter the industry description"
+            rows="3"
+          />
+        </div>
+
+        <div className="form-group">
           <label>Description:</label>
           <textarea
             value={industry.description}
@@ -51,6 +61,7 @@ const AddIndustryAdmin = () => {
             rows="5"
           />
         </div>
+
         <button type="submit" className="add-button">Add Industry</button>
       </form>
     </div>

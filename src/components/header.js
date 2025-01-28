@@ -69,42 +69,42 @@ const Header = () => {
                 className="nav-link"
                 onClick={() => setMenuOpen(false)}
               >
-                About Us
+                O nas
               </Link>
               <Link
                 to="/services"
                 className="nav-link"
                 onClick={() => setMenuOpen(false)}
               >
-                Services
+                Usługi
               </Link>
               <Link
                 to="/industries"
                 className="nav-link"
                 onClick={() => setMenuOpen(false)}
               >
-                Industries
+                Branże
               </Link>
               <Link
                 to="/products"
                 className="nav-link"
                 onClick={() => setMenuOpen(false)}
               >
-                Products
+                Produkty
               </Link>
               <Link
                 to="/articles"
                 className="nav-link"
                 onClick={() => setMenuOpen(false)}
               >
-                Articles
+                Artykuły
               </Link>
               <Link
                 to="/contacts"
                 className="nav-link"
                 onClick={() => setMenuOpen(false)}
               >
-                Contacts
+                Kontakt
               </Link>
             </nav>
           </>
@@ -112,11 +112,11 @@ const Header = () => {
 
         <div className="desktop-nav">
           <Link to="/aboutus" className="nav-link">
-            About Us
+            O nas
           </Link>
           <div className="dropdown">
             <Link to="/services" className="nav-link">
-              Services
+            Usługi
             </Link>
             <div className="dropdown-menu">
               {services.map((service) => (
@@ -132,7 +132,7 @@ const Header = () => {
           </div>
           <div className="dropdown">
             <Link to="/industries" className="nav-link">
-              Industries
+            Branże
             </Link>
             <div className="dropdown-menu">
               {industries.map((industry) => (
@@ -147,13 +147,13 @@ const Header = () => {
             </div>
           </div>
           <Link to="/products" className="nav-link">
-            Products
+          Produkty
           </Link>
           <Link to="/articles" className="nav-link">
-            Articles
+          Artykuły
           </Link>
           <Link to="/contacts" className="nav-link">
-            Contacts
+          Kontakt
           </Link>
         </div>
 
