@@ -1,86 +1,132 @@
 import React from "react";
 import shape from "../img/Shape.png";
 
-
 const PrivacyPolicy = () => {
   return (
     <div className="privacy-policy">
+      {/* Background Shape */}
+      <div class="shape-container">
+        <img src={shape} alt="Background Shape" className="shape-image-about" />
+      </div>
+      <div className="policy-text">
+        <h1>Polityka prywatności</h1>
+        <p>
+          Witamy w WoWClean. Cenimy Twoją prywatność i zobowiązujemy się do
+          ochrony Twoich danych osobowych. Niniejsza Polityka prywatności
+          opisuje sposób, w jaki zbieramy, wykorzystujemy i chronimy Twoje dane,
+          gdy korzystasz z naszych usług.
+        </p>
 
-        {/* Background Shape */}
-  <div class="shape-container">
-  <img src={shape} alt="Background Shape" className="shape-image-about" />
-</div>
-<div className="policy-text">
+        <h3>1. Informacje, które zbieramy</h3>
+        <p>Zbieramy następujące rodzaje informacji:</p>
+        <ul>
+          <li>
+            <strong>Dane osobowe:</strong> Twoje imię i nazwisko, adres e-mail,
+            numer telefonu oraz inne dane kontaktowe podane za pośrednictwem
+            naszych formularzy lub kanałów komunikacji.
+          </li>
+          <li>
+            <strong>Informacje dotyczące usług:</strong> Szczegóły dotyczące
+            zamówionych usług, w tym preferencje dotyczące sprzątania,
+            informacje o nieruchomości oraz dane płatnicze.
+          </li>
+          <li>
+            <strong>Dane o użytkowaniu:</strong> Informacje o Twoich
+            interakcjach z naszą stroną internetową, takie jak adres IP, typ
+            przeglądarki i odwiedzane strony, zbierane za pomocą plików cookies
+            i podobnych technologii.
+          </li>
+        </ul>
 
-      <h1>Privacy Policy</h1>
-      <p>
-        Welcome to WoWClean. We value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, and safeguard your data when you interact with our services.
-      </p>
-      
-      <h3>1. Information We Collect</h3>
-      <p>
-        We collect the following types of information:
-      </p>
-      <ul>
-        <li><strong>Personal Information:</strong> Your name, email address, phone number, and other contact details provided through our forms or communication channels.</li>
-        <li><strong>Service Information:</strong> Details related to the services you request, including cleaning preferences, property details, and payment information.</li>
-        <li><strong>Usage Data:</strong> Information about your interactions with our website, such as IP address, browser type, and pages visited, collected through cookies and similar technologies.</li>
-      </ul>
+        <h3>2. Jak wykorzystujemy Twoje dane</h3>
+        <p>Zebrane informacje wykorzystujemy do:</p>
+        <ul>
+          <li>
+            Świadczenia i zarządzania naszymi usługami, w tym planowania i
+            realizacji sprzątania.
+          </li>
+          <li>Komunikacji z Tobą w sprawie zapytań, rezerwacji i opinii.</li>
+          <li>
+            Udoskonalania naszej strony internetowej i usług poprzez analizę
+            danych i opinie użytkowników.
+          </li>
+          <li>
+            Zapewnienia zgodności z obowiązującymi przepisami prawa oraz ochrony
+            przed działaniami oszukańczymi.
+          </li>
+        </ul>
 
-      <h3>2. How We Use Your Information</h3>
-      <p>
-        The information we collect is used for:
-      </p>
-      <ul>
-        <li>Providing and managing our services, including scheduling and completing cleaning appointments.</li>
-        <li>Communicating with you regarding your inquiries, bookings, and feedback.</li>
-        <li>Improving our website and services through analytics and user feedback.</li>
-        <li>Ensuring compliance with legal obligations and protecting against fraudulent activities.</li>
-      </ul>
+        <h3>3. Udostępnianie Twoich danych</h3>
+        <p>
+          Nie sprzedajemy ani nie udostępniamy Twoich danych osobowych osobom
+          trzecim, z wyjątkiem następujących przypadków:
+        </p>
+        <ul>
+          <li>
+            Gdy wymagają tego przepisy prawa lub konieczne jest egzekwowanie
+            naszych warunków korzystania z usług.
+          </li>
+          <li>
+            Gdy współpracujemy z zaufanymi dostawcami usług (np. procesorami
+            płatności), którzy pomagają w realizacji naszych usług i zobowiązują
+            się do zachowania poufności Twoich danych.
+          </li>
+        </ul>
 
-      <h3>3. Sharing Your Information</h3>
-      <p>
-        We do not sell or share your personal information with third parties, except in the following cases:
-      </p>
-      <ul>
-        <li>When required to comply with legal obligations or enforce our terms of service.</li>
-        <li>With trusted service providers who assist in delivering our services (e.g., payment processors) and agree to keep your information confidential.</li>
-      </ul>
+        <h3>4. Bezpieczeństwo danych</h3>
+        <p>
+          Wdrażamy odpowiednie środki techniczne i organizacyjne, aby chronić
+          Twoje dane przed nieuprawnionym dostępem, utratą lub niewłaściwym
+          wykorzystaniem. Jednak żadna metoda transmisji ani przechowywania
+          danych nie jest w 100% bezpieczna, dlatego nie możemy zagwarantować
+          absolutnego bezpieczeństwa.
+        </p>
 
-      <h3>4. Data Security</h3>
-      <p>
-        We implement appropriate technical and organizational measures to protect your data from unauthorized access, loss, or misuse. However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security.
-      </p>
+        <h3>5. Twoje prawa</h3>
+        <p>Masz prawo do:</p>
+        <ul>
+          <li>
+            Uzyskania dostępu do swoich danych osobowych i otrzymania ich kopii.
+          </li>
+          <li>Zażądania poprawienia nieścisłości w swoich danych osobowych.</li>
+          <li>
+            Zażądania usunięcia swoich danych osobowych, pod warunkiem zgodności
+            z obowiązującymi przepisami prawa.
+          </li>
+          <li>
+            Wycofania zgody na przetwarzanie danych tam, gdzie jest to możliwe.
+          </li>
+        </ul>
 
-      <h3>5. Your Rights</h3>
-      <p>
-        You have the right to:
-      </p>
-      <ul>
-        <li>Access and obtain a copy of your personal data.</li>
-        <li>Request corrections to any inaccuracies in your personal data.</li>
-        <li>Request the deletion of your personal data, subject to legal obligations.</li>
-        <li>Withdraw consent to data processing where applicable.</li>
-      </ul>
+        <h3>6. Pliki cookies</h3>
+        <p>
+          Nasza strona internetowa wykorzystuje pliki cookies w celu poprawy
+          komfortu przeglądania. Cookies to małe pliki tekstowe przechowywane na
+          Twoim urządzeniu, które zbierają standardowe informacje dotyczące
+          logowania do internetu i zachowania użytkowników. Możesz zarządzać
+          swoimi preferencjami dotyczącymi plików cookies w ustawieniach swojej
+          przeglądarki.
+        </p>
 
-      <h3>6. Cookies</h3>
-      <p>
-        Our website uses cookies to enhance your browsing experience. Cookies are small text files stored on your device to collect standard internet log information and visitor behavior. You can manage your cookie preferences through your browser settings.
-      </p>
+        <h3>7. Zmiany w Polityce Prywatności</h3>
+        <p>
+          Możemy okresowo aktualizować niniejszą Politykę Prywatności. Wszelkie
+          zmiany zostaną opublikowane na tej stronie wraz z datą aktualizacji.
+        </p>
 
-      <h2>7. Changes to This Privacy Policy</h2>
-      <p>
-        We may update this Privacy Policy periodically. Any changes will be posted on this page with an updated revision date.
-      </p>
+        <h3>8. Kontakt</h3>
+        <p>
+          Jeśli masz pytania lub wątpliwości dotyczące niniejszej Polityki
+          Prywatności lub naszych praktyk w zakresie ochrony danych, skontaktuj
+          się z nami pod adresem:
+        </p>
 
-      <h3>8. Contact Us</h3>
-      <p>
-        If you have questions or concerns about this Privacy Policy or our data practices, please contact us at:
-      </p>
-      <p>Email: <a href="mailto:info@wowclean.com">info@wowclean.com</a></p>
-      <p>Phone: +1 555-555-5555</p>
-      <p>Address: 123 Clean Street, Sanitation City, SC 12345</p>
-    </div>
+        <p>
+          Email: <a href="mailto:help@wowclean.com">help@wowclean.com</a>
+        </p>
+        <p>Numer telefonu: +48 (734) 126-837</p>
+        <p>Adres biura: Puławska 233, 02-715 Warsaw, Poland</p>
+      </div>
     </div>
   );
 };

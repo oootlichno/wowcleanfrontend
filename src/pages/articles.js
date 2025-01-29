@@ -7,8 +7,7 @@ import ArticlesCarousel from "../components/ArticlesCarousel";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
-  const [visibleArticles, setVisibleArticles] = useState(9); // State to control number of visible articles
-
+  const [visibleArticles, setVisibleArticles] = useState(9); 
   useEffect(() => {
     const fetchArticles = async () => {
       try {
