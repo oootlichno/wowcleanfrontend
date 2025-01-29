@@ -31,6 +31,9 @@ import AddServiceAdmin from "./pages/admin/AddServiceAdmin";
 import SingleServiceAdmin from "./pages/admin/SingleServiceAdmin";
 import QuotesAdmin from "./pages/admin/QuotesAdmin";
 import MessagesAdmin from "./pages/admin/MessagesAdmin";
+import ProductsAdmin from "./pages/admin/ProductsAdmin";
+import SingleProductAdmin from "./pages/admin/SingleProductAdmin";
+import AddProductAdmin from "./pages/admin/AddProductAdmin";
 
 function App() {
   return (
@@ -70,6 +73,9 @@ function App() {
             <Route path="services" element={<ServicesAdmin />} />
             <Route path="services/add" element={<AddServiceAdmin />} />
             <Route path="services/:id" element={<SingleServiceAdmin />} />
+            <Route path="products" element={<ProductsAdmin />} />
+            <Route path="products/add" element={<AddProductAdmin />} />
+            <Route path="products/:id" element={<SingleProductAdmin />} />
             <Route path="quotes" element={<QuotesAdmin />} />
             <Route path="messages" element={<MessagesAdmin />} />
           </Route>

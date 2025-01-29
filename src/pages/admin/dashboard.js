@@ -17,6 +17,8 @@ const AdminDashboard = () => {
     { label: 'Check New Quotes', route: '/admin/dashboard/quotes' },
     { label: 'Edit Industries', route: '/admin/dashboard/industries' },
     { label: 'Edit Services', route: '/admin/dashboard/services' },
+    { label: 'Manage Products', route: '/admin/dashboard/products' },
+
   ];
 
   const isDashboardPage = location.pathname === '/admin/dashboard';
@@ -30,6 +32,7 @@ const AdminDashboard = () => {
           <li><Link to="/admin/dashboard/articles">Articles</Link></li>
           <li><Link to="/admin/dashboard/industries">Industries</Link></li>
           <li><Link to="/admin/dashboard/services">Services</Link></li>
+          <li><Link to="/admin/dashboard/products">Products</Link></li>
           <li><Link to="/admin/dashboard/quotes">Quotes</Link></li>
           <li><Link to="/admin/dashboard/messages">Messages</Link></li>
         </ul>

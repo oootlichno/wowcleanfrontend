@@ -13,7 +13,7 @@ const AddArticleAdmin = () => {
     const file = e.target.files[0];
     if (file && file.type.startsWith("image/")) {
       setImage(file);
-      setError(''); // Clear previous error
+      setError(''); 
     } else {
       setError("Please upload a valid image file.");
     }

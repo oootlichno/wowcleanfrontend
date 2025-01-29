@@ -302,14 +302,17 @@
     margin-bottom: 30px;
   }
   
+
   .dashboard-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
-  }
-  
-  .dashboard-button {
+    max-width: 660px; 
+    margin: 0 auto;
+}
+
+.dashboard-button {
     font-family: Roboto;
     font-size: 26px;
     font-weight: 700;
@@ -327,7 +330,7 @@
     justify-content: center;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+}
   
   .dashboard-button:hover {
     transform: scale(1.05);
