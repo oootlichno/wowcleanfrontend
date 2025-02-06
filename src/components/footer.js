@@ -37,12 +37,18 @@ const Footer = () => {
             <li>
               <Link to="/contacts">Kontakt</Link>
             </li>
+            <div className="contact-container">
+  <div className="contact-item">
+    <Contact phone="+48 (734) 126-837" />
+  </div>
+  <div className="contact-item">
+    <Email email="help@wowclean.pl" />
+  </div>
+</div>
           </ul>
-          <div className="contact-container">
-            <Contact phone="+48 (734) 126-837" />
-            <Email email="help@wowclean.pl" />
-          </div>
+        
         </div>
+       
       </div>
 
       <div className="footer-bottom">

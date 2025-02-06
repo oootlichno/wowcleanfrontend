@@ -1,3 +1,5 @@
+
+
 /*
   CSS RESET
  */
@@ -234,8 +236,7 @@ p {
   font-weight: bold;
   color: white;
   font-size: 18px;
-  gap: 5px; 
-text-align: right; 
+  gap: 10px; 
 position: absolute;
 right: 0; 
 margin-right: 60px;
@@ -246,6 +247,7 @@ margin-right: 60px;
   text-decoration: none; 
   color: white;
 }
+
 /* Mobile Navigation */
 
 .mobile-nav {
@@ -2237,7 +2239,6 @@ line-height: 110%;
   max-width: 1440px;
   padding-top: 24px;
   border-top: 1px solid #334155;
-  margin-top: 35px;
 }
 
 .footer-bottom p {
@@ -2635,6 +2636,13 @@ line-height: 110%;
     display: none;
   }
 
+
+  .services-grid,
+  .benefits-container {
+    grid-template-columns: 1fr;
+  }
+
+  
   .contact-container-header{
     display: none;
   }
@@ -2676,9 +2684,10 @@ line-height: 110%;
   }
 
   .contact-container{
-    margin-top: 15px;
+    margin-top: 25px;
     gap:5px;
   }
+
   .email-link{
   padding-left: 35px;
   }
@@ -3073,9 +3082,14 @@ line-height: 110%;
   width: 100%;
 }
 
+
 .contact-container {
-  align-items: center; 
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 30px; 
+  flex-wrap: wrap; 
 }
 
 
