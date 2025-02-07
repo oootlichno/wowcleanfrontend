@@ -34,13 +34,21 @@ import MessagesAdmin from "./pages/admin/MessagesAdmin";
 import ProductsAdmin from "./pages/admin/ProductsAdmin";
 import SingleProductAdmin from "./pages/admin/SingleProductAdmin";
 import AddProductAdmin from "./pages/admin/AddProductAdmin";
+import { Helmet } from "react-helmet";
 
 function App() {
   return (
     <BrowserRouter>
       <div id="main-content">
+        <Helmet>
+          <title>WOW Clean - Profesjonalne Usługi Sprzątania</title>
+          <meta name="description" content="Eksperckie usługi czyszczenia toalet w Polsce. Zamów sprzątanie już dziś!" />
+        </Helmet>
+
         <Header />
+
         <Routes>
+          {/* Public Routes */}
           <Route path="/" element={<Home />} />
           <Route path="/aboutus" element={<Aboutus />} />
           <Route path="/services" element={<Services />} />
@@ -54,16 +62,10 @@ function App() {
           <Route path="/quote" element={<Quote />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/thank-you" element={<ThankYou />} />
+
           {/* Admin Routes */}
           <Route path="/admin" element={<AdminLogin />} />
-          <Route
-            path="/admin/dashboard"
-            element={
-              <ProtectedAdminRoute>
-                <AdminDashboard />
-              </ProtectedAdminRoute>
-            }
-          >
+          <Route path="/admin/dashboard" element={<ProtectedAdminRoute><AdminDashboard /></ProtectedAdminRoute>}>
             <Route path="articles" element={<ArticlesAdmin />} />
             <Route path="articles/:id" element={<SingleArticleAdmin />} />
             <Route path="articles/add" element={<AddArticleAdmin />} />
@@ -80,6 +82,7 @@ function App() {
             <Route path="messages" element={<MessagesAdmin />} />
           </Route>
         </Routes>
+
         <Footer />
       </div>
     </BrowserRouter>
