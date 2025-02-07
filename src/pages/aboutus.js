@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import image from "../img/wowclean_clean.png";
+import image from "../img/wowclean_clean.webp";
 import QuoteForm from "../components/quote";
 import shape from "../img/Shape.png";
 

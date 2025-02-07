@@ -1,5 +1,5 @@
 import React from "react";
-import bannerImage from "../img/image 70.png";
+import bannerImage from "../img/image 70.webp";
 import shape from "../img/Shape.png";
 
 const Banner = () => {

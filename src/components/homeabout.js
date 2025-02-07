@@ -1,5 +1,5 @@
 import React from "react";
-import people from "../img/image main about.png";
+import people from "../img/image_main_about.webp";
 
 
 
