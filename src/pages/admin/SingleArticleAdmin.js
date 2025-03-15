@@ -45,11 +45,13 @@ const SingleArticleAdmin = () => {
           const formData = new FormData();
           formData.append('file', selectedFile);
           formData.append('upload_preset', process.env.REACT_APP_UPLOAD_PRESET);
+
+
           const uploadRes = await axios.post(
             `https://api.cloudinary.com/v1_1/ds7x1z5jb/image/upload`,
             formData
           );
-          imageUrl = uploadRes.data.secure_url;
+          imageUrl = `https://res.cloudinary.com/ds7x1z5jb/image/upload/w_1440,q_auto,f_auto/${uploadRes.data.public_id}`;
         } catch (uploadErr) {
           setError('Image upload failed.');
           return;

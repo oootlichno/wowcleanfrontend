@@ -34,6 +34,7 @@ import MessagesAdmin from "./pages/admin/MessagesAdmin";
 import ProductsAdmin from "./pages/admin/ProductsAdmin";
 import SingleProductAdmin from "./pages/admin/SingleProductAdmin";
 import AddProductAdmin from "./pages/admin/AddProductAdmin";
+import AiChatBot from "./components/AiChatBot";
 import { Helmet } from "react-helmet";
 
 function App() {
@@ -62,6 +63,7 @@ function App() {
           <Route path="/quote" element={<Quote />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/thank-you" element={<ThankYou />} />
+          
 
           {/* Admin Routes */}
           <Route path="/admin" element={<AdminLogin />} />
@@ -82,6 +84,11 @@ function App() {
             <Route path="messages" element={<MessagesAdmin />} />
           </Route>
         </Routes>
+
+        {/* ✅ Add AI Chatbot Component Here */}
+        <div style={{ position: "fixed", bottom: "20px", right: "20px", zIndex: 1000 }}>
+          <AiChatBot />
+        </div>
 
         <Footer />
       </div>

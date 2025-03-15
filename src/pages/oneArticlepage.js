@@ -16,7 +16,7 @@ const OneArticlePage = () => {
 
     const fetchLatestArticles = async () => {
       const response = await axios.get(`${backendURL}/api/articles`);
-      setLatestArticles(response.data.slice(0, 3)); // Limit to 3 articles for the sidebar
+      setLatestArticles(response.data.slice(0, 3)); 
     };
 
     fetchArticle();

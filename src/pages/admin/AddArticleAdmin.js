@@ -27,44 +27,47 @@ const AddArticleAdmin = () => {
       return;
     }
 
-    try {
-      let imageUrl = null;
 
-      if (image) {
-        try {
-          const formData = new FormData();
-          formData.append('file', image);
-          formData.append('upload_preset', process.env.REACT_APP_UPLOAD_PRESET);
-
-          const uploadRes = await axios.post(
-            `https://api.cloudinary.com/v1_1/ds7x1z5jb/image/upload`,
-            formData
-          );
-
-          imageUrl = uploadRes.data.secure_url;
-        } catch (err) {
-          setError("Failed to upload the image.");
-          return;
-        }
+  try {
+    let imageUrl = null;
+  
+    if (image) {
+      try {
+        const formData = new FormData();
+        formData.append('file', image);
+        formData.append('upload_preset', process.env.REACT_APP_UPLOAD_PRESET);
+        formData.append('folder', 'uploads'); 
+  
+        const uploadRes = await axios.post(
+          `https://api.cloudinary.com/v1_1/ds7x1z5jb/image/upload`,
+          formData
+        );
+  
+        // Ensure transformation is applied to stored image
+        imageUrl = uploadRes.data.secure_url.replace("/upload/", "/upload/w_1440,q_auto,f_auto/");
+      } catch (err) {
+        setError("Failed to upload the image.");
+        return;
       }
-
-      const articleData = {
-        title: article.title,
-        text: article.text,
-        published_date: article.published_date,
-        image: imageUrl,
-      };
-
-      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/articles`, articleData);
-
-      alert('Article added successfully!');
-      setArticle({ title: '', text: '', published_date: '' }); // Clear form
-      setImage(null);
-      navigate('/admin/dashboard/articles');
-    } catch (err) {
-      setError('Failed to add the article. Please try again later.');
     }
-  };
+  
+    const articleData = {
+      title: article.title,
+      text: article.text,
+      published_date: article.published_date,
+      image: imageUrl,
+    };
+  
+    await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/articles`, articleData);
+  
+    alert('Article added successfully!');
+    setArticle({ title: '', text: '', published_date: '' }); // Clear form
+    setImage(null);
+    navigate('/admin/dashboard/articles');
+  } catch (err) {
+    setError('Failed to add the article. Please try again later.');
+  }
+  }  
 
   return (
     <div className="add-article-container">
